@@ -2,15 +2,15 @@
   <img src="assets/nsfc-bamai-banner.svg" alt="NSFC 本子把脉" width="100%">
 </p>
 
-# NSFC 本子把脉
+<h1 align="center">NSFC 本子把脉</h1>
 
 <p align="center">
   <strong>给国自然申请书做一次结构化体检：找逻辑断点，给修改抓手。</strong>
 </p>
 
 <p align="center">
-  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0027ff?style=flat-square&labelColor=0B0A1A">
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/jiankang1991/nsfc-benzi-audit?style=flat-square&labelColor=0B0A1A&color=ab0d88">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0027ff?style=flat-square&labelColor=0B0A1A"></a>
+  <a href="https://github.com/jiankang1991/nsfc-benzi-audit/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/jiankang1991/nsfc-benzi-audit?style=flat-square&labelColor=0B0A1A&color=ab0d88"></a>
   <img alt="Agent Skills" src="https://img.shields.io/badge/Agent_Skills-compatible-ff004d?style=flat-square&labelColor=0B0A1A">
 </p>
 
