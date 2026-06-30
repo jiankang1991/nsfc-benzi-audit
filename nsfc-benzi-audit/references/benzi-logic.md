@@ -4,7 +4,7 @@ Use this reference to audit the internal logic of an NSFC application draft. It 
 
 ## Scope
 
-This logic is most suitable for 青年基金、面上项目、地区基金 and especially application-oriented basic research in engineering/materials/information-style fields. For pure mathematics/theory, medicine, management, or special talent programs, keep the framework but soften the engineering examples and check field-specific norms separately.
+This logic is most suitable for 青年基金、面上项目、地区基金 and especially application-oriented basic research in engineering/materials/information-style fields. For pure mathematics/theory, management, or special talent programs, keep the framework but soften the engineering examples and check field-specific norms separately. For medicine, clinical, or biomedical drafts, also read `medical-biomedical.md` and translate the logic map into a disease-mechanism-evidence chain.
 
 ## Context Calibration
 

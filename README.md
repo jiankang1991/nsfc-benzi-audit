@@ -33,6 +33,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 想把评审人快速阅读时可能卡住的问题提前暴露出来。
 - 想生成一份可执行的“优先修改清单”，而不是泛泛润色。
 - 手头有已中/已获资助本子，想在匿名化后提炼可迁移写法规律，用来对照当前草稿。
+- 医学、临床或生物医学本子需要额外检查疾病机制、样本/队列、模型体系、伦理、生物安全和转化验证链条。
 
 ## 不适用场景
 
@@ -101,6 +102,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 数据、验证与研究基础映射
 - 文献与研究现状
 - 政策与科研诚信
+- 医学、伦理与样本链条（如适用）
 - 一致性矩阵
 - 中标样本对照（如提供）
 - 摘要、关键科学问题、创新点的改写骨架
@@ -123,6 +125,7 @@ nsfc-benzi-audit/
 └── references/
     ├── benzi-logic.md
     ├── audit-surfaces.md
+    ├── medical-biomedical.md
     ├── exemplar-learning.md
     └── current-rules.md
 ```

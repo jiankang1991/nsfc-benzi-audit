@@ -26,6 +26,7 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
    - Always read `references/benzi-logic.md` before diagnosing logic or writing suggestions.
    - Read `references/audit-surfaces.md` for full diagnosis, structure/form checks, figure/readability checks, literature-current-status checks, or policy-risk triage.
    - Read `references/exemplar-learning.md` when the user provides already-funded/successful examples, asks to compare with "中的本子"/"中标本子", or asks to improve this skill from sample applications.
+   - Read `references/medical-biomedical.md` when the draft or provided examples involve medicine, clinical research, biomedicine, disease mechanisms, patient cohorts, specimens, animal/cell/organoid models, biomarkers, diagnostics, therapy/intervention, immunology, ethics, or biosafety.
    - Read `references/current-rules.md` when checking current-year compliance, research attributes, application-code risk, budget/ethics/scientific-integrity issues, or anything tied to official NSFC rules.
    - Use `assets/report-template.md` as the output shape unless the user requests another format.
 
