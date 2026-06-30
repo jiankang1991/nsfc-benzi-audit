@@ -1,0 +1,4 @@
+interface:
+  display_name: "NSFC 本子把脉"
+  short_description: "诊断国自然申请书整体逻辑结构并生成分章节修改建议表"
+  default_prompt: "Use $nsfc-benzi-audit to audit this NSFC application draft and produce a prioritized revision report."
