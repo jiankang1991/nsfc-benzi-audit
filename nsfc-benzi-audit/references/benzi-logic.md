@@ -6,6 +6,20 @@ Use this reference to audit the internal logic of an NSFC application draft. It 
 
 This logic is most suitable for 青年基金、面上项目、地区基金 and especially application-oriented basic research in engineering/materials/information-style fields. For pure mathematics/theory, medicine, management, or special talent programs, keep the framework but soften the engineering examples and check field-specific norms separately.
 
+## Context Calibration
+
+Do not apply one universal writing standard to every application. First calibrate the expected burden of proof:
+
+| Context | Audit emphasis |
+| --- | --- |
+| 青年项目 | A narrow independent story, 2-3 tightly linked contents, clear applicant ownership, enough basis to start but not evidence that the project is already finished. |
+| 面上项目 | A deeper continuation or expansion from prior work, stronger evidence chain, clearer team/data/platform support, and a broader but still coherent system-level contribution. |
+| 目标导向类基础研究 | Technical or application needs may appear prominently, but the draft must still extract a model, mechanism, relation, representation, optimization, evaluation, or law under concrete conditions. |
+| 自由探索类基础研究 | Scientific question originality and conceptual depth carry more weight than immediate application scenario. |
+| Application-code-heavy fields | Object, method, data, and validation scene should visibly match the selected application code and likely reviewer community. |
+
+For goal-oriented projects, do not reject a draft merely because the wording mentions performance, prediction, detection, platform, or application. Diagnose whether it converts a task into a constrained scientific problem: `specific object + specific data/condition + specific bottleneck + model/mechanism/method question + verifiable outcome`.
+
 ## Core Logic Elements
 
 Every strong application should make four elements easy to extract:
@@ -30,6 +44,25 @@ Common failures:
 - Problem not focused: many pain points are listed, but none is turned into the project's central problem.
 - Method-driven story: the draft sells an algorithm/platform/technology first, then retrofits a problem.
 - Distinctive feature is decorative: it appears in the title but not in research contents, mechanism, or innovation.
+
+## Data And Validation Loop
+
+In data-, experiment-, or platform-heavy fields, add a fifth support axis: data/validation resources. A project can have a good logical story but still feel weak if reviewers cannot see how it will be verified.
+
+Check:
+
+- What data, samples, instruments, field sites, benchmark datasets, simulation tools, computing resources, or collaboration channels support each research content?
+- Are validation scenes concrete enough to test the claimed model or method, not just named as future applications?
+- Does the draft show both controlled validation and real/scenario validation when the field expects both?
+- Are evaluation metrics, baselines, controls, uncertainty/risk alternatives, and boundary conditions visible?
+- Does any required data or platform depend on an unconfirmed collaboration, proprietary source, ethics approval, or security-sensitive condition?
+
+Flag issues:
+
+- Data are mentioned only in feasibility, not tied to contents or scientific questions.
+- Validation only promises "application demonstration" without saying what hypothesis or model property will be tested.
+- The project needs large-scale data, samples, hardware, or field access but gives no evidence of availability.
+- Strong preliminary results appear to finish the core project rather than support the next step.
 
 ## Abstract Logic Chain
 
@@ -97,6 +130,8 @@ Flag weak scientific questions that:
 - Are too broad: "人工智能与复杂系统耦合机制".
 - Do not correspond to research contents or innovation points.
 
+For applied AI/remote-sensing/engineering drafts, a question may be acceptable even when it contains method words if it clearly asks about a constrained relation or failure mode, for example representation under specific spatial-temporal conditions, transfer/generation/generalization under data shift, physical consistency, optimization convergence, measurement/evaluation validity, or structure-preserving reconstruction. The red flag is not method vocabulary itself; the red flag is a question that cannot be answered except by "build the system and see if performance improves."
+
 ## Rationale
 
 The rationale usually contains research significance, literature/current status, and a final project-positioning section.
@@ -141,6 +176,24 @@ Flag issues:
 - The project is too wide for the funding period.
 - Experiments or simulations are listed without saying what scientific question each resolves.
 
+## Research Content Dependency Graph
+
+For strong drafts, research contents usually form a dependency graph rather than a flat task list. Extract each content item's role:
+
+- Foundation: representation, mechanism, data construction, theoretical model, or measurement system that later contents need.
+- Method/model: algorithm, model, framework, inference, optimization, or experimental method built from the foundation.
+- Evaluation/feedback: quality assessment, uncertainty analysis, comparison, validation metric, or error mechanism that improves or tests the method.
+- Scenario/application validation: realistic data, sample, platform, field case, or prototype used to verify generality and boundary conditions.
+
+Audit questions:
+
+- Does each content item have a clear input from earlier work and output to later work?
+- Are research objectives mapped to contents, rather than appearing as separate slogans?
+- Are key scientific questions covered by contents without one content carrying all the intellectual load?
+- Is the last content a real validation of scientific claims, not only system development or demonstration?
+
+A useful diagnosis is: "内容一提供 X，内容二基于 X 建立 Y，内容三评价/验证 Y 的 Z，内容四在 W 场景检验边界." If this sentence cannot be written, the contents are probably not integrated enough.
+
 ## Research Plan And Feasibility
 
 The research plan should explain how each content item will be executed and how the key scientific questions will be answered.
@@ -160,6 +213,16 @@ Flag issues:
 - The plan relies on high-risk breakthroughs without alternatives.
 - Feasibility only says "team has rich experience" without mapping evidence to tasks.
 
+Use an evidence map for full audits:
+
+| Research content | Needed evidence/resource | Draft evidence | Gap |
+| --- | --- | --- | --- |
+| Content 1 | Prior theory/data/preliminary result |  |  |
+| Content 2 | Method basis/platform/computing |  |  |
+| Content 3 | Validation data/baseline/metric |  |  |
+
+The most persuasive feasibility sections often separate theoretical feasibility, technical-route feasibility, data/sample feasibility, platform/equipment feasibility, and team/collaboration feasibility. Do not require every label, but check whether these burdens of proof are substantively covered.
+
 ## Features And Innovations
 
 Features and innovations should come from the distinctive feature, the scientific questions, and expected breakthroughs. Usually 2-3 points are enough.
@@ -178,6 +241,12 @@ Flag issues:
 - Innovation is only engineering integration or parameter optimization.
 - The innovation is not supported by key scientific questions.
 
+Prefer innovation points with this internal shape:
+
+`existing limitation -> project-specific constraint -> proposed new mechanism/model/method/evidence -> what capability or understanding becomes possible`
+
+Flag innovation points that name only a technology stack, a fashionable model, a platform, or a performance target. Stronger innovation explains why existing approaches fail under this project's object/condition and why the proposed idea changes the explanation, model, evaluation, or boundary.
+
 ## Research Basis And Conditions
 
 Research basis should prove that the applicant can do the proposed project, but must not make it look already completed.
@@ -195,6 +264,10 @@ Flag issues:
 - Preliminary work is unrelated to key methods or scientific questions.
 - The draft implies the core content has already been finished.
 - Equipment purchase or missing conditions are too large for the project type.
+
+For 青年项目, check whether the basis proves applicant independence: first/corresponding work, self-owned datasets or methods, clear personal contribution, and a future plan not merely inherited from the supervisor/team.
+
+For 面上项目, check whether the basis explains a natural continuation: what previous project/work solved, what new bottleneck emerged, and how this application deepens or expands it without duplicating completed work.
 
 ## Consistency Matrix
 
@@ -218,6 +291,7 @@ Columns:
 - Problem/goal
 - Method/path
 - Distinctive feature/innovation
+- Data/validation loop
 - Expected achievement/significance
 
 Mark each cell as present, weak, missing, or inconsistent. The most valuable findings usually come from mismatches across rows.

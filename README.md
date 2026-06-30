@@ -8,9 +8,23 @@
   <strong>给国自然申请书做一次结构化体检：找逻辑断点，给修改抓手。</strong>
 </p>
 
+<p align="center">
+  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0027ff?style=flat-square&labelColor=0B0A1A">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/jiankang1991/nsfc-benzi-audit?style=flat-square&labelColor=0B0A1A&color=ab0d88">
+  <img alt="Agent Skills" src="https://img.shields.io/badge/Agent_Skills-compatible-ff004d?style=flat-square&labelColor=0B0A1A">
+</p>
+
 `nsfc-benzi-audit` 是一个用于国家自然科学基金（NSFC/国自然）申请书初稿诊断的 Agent Skill。它面向已经有草稿的申请人，帮助从题目、摘要、立项依据、关键科学问题、研究内容、创新点、研究基础、图表、文献和形式栏目等角度生成修改建议。
 
 它不是代写工具，不承诺申请成功，也不替代导师、同行专家和基金委官方指南。
+
+## 快速开始
+
+```text
+Use $nsfc-benzi-audit to audit this NSFC application draft.
+```
+
+把申请书 PDF、DOCX、Markdown、纯文本，或核心片段贴给 Agent。若提供已中本子作为对照样本，先做匿名化处理，并说明项目类型、获资助年份、粗略学科/申请代码和研究属性。
 
 ## 适用场景
 
@@ -18,21 +32,32 @@
 - 想检查题目、摘要、关键科学问题和创新点是否互相支撑。
 - 想把评审人快速阅读时可能卡住的问题提前暴露出来。
 - 想生成一份可执行的“优先修改清单”，而不是泛泛润色。
+- 手头有已中/已获资助本子，想在匿名化后提炼可迁移写法规律，用来对照当前草稿。
 
 ## 不适用场景
 
 - 从零代写申请书。
 - 编造论文、数据、前期基础、合作单位或实验结果。
+- 复制已中本子的原文、未公开思路、数据、图表或保密研究基础。
 - 替代当年官方指南、申请系统和单位科研管理部门要求。
 - 输出正式通讯评审意见。
 
 ## 安装
 
-将 `nsfc-benzi-audit/` 目录复制到你的 Agent Skills 目录中。例如 Codex 可放到：
+将 `nsfc-benzi-audit/` 目录复制到你的 Agent Skills 目录中。
+
+Codex：
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -a nsfc-benzi-audit ~/.codex/skills/
+```
+
+Claude Code：
+
+```bash
+mkdir -p ~/.claude/skills
+cp -a nsfc-benzi-audit ~/.claude/skills/
 ```
 
 然后在对话中使用：
@@ -59,6 +84,8 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 你最担心的问题：
 ```
 
+若提供已中本子作为对照样本，建议同时说明项目类型、获资助年份、粗略学科/申请代码、研究属性，并先去除姓名、单位、项目编号、联系方式、未公开数据和敏感成果。
+
 也可以输入 PDF、DOCX、Markdown、纯文本，或从 PDF 转出的文本/Markdown。若涉及真实申请书，注意不要公开个人信息、项目编号、未公开数据、合作单位和敏感成果。
 
 ## 输出内容
@@ -71,9 +98,11 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 分章节诊断
 - 形式与栏目完整性
 - 图表与可读性
+- 数据、验证与研究基础映射
 - 文献与研究现状
 - 政策与科研诚信
 - 一致性矩阵
+- 中标样本对照（如提供）
 - 摘要、关键科学问题、创新点的改写骨架
 - 官方规则核查状态与诊断限制
 
@@ -83,6 +112,22 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 
 - `mini-draft.md`：一个本子核心片段示例。
 - `mini-report.md`：对应的诊断报告示例。
+
+## 文件结构
+
+```text
+nsfc-benzi-audit/
+├── SKILL.md
+├── agents/openai.yaml
+├── assets/report-template.md
+└── references/
+    ├── benzi-logic.md
+    ├── audit-surfaces.md
+    ├── exemplar-learning.md
+    └── current-rules.md
+```
+
+`SKILL.md` 负责触发和工作流，`references/` 存放诊断判据，`assets/report-template.md` 是默认报告结构。
 
 ## 修改示例
 

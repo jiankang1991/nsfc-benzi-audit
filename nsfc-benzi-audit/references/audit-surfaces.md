@@ -31,6 +31,8 @@ Check:
 - Key claims are visible in topic sentences, not buried in long paragraphs.
 - The proposal can be understood from title + abstract + rationale summary + one overview figure.
 - Terminology remains consistent across sections.
+- Research-content headings expose the dependency chain, not only method names.
+- Research basis visibly supports the proposed contents before the reviewer has to search for it.
 
 Flag:
 
@@ -51,12 +53,35 @@ Check for:
 - Research basis figure/table: maps prior work to proposed tasks without implying the project is already completed.
 - Annual plan/Gantt-style figure: milestones are concrete and aligned with research contents.
 
+Strong figures often act as navigation: a reviewer should be able to reconstruct "why these contents, in this order, with these data and expected outputs" from the figure plus nearby paragraph.
+
 Flag:
 
 - Figures not mentioned or explained in nearby text.
 - Figure logic contradicts the written research contents.
 - Overloaded figures with too many boxes, arrows, colors, or abbreviations.
 - Low-resolution screenshots, illegible labels, inconsistent numbering, or mismatched terminology.
+- Figures list modules but omit dependencies, validation data, or expected outputs.
+
+## Evidence And Validation Resources
+
+Use this surface when the draft depends on datasets, samples, instruments, computing resources, platforms, collaborations, field sites, or application scenarios.
+
+Check:
+
+- Each research content has at least one credible evidence/resource basis.
+- Preliminary work is mapped to future tasks, not just listed by paper count.
+- Data/sample access is concrete: source, scale, representativeness, preprocessing/annotation, permissions, and continuity.
+- Validation plan names baselines, metrics, controls, comparisons, or application cases appropriate to the field.
+- Computing/instrument/platform needs match the methods and budget.
+- Collaborations are specific enough to support access, expertise, or verification.
+
+Flag:
+
+- "数据丰富", "平台完备", "基础扎实" without task-level mapping.
+- Feasibility rests on a collaborator or platform that is not evidenced in the provided material.
+- Validation uses only a convenient demonstration case and cannot test the core scientific claim.
+- Preliminary evidence is so complete that reviewers may ask what remains to be funded.
 
 ## Literature And Current Status
 
@@ -106,6 +131,11 @@ For each supplementary surface, keep findings short:
 - 建议：
 
 ### 图表与可读性
+- 风险：
+- 依据：
+- 建议：
+
+### 数据、验证与研究基础映射
 - 风险：
 - 依据：
 - 建议：

@@ -1,6 +1,6 @@
 ---
 name: nsfc-benzi-audit
-description: Diagnose and revise Chinese National Natural Science Foundation of China (NSFC/国自然) application drafts from PDF, DOCX, Markdown, plain text, or extracted PDF text/Markdown. Use when the user asks for "本子把脉", "本子体检", "国自然申请书修改建议", "NSFC benzi audit", "帮我看国自然本子", "标书逻辑诊断", "青年/面上/地区基金申请书修改", or wants applicant-facing critique of title, abstract, scientific questions, rationale, research contents, innovation, feasibility, research basis, or consistency. This is for applicant revision advice, not formal communication review opinions; use nsfc-review for expert review forms.
+description: Diagnose and revise Chinese National Natural Science Foundation of China (NSFC/国自然) application drafts from PDF, DOCX, Markdown, plain text, or extracted PDF text/Markdown. Use when the user asks for "本子把脉", "本子体检", "国自然申请书修改建议", "NSFC benzi audit", "帮我看国自然本子", "标书逻辑诊断", "青年/面上/地区基金申请书修改", "对照已中本子", "从中标样本提炼写法规律", or wants applicant-facing critique of title, abstract, scientific questions, rationale, research contents, innovation, feasibility, research basis, or consistency. This is for applicant revision advice, not formal communication review opinions; use nsfc-review for expert review forms.
 ---
 
 # NSFC Benzi Audit
@@ -25,28 +25,36 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
 3. Load the right references.
    - Always read `references/benzi-logic.md` before diagnosing logic or writing suggestions.
    - Read `references/audit-surfaces.md` for full diagnosis, structure/form checks, figure/readability checks, literature-current-status checks, or policy-risk triage.
+   - Read `references/exemplar-learning.md` when the user provides already-funded/successful examples, asks to compare with "中的本子"/"中标本子", or asks to improve this skill from sample applications.
    - Read `references/current-rules.md` when checking current-year compliance, research attributes, application-code risk, budget/ethics/scientific-integrity issues, or anything tied to official NSFC rules.
    - Use `assets/report-template.md` as the output shape unless the user requests another format.
 
-4. Build the one-page logic map.
-   - Extract the draft's core logic elements: object/scenario, focused problem or goal, method/path, and distinctive feature or innovation.
+4. If successful examples are provided, separate exemplar learning from target diagnosis.
+   - Treat funded examples as pattern evidence, not as text to copy or proof of causality.
+   - Anonymize names, project numbers, institutions, unpublished data, and sensitive achievements before extracting patterns.
+   - Prefer patterns repeated across matched examples: same project type, similar discipline/application code, similar research attribute, or comparable career stage.
+   - Apply exemplar patterns as contrastive questions: what does the target draft fail to make visible that successful examples make visible?
+
+5. Build the one-page logic map.
+   - Extract the draft's core logic elements: object/scenario, focused problem or goal, method/path, distinctive feature or innovation, and data/validation loop.
    - Extract the abstract logic chain: object/problem, method/goal, contents/innovation, achievement/significance.
    - Map these terms across title, abstract, rationale, research contents, scientific questions, innovation, feasibility, and research basis.
    - Mark missing, vague, inconsistent, or duplicated elements.
 
-5. Diagnose by priority, not by page order.
+6. Diagnose by priority, not by page order.
    - High priority: flaws likely to affect funding judgment, such as no real scientific question, engineering/technical task posing as basic research, object too broad, problem not focused, innovation unsupported, methods not tied to scientific questions, or research basis unrelated.
    - Medium priority: section-level weaknesses, such as literature review not pointing to proposed contents, research objectives not scientific enough, feasibility too generic, innovation phrased as slogans, required columns that may be missing, figures that do not match the text, or literature gaps that weaken the rationale.
    - Low priority: expression, structure, title length, repeated wording, formatting, and local polishing.
 
-6. Give concrete revision actions.
+7. Give concrete revision actions.
    - For every major finding, cite the draft section or quoted phrase briefly, explain why it is a problem, and give an actionable fix.
    - Prefer rewrite recipes and replacement skeletons over generic advice.
    - When suggesting rewritten text, label it as a draft example that the applicant must verify against facts and literature.
 
-7. Output a Markdown report.
+8. Output a Markdown report.
    - Default filename: `本子诊断报告.md` next to the source draft when working in files; otherwise answer in chat.
-   - Include: overall judgment, one-page logic map, prioritized fixes, section-by-section findings, structure/form checks, figure/readability checks, literature checks, consistency matrix, candidate rewrites, official-rule status, and limits.
+   - Include: overall judgment, one-page logic map, prioritized fixes, section-by-section findings, structure/form checks, figure/readability checks, data/validation evidence mapping, literature checks, consistency matrix, candidate rewrites, official-rule status, and limits.
+   - If successful examples were used, include a short exemplar-derived pattern section with transferability limits.
    - Do not paste long extracted source text. Quote only short phrases needed to support findings.
 
 ## Style
@@ -56,3 +64,4 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
 - Separate "must fix before submission" from "can polish later".
 - Avoid empty comments such as "加强创新性"; say which scientific question, mechanism, model, method, experiment, or evidence must be changed.
 - Preserve academic integrity: do not invent literature, data, publications, patents, collaborations, preliminary results, or official policy requirements.
+- Do not copy distinctive wording, structure, data, or undisclosed ideas from successful examples into another applicant's draft.
