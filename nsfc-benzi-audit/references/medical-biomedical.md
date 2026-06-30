@@ -99,6 +99,17 @@ Check model fit, not just experiment quantity:
 
 For immunology or immunotherapy, inspect whether the model can actually represent the immune mechanism being claimed. Immunodeficient tumor models cannot by themselves prove T-cell, NK-cell, checkpoint, or microenvironment mechanisms.
 
+## Variant-Specific Checks
+
+Use these checks when the medical draft is not a standard molecule-pathway-disease proposal. They are contrastive questions; do not force every item into every draft.
+
+- Clinical prediction, AI, imaging, or warning models: identify the clinical decision point, target population, label/ground truth, cohort source, training/validation/test separation, prospective or external validation plan, leakage/confounding controls, interpretability, and clinical utility. Model construction alone is not the scientific question unless it exposes a disease mechanism, diagnostic principle, or decision rule that fits NSFC basic-research framing.
+- Nursing, psychology, health service, public-health, or behavioral intervention work: define population, scenario, intervention component, comparator/usual care, outcome scale, follow-up window, randomization/blinding where applicable, implementation pathway, and mediator/mechanism if the project claims basic research value.
+- Traditional medicine, formula, natural-product, or syndrome-based work: translate syndrome, formula, herb, or compound claims into a testable material basis and mechanism chain. Check quality control, batch/compound identity, dose-response, target engagement, pathway perturbation, model fit, and whether efficacy claims are separated from mechanistic claims.
+- Biomaterials, nanomedicine, molecular imaging, or theranostic work: link material/probe design to biological mechanism and disease endpoint. Check biodistribution, targeting specificity, safety/toxicity, clearance, comparator, imaging ground truth, therapeutic synergy, and the boundary between platform novelty and disease-relevant scientific question.
+- Antimicrobial, infection, implant, or wound-material work: connect local microenvironment triggers, release kinetics, host response, pathogen/biofilm model, tissue repair, and safety. Do not accept "new material plus antibacterial test" as sufficient without a mechanism and clinically matched model.
+- Regional, joint, key, or other non-standard project types: calibrate scope, resources, platform, collaboration, and expected breadth against the project type instead of judging them only by youth/general-project compactness.
+
 ## Feasibility And Research Basis
 
 Medical feasibility is strongest when prior work and resources map to proposed contents:
@@ -120,6 +131,7 @@ Use these as contrastive questions, not as rules:
 - Their research contents are not a flat list of methods; each later content depends on the previous discovery or mechanism.
 - Their feasibility sections connect clinical resources, specimen banks, animal/model systems, and team expertise to specific tasks.
 - Their innovation points explain the new disease mechanism, target, model, or intervention principle, not only that a method or marker is "first."
+- Strong cross-domain medical examples make the technical platform serve a clinical or biological question: the proposal explains why a specific delivery route, model, material, imaging probe, scale, or intervention logic is necessary for the disease problem.
 
 Because these observations may come from a small or field-specific sample batch, label them as "可迁移", "条件迁移", or "样本不足" when reporting.
 
@@ -133,3 +145,7 @@ Use concise applicant-facing language:
 - `模型不匹配`: 细胞或动物模型不能支撑所声称的疾病亚型、免疫机制、转移/复发或治疗场景。
 - `临床意义后置`: 临床验证只放在最后一项，没有说明它如何反向支撑科学问题和创新点。
 - `前期基础未映射`: 论文、平台和样本很多，但没有说明分别支撑哪个研究内容。
+- `模型构建替代科学问题`: 预测、AI、影像或预警模型写得完整，但缺少要解释的机制、决策原则、验证终点或临床应用边界。
+- `技术平台抢主线`: 纳米材料、递送体系、影像探针或诊疗一体化设计很复杂，但没有说明它为什么是解决该疾病科学问题的必要路径。
+- `干预要素不闭环`: 护理、心理、健康服务或行为干预提出了方案，但人群、对照、终点、随访、实施机制和统计验证没有形成闭环。
+- `中医药机制未转译`: 方药、证候或天然产物停留在经验疗效描述，缺少物质基础、质量控制、剂量-效应、靶点扰动和模型验证。

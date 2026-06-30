@@ -93,6 +93,7 @@ When the user's goal is to improve the skill itself:
 3. Put exemplar-specific or field-specific details in a separate reference; do not bloat `SKILL.md`.
 4. Use synthetic or heavily anonymized examples if an example must be retained.
 5. Re-run basic validation and test with at least one draft that was not used to derive the pattern.
+6. If the absorbed sample set changes, update the README `Calibrated` badge count and the local `benzi_pass/index.md` after the skill references are updated.
 
 Avoid overfitting:
 
