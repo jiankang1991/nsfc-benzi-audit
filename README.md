@@ -46,18 +46,34 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 
 ## 安装
 
-将 `nsfc-benzi-audit/` 目录复制到你的 Agent Skills 目录中。
+推荐用 Skills CLI 一行安装。`npx` 会临时运行 npm 上的 `skills` 命令，从 GitHub 拉取本仓库中的 skill；这不要求本项目本身发布成 npm 包。
 
 Codex：
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -a nsfc-benzi-audit ~/.codex/skills/
+npx skills add jiankang1991/nsfc-benzi-audit -g -a codex -y
 ```
 
 Claude Code：
 
 ```bash
+npx skills add jiankang1991/nsfc-benzi-audit -g -a claude-code -y
+```
+
+如果想让 CLI 自动检测本机已安装的 Agent，也可以用：
+
+```bash
+npx skills add jiankang1991/nsfc-benzi-audit -g -y
+```
+
+没有 Node.js/npx，或网络环境无法访问 GitHub 时，也可以手动安装。将 `nsfc-benzi-audit/` 目录复制到对应 Agent Skills 目录：
+
+```bash
+# Codex
+mkdir -p ~/.codex/skills
+cp -a nsfc-benzi-audit ~/.codex/skills/
+
+# Claude Code
 mkdir -p ~/.claude/skills
 cp -a nsfc-benzi-audit ~/.claude/skills/
 ```
