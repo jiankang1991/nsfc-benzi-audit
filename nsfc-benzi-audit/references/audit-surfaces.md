@@ -83,6 +83,25 @@ Flag:
 - Validation uses only a convenient demonstration case and cannot test the core scientific claim.
 - Preliminary evidence is so complete that reviewers may ask what remains to be funded.
 
+## Key Project And Platform-Heavy Drafts
+
+Use this surface for 重点项目, large-team projects, or drafts whose outputs include datasets, knowledge bases, software platforms, prototype systems, maps, atlases, standards, or field demonstrations.
+
+Check:
+
+- Whether the enlarged scope is justified by one central scientific problem rather than by a list of deliverables.
+- Whether each subtask has a scientific role: shared data/knowledge foundation, representation/model, fusion/optimization/control, evaluation/feedback, or scenario validation.
+- Whether team members, platforms, data sources, and field sites map to subtasks instead of being listed as general strength.
+- Whether expected outputs such as datasets, maps, systems, software, or atlases are used to test scientific claims, not only to show workload.
+- Whether annual plans show dependency and integration milestones, not just parallel subteam schedules.
+
+Flag:
+
+- A broad "system construction" project with no unifying model, mechanism, representation, taxonomy, or law.
+- Many modules named by technology or deliverable, but no explanation of why they must be studied together.
+- Platform/data outputs whose quality metrics, openness, annotation rules, uncertainty, or validation use are unclear.
+- A team basis section that proves general strength but not who can solve which proposed bottleneck.
+
 ## Literature And Current Status
 
 The literature review should support the argument for this project, not merely prove the applicant read papers.

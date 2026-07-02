@@ -12,7 +12,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0027ff?style=flat-square&labelColor=0B0A1A"></a>
   <a href="https://github.com/jiankang1991/nsfc-benzi-audit/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/jiankang1991/nsfc-benzi-audit?style=flat-square&labelColor=0B0A1A&color=ab0d88"></a>
   <img alt="Agent Skills" src="https://img.shields.io/badge/Agent_Skills-compatible-ff004d?style=flat-square&labelColor=0B0A1A">
-  <img alt="Calibrated: 67" src="https://img.shields.io/badge/Calibrated-67-4f46e5?style=flat-square&labelColor=0B0A1A">
+  <img alt="Calibrated: 74" src="https://img.shields.io/badge/Calibrated-74-4f46e5?style=flat-square&labelColor=0B0A1A">
 </p>
 
 `nsfc-benzi-audit` 是一个用于国家自然科学基金（NSFC/国自然）申请书初稿诊断的 Agent Skill。它面向已经有草稿的申请人，帮助从题目、摘要、立项依据、关键科学问题、研究内容、创新点、研究基础、图表、文献和形式栏目等角度生成修改建议。
@@ -35,6 +35,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 想生成一份可执行的“优先修改清单”，而不是泛泛润色。
 - 手头有已中/已获资助本子，想在匿名化后提炼可迁移写法规律，用来对照当前草稿。
 - 医学、临床或生物医学本子需要额外检查疾病机制、样本/队列、模型体系、伦理、生物安全和转化验证链条。
+- 遥感、GIS、地理空间智能、地貌/DEM、点云/三维建模、时空图、视频 GIS 或轨迹/位置数据本子需要额外检查空间对象、数据模态、几何/物理/拓扑约束和验证链条。
 
 ## 不适用场景
 
@@ -120,6 +121,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 文献与研究现状
 - 政策与科研诚信
 - 信息通信类专项检查（如适用）
+- 遥感/GIS/地理空间专项检查（如适用）
 - 医学、伦理与样本链条（如适用）
 - 一致性矩阵
 - 中标样本对照（如提供）
@@ -144,6 +146,7 @@ nsfc-benzi-audit/
     ├── benzi-logic.md
     ├── audit-surfaces.md
     ├── information-communication.md
+    ├── geospatial-remote-sensing.md
     ├── medical-biomedical.md
     ├── exemplar-learning.md
     └── current-rules.md

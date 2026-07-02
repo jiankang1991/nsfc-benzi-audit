@@ -4,7 +4,7 @@ Use this reference to audit the internal logic of an NSFC application draft. It 
 
 ## Scope
 
-This logic is most suitable for 青年基金、面上项目、地区基金 and especially application-oriented basic research in engineering/materials/information-style fields. For information, communication, network, applied AI, remote-sensing, security, quantum communication, or data-center drafts, also read `information-communication.md` and translate the logic map into a demand-constraint-model-validation chain. For pure mathematics/theory, management, or special talent programs, keep the framework but soften the engineering examples and check field-specific norms separately. For medicine, clinical, or biomedical drafts, also read `medical-biomedical.md` and translate the logic map into a disease-mechanism-evidence chain.
+This logic is most suitable for 青年基金、面上项目、地区基金 and especially application-oriented basic research in engineering/materials/information-style fields. For information, communication, network, applied AI, security, quantum communication, or data-center drafts, also read `information-communication.md` and translate the logic map into a demand-constraint-model-validation chain. For remote sensing, GIS, geomorphology, spatial data, point cloud, SAR/optical/hyperspectral, video GIS, trajectory, city 3D, or geospatial knowledge-graph drafts, also read `geospatial-remote-sensing.md` and translate the logic map into a spatial-object/data-constraint/model-validation chain. For pure mathematics/theory, management, or special talent programs, keep the framework but soften the engineering examples and check field-specific norms separately. For medicine, clinical, or biomedical drafts, also read `medical-biomedical.md` and translate the logic map into a disease-mechanism-evidence chain.
 
 ## Context Calibration
 
@@ -14,6 +14,7 @@ Do not apply one universal writing standard to every application. First calibrat
 | --- | --- |
 | 青年项目 | A narrow independent story, 2-3 tightly linked contents, clear applicant ownership, enough basis to start but not evidence that the project is already finished. |
 | 面上项目 | A deeper continuation or expansion from prior work, stronger evidence chain, clearer team/data/platform support, and a broader but still coherent system-level contribution. |
+| 重点项目/大团队项目 | A broader framework is acceptable, but the draft must show a unified theoretical problem, task dependencies across subteams, shared data/platform resources, and system-level validation. Do not force it into a youth-style narrow story; instead test whether the larger scope is intellectually integrated. |
 | 目标导向类基础研究 | Technical or application needs may appear prominently, but the draft must still extract a model, mechanism, relation, representation, optimization, evaluation, or law under concrete conditions. |
 | 自由探索类基础研究 | Scientific question originality and conceptual depth carry more weight than immediate application scenario. |
 | Application-code-heavy fields | Object, method, data, and validation scene should visibly match the selected application code and likely reviewer community. |
@@ -193,6 +194,8 @@ Audit questions:
 - Is the last content a real validation of scientific claims, not only system development or demonstration?
 
 A useful diagnosis is: "内容一提供 X，内容二基于 X 建立 Y，内容三评价/验证 Y 的 Z，内容四在 W 场景检验边界." If this sentence cannot be written, the contents are probably not integrated enough.
+
+For key or platform-heavy projects, the dependency graph may have 4-5 contents, but it should still be reducible to a framework sentence, for example: "内容一建立共享数据/知识/时空基准，内容二形成表示或机理模型，内容三解决融合/优化/控制，内容四构建平台或方法体系，内容五在典型场景检验边界与泛化." Flag broad projects when modules are only a management work breakdown and not a scientific chain.
 
 ## Research Plan And Feasibility
 
