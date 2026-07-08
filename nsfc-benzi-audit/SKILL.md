@@ -1,6 +1,6 @@
 ---
 name: nsfc-benzi-audit
-description: Diagnose and revise Chinese National Natural Science Foundation of China (NSFC/国自然) application drafts from PDF, DOCX, Markdown, plain text, or extracted PDF text/Markdown. Use when the user asks for "本子把脉", "本子体检", "国自然申请书修改建议", "NSFC benzi audit", "帮我看国自然本子", "标书逻辑诊断", "青年/面上/地区基金申请书修改", "对照已中本子", "从中标样本提炼写法规律", or wants applicant-facing critique of title, abstract, scientific questions, rationale, research contents, innovation, feasibility, research basis, or consistency. This is for applicant revision advice, not formal communication review opinions; use nsfc-review for expert review forms.
+description: Use when a user wants applicant-facing diagnosis and revision advice on a Chinese NSFC (国自然) application draft — asks for 本子把脉, 本子体检, 国自然申请书修改建议, NSFC benzi audit, 帮我看国自然本子, 标书逻辑诊断, 青年/面上/地区基金申请书修改, 对照已中本子, or 从中标样本提炼写法规律 — or wants critique of the title, abstract, key scientific questions, rationale, research contents, innovation, feasibility, research basis, or cross-section consistency. Accepts PDF/DOCX/Markdown/text or extracted draft text. This is applicant revision advice, not formal communication-review opinions; for expert review forms use nsfc-review.
 ---
 
 # NSFC Benzi Audit
