@@ -14,6 +14,15 @@ Look for:
 - Ongoing projects, completed NSFC projects, representative works, collaborations, ethics/safety, and other explanatory fields that appear relevant but are absent from the provided material.
 - Attachments or figures referenced in text but missing from extraction.
 
+Ranked 形式审查 checklist (most-frequent failure first — verify current-year specifics):
+
+- 人员超项 (members over the concurrent-project limit) — the single most common 形审 rejection.
+- Wrong 申请代码 (routes to the wrong 学部).
+- 依托单位 / 公章 inconsistency; missing or non-handwritten signature (笔迹一致).
+- Missing attachments: 伦理批件; two recommendation letters when the applicant has only a mid-level title and no doctorate; in-station postdoc consent letter; biosafety commitment; the "≤5 related papers" attachment limit.
+
+Keyword-reconstruction test: the keyword list should let a reader rebuild the draft's main thread. Flag first-level discipline names and over-broad words (安全、保护、曲线、工程) used as keywords; the second application code carries little weight while a wrong first code is costly.
+
 Report as:
 
 - `规则风险`: only when verified against official current-year documents.
@@ -40,6 +49,11 @@ Flag:
 - Important innovations first appearing late in the draft.
 - Repeated background that delays the scientific question.
 - Overuse of slogans such as "重大意义", "国际领先", "填补空白", or unsupported "首次".
+- Cliché openers that carry no information: "随着我国经济迅速发展……", "随着大数据时代的到来……" and similar.
+
+Reviewer-impression check ("酒香也怕巷子深"): a skimming reviewer should catch the load-bearing claims without slow reading. Check whether the key scientific question, the scientific hypothesis, preliminary results, and the distinctive feature are bold-highlighted, backed by one key-data figure, and reinforced by citing the applicant's own related papers.
+
+Concept-precision check: inconsistent or misused core concepts are cited as 函评 deductions. Watch high-frequency confusions — 强度 ≠ 稳定性, 机理 ≠ 规律, over-narrowing 本构关系 to stress-strain, and 耦合 used without saying which variables couple, how, and how they are decoupled for solution. A single mixed-terminology case (e.g. "2型糖尿病" and "Ⅱ型糖尿病" both used) has been cited by a reviewer as a reason to withhold funding in a competitive year — so terminology consistency is not always a low-priority polish item.
 
 ## Figure And Visual Evidence
 
@@ -55,11 +69,24 @@ Check for:
 
 Strong figures often act as navigation: a reviewer should be able to reconstruct "why these contents, in this order, with these data and expected outputs" from the figure plus nearby paragraph.
 
+Conventions strong drafts reliably follow (expect these; flag their absence):
+
+- One 研究思路/总体框架图 that maps 对象/需求 → 挑战 → 关键科学问题 → 研究内容 → 目标 (→ 验证) in a single graph. A draft that presents research contents as prose with no framework figure is a real finding.
+- A 总-分 技术路线图 with swimlanes (e.g. 结构/科学问题/内容/方法/成果) as a clean framework diagram, not prose. Prefer 框架图 form so 研究对象、建模/实验方法、分组、观察指标、检测方法、研究目标 are 一目了然.
+- One method flowchart per 研究内容; a 总图 + 分图 split is fine.
+- For content chains that are bidirectional / 协同 / feedback, the content-architecture figure should show feedback arrows, not a straight pipeline.
+- A 立项依据示意图 using 实线=known / 虚线(或问号)=hypothesis — the dashed part is the project's innovation.
+- Research design principles to check in the route figure: 随机、对照、重复 where the field expects them.
+
+Annual-plan do's and don'ts: 4-6 lines per year, layered; do not spend dedicated time on "购买试剂 / 查阅文献 / 预试验" or "结题 / 整理资料 / 撰文"; schedule long-lead work (model building, animal-model prep, patient enrollment) early.
+
+Figure-fidelity caveat: when the source is a converted/extracted draft (e.g. mineru), a 流程图/示意图 may be re-rendered as broken mermaid or lost. Do not judge figure logic from a mangled mermaid block — consult the original image (the `images/` directory) before flagging figure-logic problems, and note extraction loss as a limitation rather than an applicant mistake.
+
 Flag:
 
 - Figures not mentioned or explained in nearby text.
 - Figure logic contradicts the written research contents.
-- Overloaded figures with too many boxes, arrows, colors, or abbreviations.
+- Overloaded "八卦图 / 迷魂阵" figures — too many boxes, arrows, colors, or abbreviations that dazzle rather than guide.
 - Low-resolution screenshots, illegible labels, inconsistent numbering, or mismatched terminology.
 - Figures list modules but omit dependencies, validation data, or expected outputs.
 
@@ -113,6 +140,14 @@ Check:
 - Domestic and applicant's own prior work are positioned appropriately, not overused.
 - Each literature subsection ends with a gap that points to one proposed research content or scientific question.
 - The cited limitations are specific: mechanism unknown, model not valid under certain conditions, data/source mismatch, unresolved relation, missing validation, etc.
+
+Reference rules of thumb (adjust to field norms):
+
+- Roughly 20-30 references is a healthy band; far fewer suggests the applicant has not read the field.
+- Include the newest work (submission year or the year before) and authoritative-venue work; too old-only reads as out of touch.
+- Include some of the applicant's/group's own related papers, but do not over-cite them.
+- English references may dominate, but keep some Chinese ones — most 通讯评审 reviewers are domestic.
+- Each cited claim must be tied to a specific in-text citation point in the rationale, not just listed at the end.
 
 Flag:
 

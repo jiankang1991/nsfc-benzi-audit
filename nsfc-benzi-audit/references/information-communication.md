@@ -36,6 +36,14 @@ Weak signs:
 - National strategy, standards, or industrial demand is long, but the scientific bottleneck remains one sentence.
 - The draft lists fashionable methods without explaining why existing methods fail under this project's constraint.
 
+Science-elevation devices (audit that at least one is present — these are how funded info-comm drafts turn scheduling/networking from a task into science):
+
+- Unified mathematical description of heterogeneous multi-resources (e.g. 频谱/时隙/密钥, or 算力/路由/波长) plus mining their intrinsic constraint or coupling.
+- An analytic performance model (e.g. 阻塞率解析模型) plus a theoretical-condition proof (e.g. 严格无阻塞条件).
+- Framing the target as an unknown quantitative relation φ that must be modeled/fitted rather than assumed ("准确关系难以量化" as the science itself).
+- A supply-consumption / balance constraint (e.g. 密钥供给 vs 消耗).
+- Relational SQ nouns: 博弈 / 矛盾 / 协同 / 耦合 between two objectives or resources.
+
 ## Content Architecture Patterns
 
 Information and communication examples often use one of these content dependency chains:
@@ -65,11 +73,11 @@ Good information-field scientific questions often ask about:
 - physical, protocol, topology, or security constraints that change model behavior;
 - evaluation validity, uncertainty, and boundary conditions.
 
-Prefer questions with this shape:
+Real funded info-comm SQs are noun phrases (e.g. "安全性与可靠性之间的博弈", "动态低时延业务与资源实时智能适配"), not interrogatives. Use the shape below only to test the *body sentence* beneath the noun-phrase title; do not flag a noun-phrase SQ as task-like for being non-interrogative:
 
 `Under [specific scenario/condition], how do [variables/resources/failures/data shifts] constrain [model/mechanism/control/representation], and how can this relation be described, optimized, or verified?`
 
-Flag questions that can only be answered by "we will build it and compare performance".
+Flag questions whose body can only be answered by "we will build it and compare performance".
 
 ## Literature And Rationale
 
@@ -114,6 +122,10 @@ Innovation points should not be method names alone. Ask whether each innovation 
 - the planned evidence for the claim.
 
 In information drafts, "first use of a model", "combined algorithm", "platform implementation", or "higher performance" is usually weak unless tied to a new constrained relation, resource coupling, theoretical property, or validation boundary.
+
+Integration must be cashed out as a mechanism: when the spine is 一体化 / 协同 / 融合 (e.g. 通算融合, 通感一体), verify it resolves to a joint/unified objective, a shared resource model, or an explicit coupling mechanism — not a bundling slogan.
+
+Figure conventions: expect the framework and 总-分 技术路线 figures from `audit-surfaces.md`, plus architecture figures (e.g. multi-plane SDN, resource-scheduling/blocking flowcharts) and a "研究对象-需求-科学问题-内容-目标-验证" relationship figure. Flag an info-comm draft that argues an architecture→model→optimization→validation chain with no framework figure.
 
 ## Report Add-On
 

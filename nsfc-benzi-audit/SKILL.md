@@ -42,9 +42,11 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
    - Extract the draft's core logic elements: object/scenario, focused problem or goal, method/path, distinctive feature or innovation, and data/validation loop.
    - Extract the abstract logic chain: object/problem, method/goal, contents/innovation, achievement/significance.
    - Map these terms across title, abstract, rationale, research contents, scientific questions, innovation, feasibility, and research basis.
+   - If a 科学问题属性 statement exists, map it too and check it cross-validates the key scientific questions.
    - Mark missing, vague, inconsistent, or duplicated elements.
 
 6. Diagnose by priority, not by page order.
+   - Lead with the three decisive funding factors (创新性、技术路线、前期研究基础) and the three scored axes (课题、申请人、研究条件); see `references/benzi-logic.md`. Because 会评 leans on 通讯意见 + title + abstract (see `references/current-rules.md`), weight title/abstract/通讯-facing clarity accordingly.
    - High priority: flaws likely to affect funding judgment, such as no real scientific question, engineering/technical task posing as basic research, object too broad, problem not focused, innovation unsupported, methods not tied to scientific questions, or research basis unrelated.
    - Medium priority: section-level weaknesses, such as literature review not pointing to proposed contents, research objectives not scientific enough, feasibility too generic, innovation phrased as slogans, required columns that may be missing, figures that do not match the text, or literature gaps that weaken the rationale.
    - Low priority: expression, structure, title length, repeated wording, formatting, and local polishing.

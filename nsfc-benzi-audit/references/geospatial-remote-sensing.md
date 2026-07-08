@@ -68,11 +68,19 @@ Good geospatial scientific questions often ask about:
 - camera/sensor network coverage, topology, synchronization, pose, and cooperative observation under quality constraints;
 - evaluation validity when ground truth is expensive, missing, delayed, or only partially observable.
 
-Prefer questions with this shape:
+Real funded geospatial SQs are written as compact noun phrases (e.g. "散射机理约束", "地貌全信息知识图谱体系构建", "跨源表征的联合测度机理"), not as interrogatives. Use the shape below only as an internal test of the *body sentence* beneath the noun-phrase title, and do not flag a normal noun-phrase question as task-like for being non-interrogative:
 
 `Under [spatial scene/data modality/scale], how do [geometry/physics/topology/semantics/time/annotation constraints] affect [representation/model/knowledge/optimization/evaluation], and how can this relation be described, computed, or validated?`
 
-Flag questions that can only be answered by "we will process data and compare accuracy".
+Flag questions whose body sentence can only be answered by "we will process data and compare accuracy" — the "tasks restated as problems" antipattern (a set of noun-phrase SQs that are really just the research contents relabeled, with the only real science buried elsewhere).
+
+## Modality-Specific Physical Consistency
+
+"Physical consistency" is often asserted generically. Check whether the physics actually enters the scientific question, the method, AND the evaluation — not just the introduction.
+
+- SAR: 散射机理 / 属性散射中心 (ASC) / 成像几何与多角度一致性 / 极化 (HH·HV·VV)、入射角、分辨率、波段 (as controllable conditions or shift-inducing factors) / 复值与相位 / 散斑. A strong SAR draft threads these through the SQ (e.g. "生成的多条件解耦与散射机理约束"), uses a physical quantity (ASC + feature matching) as an evaluation metric, and defines its open-world along physical axes (目标观测受限 / 场景散射变化 / 载荷配置多样). "SAR" merely name-dropped in the intro is the weak case.
+- InSAR (flag `样本不足` — add only by analogy, not as a sample-derived rule): 相干性 / 干涉相位 / 形变-大气-地形相位分解 / 时空基线. Treat parameter estimation as an inverse problem (see benzi-logic Research-Type Tests).
+- Optical/hyperspectral (`样本不足`): 成像光谱 / 混合像元-端元-丰度 / 空谱联合 / 大气校正 / 降维. Term trap: real hyperspectral method vocabulary often appears in English (unmixing / endmember / abundance / low-rank / super-resolution) while 混合像元/降维/空谱 are rarely written literally — do not key domain detection only on Chinese surface terms.
 
 ## Literature And Rationale
 
@@ -121,6 +129,12 @@ Innovation should not be only a technology stack or a new dataset. Ask whether e
 - what data or validation will demonstrate the claim.
 
 Datasets, maps, knowledge bases, or systems can support innovation, but they are usually not the innovation alone unless the scientific contribution is the taxonomy, annotation principle, measurement framework, uncertainty model, or generalizable construction method.
+
+Integration must be cashed out as a mechanism. When a draft's spine is 一体化 / 协同 / 融合, verify the word resolves to a concrete mechanism — a mutual prior between two tasks (e.g. segmentation ↔ reconstruction), a joint/unified mathematical framework or objective, a shared representation/latent space, or explicit inter-model 连接点 — not a bundling slogan. Strong drafts *earn* the integration word (e.g. "geometry-semantics mutual prior", a bidirectional generate↔perceive optimization loop with named stages); a title that claims 一体化 while the contents run in parallel is a flag.
+
+## Figure Conventions
+
+Funded geospatial/RS drafts front-load figures heavily (often 15+). Expect the framework/technical-route figures from `audit-surfaces.md`, plus field-specific ones: a 数据源 → 技术方法 → 研究内容 → 结果 → 效应 multi-lane master figure; a knowledge-graph schema figure (e.g. 形态类型 | 成因类型) for taxonomy/KG drafts; per-technique method flowcharts. Flag a geospatial draft that argues a data/knowledge/model/validation chain in prose with no framework figure.
 
 ## Report Add-On
 

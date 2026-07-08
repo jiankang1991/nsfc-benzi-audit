@@ -93,10 +93,23 @@ When the user's goal is to improve the skill itself:
 3. Put exemplar-specific or field-specific details in a separate reference; do not bloat `SKILL.md`.
 4. Use synthetic or heavily anonymized examples if an example must be retained.
 5. Re-run basic validation and test with at least one draft that was not used to derive the pattern.
-6. If the absorbed sample set changes, update the README `Calibrated` badge count and the local `benzi_pass/index.md` after the skill references are updated.
+6. If the absorbed sample set changes, update the README `Calibrated` badge count after the skill references are updated.
 
 Avoid overfitting:
 
 - Do not turn a single funded application's style into a universal rule.
 - Do not encode confidential facts, original ideas, or section text.
 - Do not replace current official NSFC rules with old-sample conventions.
+
+## Common Rejection Patterns (from real reviewer comments)
+
+Learn from failures as well as successes. These patterns are drawn from published reviewer comments on failed and B-类 near-miss proposals; use them as contrastive questions, not verdicts:
+
+- Preliminary work must be *directly* on the proposed object/tissue/target, not merely adjacent. A proposal was rejected because the applicant's prior work was on a different organ than the one the mechanism concerned — "无前期工作基础，也无预实验结果" on the actual object.
+- "现象观察层次" scores low: staying at observed correlation/phenomenon without a deeper mechanism draws "创新性较低".
+- Model/system mismatch: the model must convincingly represent the disease/scenario claimed (e.g. an immunodeficient model cannot prove an immune mechanism; a cell-line-only result "欠缺说服力" for an in-vivo claim).
+- Even a well-liked B-类 fails on the half-vote at 会评. Its typical sinking specifics: too many scientific questions, some research contents not set up in the literature review, and self-repetition ("同一对象在同一疾病中不同作用机制"). So: trim questions, ground every content in the rationale, and avoid restating the same story.
+
+## Public, Redaction-Free Calibration Samples
+
+The worked examples printed inside the public guidance books (e.g. 柔索机器人, 废弃煤矿, 受载岩体反馈特性, 高粘度超细粉体, 牻牛儿苗) are already public and may be used as calibration/illustration samples without anonymization — unlike real applicant drafts, which must be redacted.
