@@ -12,7 +12,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0027ff?style=flat-square&labelColor=0B0A1A"></a>
   <a href="https://github.com/jiankang1991/nsfc-benzi-audit/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/jiankang1991/nsfc-benzi-audit?style=flat-square&labelColor=0B0A1A&color=ab0d88"></a>
   <img alt="Agent Skills" src="https://img.shields.io/badge/Agent_Skills-compatible-ff004d?style=flat-square&labelColor=0B0A1A">
-  <img alt="Calibrated: 74" src="https://img.shields.io/badge/Calibrated-74-4f46e5?style=flat-square&labelColor=0B0A1A">
+  <img alt="Calibrated: 77" src="https://img.shields.io/badge/Calibrated-77-4f46e5?style=flat-square&labelColor=0B0A1A">
 </p>
 
 `nsfc-benzi-audit` 是一个用于国家自然科学基金（NSFC/国自然）申请书初稿诊断的 Agent Skill。它面向已经有草稿的申请人，帮助从题目、摘要、立项依据、关键科学问题、研究内容、创新点、研究基础、图表、文献和形式栏目等角度生成修改建议。
