@@ -112,4 +112,4 @@ Learn from failures as well as successes. These patterns are drawn from publishe
 
 ## Public, Redaction-Free Calibration Samples
 
-The worked examples printed inside the public guidance books (e.g. 柔索机器人, 废弃煤矿, 受载岩体反馈特性, 高粘度超细粉体, 牻牛儿苗) are already public and may be used as calibration/illustration samples without anonymization — unlike real applicant drafts, which must be redacted.
+The worked examples printed inside the public guidance books (e.g. 柔索机器人, 废弃煤矿, 受载岩体反馈特性, 高粘度超细粉体, 牻牛儿苗) are already public and may be used as calibration/illustration samples without anonymization — unlike real applicant drafts, which must be redacted. The same applies to the 81 named cases in the NSFC-authored《凝练科学问题案例》(结构超滑, 单原子催化, 交换移植非渐近分析, 静态 CT 安检, 草莓果形, 人机紧耦合人因安全, …) and their named expert commentaries, which back `question-distillation.md`.

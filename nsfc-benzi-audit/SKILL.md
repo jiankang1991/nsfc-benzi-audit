@@ -25,6 +25,7 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
 3. Load the right references.
    - Always read `references/benzi-logic.md` before diagnosing logic or writing suggestions.
    - Read `references/audit-surfaces.md` for full diagnosis, structure/form checks, figure/readability checks, literature-current-status checks, or policy-risk triage.
+   - Read `references/question-distillation.md` when judging how well the scientific question is distilled: the 关键科学问题 importance argument, the rationale's convergence chain, the 科学问题属性 justification, drafts claiming 原创/独辟蹊径/卡脖子/瓶颈/学科交叉, or when the user asks whether the 科学问题凝练得好.
    - Read `references/representative-works.md` when the draft lists 代表性论著/代表作/主要论文, or when 研究基础 leans on the applicant's publications. Do not judge those works from titles alone — get the abstract and method from the applicant's PDFs first, else via the `paper-lookup` skill, else mark them 未核实.
    - Read `references/exemplar-learning.md` when the user provides already-funded/successful examples, asks to compare with "中的本子"/"中标本子", or asks to improve this skill from sample applications.
    - Read `references/information-communication.md` when the draft or provided examples involve information science, communication networks, optical networks, computer networks, data centers, remote sensing information processing, applied AI, network security, quantum communication, or related information-engineering directions.

@@ -44,6 +44,7 @@ When it exists, audit it:
 - Preferred two-段 justification: paragraph one anchors the first four characters of the chosen attribute, paragraph two anchors the last four; the statement must cross-validate with the key scientific questions.
 - 需求牵引/卡脖子 still must extract a scientific problem, not stay at engineering need; 聚焦前沿 needs originality evidence, not just topicality.
 - Map the attribute statement as a row in the one-page logic map and the consistency matrix.
+- For the strong form of each attribute's argument (原创须引可核对的"不可能/空白"对立面, 独辟蹊径须论证主流路线的结构性死结, 需求牵引须走完五步凝练链并量化瓶颈, 交叉融通须给出交叉产物与双向反哺), see `question-distillation.md`.
 
 ## Core Logic Elements
 
@@ -188,6 +189,7 @@ Funded Chinese proposals almost never phrase the key-scientific-question *title*
 - Audit the body sentence, not the title form: does it hold a describable, computable, or verifiable relation under stated conditions? Use the interrogative "Under [conditions], how do [variables] constrain [model/mechanism]?" only as an internal test of that body sentence.
 - Positive body template: `在[具体条件/前提]下，[对象/现象]的[关系/机制]如何用[数学模型/框架]描述、求解或验证`.
 - Write key questions as separate itemized points and argue why each is *key* (enabling the method/goal/innovation), not merely true. The key question usually sits *behind* the mechanism — the mechanism is the result of resolving it.
+- Beyond "is it a scientific question", audit "is it well-distilled" (question source, timing argument, anomaly exclusion, constraint visibility, difficulty-innovation pairing) with `question-distillation.md`.
 
 Correlation is not mechanism. For data-/ML-driven drafts, a regression or association is not itself an explanation ("虚假回归" when the causal judgement is skipped); a statistical finding must point to the next mechanistic question. This is the symmetric constraint on the applied-AI tolerance above: method vocabulary is fine, but "we fit it and it correlates / performs better" is not a scientific answer.
 
