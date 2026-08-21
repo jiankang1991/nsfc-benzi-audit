@@ -1,6 +1,6 @@
 ---
 name: nsfc-benzi-audit
-description: Use when a user wants applicant-facing diagnosis and revision advice on a Chinese NSFC (国自然) application draft — asks for 本子把脉, 本子体检, 国自然申请书修改建议, NSFC benzi audit, 帮我看国自然本子, 标书逻辑诊断, 青年/面上/地区基金申请书修改, 对照已中本子, or 从中标样本提炼写法规律 — or wants critique of the title, abstract, key scientific questions, rationale, research contents, innovation, feasibility, research basis, 代表作/代表性论著 quality and support, or cross-section consistency. Accepts PDF/DOCX/Markdown/text or extracted draft text. This is applicant revision advice, not formal communication-review opinions; for expert review forms use nsfc-review.
+description: Use when a user wants applicant-facing diagnosis and revision advice on a Chinese NSFC (国自然) application draft — asks for 本子把脉, 本子体检, 国自然申请书修改建议, NSFC benzi audit, 帮我看国自然本子, 标书逻辑诊断, 青年/面上/地区基金申请书修改, 对照已中本子, 从中标样本提炼写法规律, 选题撞题核查, or 申请代码选得对不对 — or wants critique of the title, abstract, key scientific questions, rationale, research contents, innovation, feasibility, research basis, 代表作/代表性论著 quality and support, or cross-section consistency. Accepts PDF/DOCX/Markdown/text or extracted draft text. This is applicant revision advice, not formal communication-review opinions; for expert review forms use nsfc-review.
 ---
 
 # NSFC Benzi Audit
@@ -27,6 +27,7 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
    - Read `references/audit-surfaces.md` for full diagnosis, structure/form checks, figure/readability checks, literature-current-status checks, or policy-risk triage.
    - Read `references/question-distillation.md` when judging how well the scientific question is distilled: the 关键科学问题 importance argument, the rationale's convergence chain, the 科学问题属性 justification, drafts claiming 原创/独辟蹊径/卡脖子/瓶颈/学科交叉, or when the user asks whether the 科学问题凝练得好.
    - Read `references/representative-works.md` when the draft lists 代表性论著/代表作/主要论文, or when 研究基础 leans on the applicant's publications. Do not judge those works from titles alone — get the abstract and method from the applicant's PDFs first, else via the `paper-lookup` skill, else mark them 未核实.
+   - Read `references/kd-lookup.md` when the audit needs external evidence rather than draft-internal logic: 撞题/选题重复风险, 申请代码是否送对学部, 预期成果是否超额承诺, 申请人自己已资助/已结题项目的重复度与绩效, or a draft claiming 国内尚无人开展. The applicant runs the queries on kd.nsfc.cn; never automate its login or captcha, and never report a lookup result without the query string, hit count, and date.
    - Read `references/exemplar-learning.md` when the user provides already-funded/successful examples, asks to compare with "中的本子"/"中标本子", or asks to improve this skill from sample applications.
    - Read `references/information-communication.md` when the draft or provided examples involve information science, communication networks, optical networks, computer networks, data centers, remote sensing information processing, applied AI, network security, quantum communication, or related information-engineering directions.
    - Read `references/geospatial-remote-sensing.md` when the draft or provided examples involve remote sensing, GIS, geospatial intelligence, DEM/terrain/geomorphology, spatial databases, point clouds, SAR/optical/hyperspectral imagery, video GIS, camera networks, POI/trajectory/location data, city 3D modeling, or geospatial knowledge graphs.
@@ -60,7 +61,7 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
 
 8. Output a Markdown report.
    - Default filename: `本子诊断报告.md` next to the source draft when working in files; otherwise answer in chat.
-   - Include: overall judgment, one-page logic map, prioritized fixes, section-by-section findings, structure/form checks, figure/readability checks, data/validation evidence mapping, representative-works support (when listed), literature checks, consistency matrix, candidate rewrites, official-rule status, and limits.
+   - Include: overall judgment, one-page logic map, prioritized fixes, section-by-section findings, structure/form checks, figure/readability checks, data/validation evidence mapping, representative-works support (when listed), funding-landscape/topic-collision checks (when kd lookups were run), literature checks, consistency matrix, candidate rewrites, official-rule status, and limits.
    - If successful examples were used, include a short exemplar-derived pattern section with transferability limits.
    - Do not paste long extracted source text. Quote only short phrases needed to support findings.
 

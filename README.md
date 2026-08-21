@@ -45,6 +45,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 想把评审人快速阅读时可能卡住的问题提前暴露出来。
 - 想生成一份可执行的“优先修改清单”，而不是泛泛润色。
 - 手头有已中/已获资助本子，想在匿名化后提炼可迁移写法规律，用来对照当前草稿。
+- 想借基金委大数据知识管理服务门户（kd.nsfc.cn）核查选题撞题风险、申请代码是否送对学部、预期成果是否超额承诺、以及自己已结题项目与本子的重复度。
 - 医学、临床或生物医学本子需要额外检查疾病机制、样本/队列、模型体系、伦理、生物安全和转化验证链条。
 - 遥感、GIS、地理空间智能、地貌/DEM、点云/三维建模、时空图、视频 GIS 或轨迹/位置数据本子需要额外检查空间对象、数据模态、几何/物理/拓扑约束和验证链条。
 
@@ -55,6 +56,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 复制已中本子的原文、未公开思路、数据、图表或保密研究基础。
 - 替代当年官方指南、申请系统和单位科研管理部门要求。
 - 输出正式通讯评审意见。
+- 批量爬取 kd.nsfc.cn，或代替申请人登录、过验证码操作基金委系统。
 
 ## 安装
 
@@ -129,6 +131,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 - 形式与栏目完整性
 - 图表与可读性
 - 数据、验证与研究基础映射
+- 资助格局与撞题核查（如已查 kd）
 - 文献与研究现状
 - 政策与科研诚信
 - 信息通信类专项检查（如适用）
@@ -161,6 +164,7 @@ nsfc-benzi-audit/
     ├── geospatial-remote-sensing.md
     ├── medical-biomedical.md
     ├── representative-works.md
+    ├── kd-lookup.md
     ├── exemplar-learning.md
     └── current-rules.md
 ```
