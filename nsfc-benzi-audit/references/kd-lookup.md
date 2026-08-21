@@ -10,7 +10,7 @@ Everything else in this skill is a closed-world text audit: it judges the draft 
 
 | Module | Content | Access |
 | --- | --- | --- |
-| 结题项目检索 | 已结题项目：批准号、名称、负责人、依托单位、项目类别、申请代码、批准/结题年度、资助经费、中文摘要、关键词 | Open (no login) |
+| 结题项目检索 | 已结题项目：批准号、名称、负责人、依托单位、项目类别、**申请代码**、批准/结题年度、资助经费、登记关键词、**成果计数**（期刊论文/会议论文/专著/专利/奖励） | Open (no login) |
 | 结题报告全文 | 结题报告 / 成果报告 full text | Needs 科学基金网络信息系统 (ISIS) account |
 | 资助项目检索 | 已资助（含未结题）项目清单 | Captcha-gated |
 | 项目成果 | 项目产出的论文、专著、专利、获奖 | Open |
@@ -22,6 +22,17 @@ Three constraints that shape every use of this surface:
 - **~4-year blind spot.** Abstracts and full text appear only after 结题. A project funded in year N surfaces around N+4 (青年 3 年 + 结题公开延迟). The freshest collision signal lives in 资助项目检索, which is captcha-gated. So a clean 撞题 result is weak evidence; a positive hit is strong evidence.
 - **Application-code drift.** NSFC restructured 申请代码 in recent years (rolled out by 学部, not all at once). Old 结题项目 carry the code system in force at their 批准年度. When comparing code distributions, say which years the counts came from and do not treat an old code string as current. The current annual 指南 is authoritative for the code the applicant should file under.
 - **Selection bias.** Only funded projects are in the database. It shows what got funded, never what was rejected, so it cannot tell an applicant that a phrasing "works" — only that a topic is occupied.
+
+## Query Mechanics (verified against the portal, 2026-08-21)
+
+These decide whether a query returns anything at all. Tell the applicant, or a query comes back empty and gets misread as "no competing work".
+
+- **结题年度 is mandatory.** The 结题项目检索 form requires one 结题年度 per query, so a multi-year sweep is one query per year. A missing 结题年度 returns 请正确输入检索条件, not zero hits.
+- **Search the words that appear in project titles, not the words a paper would use.** `干涉图` returned 0; `干涉` returned 62 in the same year. NSFC titles favor 干涉测量/干涉相位/InSAR over the applicant's own method vocabulary. Run 3-5 title-level variants before concluding anything.
+- **Broad title words pull in homonyms across 学部.** `干涉` also returns 量子干涉、涡干涉、光学干涉仪 from A/B 学部. Filter the hit list by 申请代码 before counting anything, or the code distribution is meaningless.
+- **关键词 is the registered keyword field, matched literally.** It misses far more than the title field. Use it to confirm, never to rule out.
+- **The result row already carries 申请代码 and the achievement counts**, so lookups 2 and 3 need no extra clicks: the code distribution and the 论文/专利 band come straight from the hit list.
+- Results are capped (about 100 pages); a broad term gives a count, not a complete list.
 
 ## Default Mechanism: The Applicant Runs The Query
 
@@ -43,6 +54,7 @@ Ranked by how much they change the revision list. Run 1 and 2 whenever the draft
 - **Read**: for each hit whose 摘要 overlaps the draft, name which 研究内容 it overlaps and on which axis (对象 / 数据条件 / 方法 / 验证).
 - **Convert to action**: overlap is not a veto — it is a demand for an explicit differentiation sentence. Write the fix as "在创新点第 N 条后补一句，说明相对 [某已资助方向] 新增的变量/关系/边界". If three or more funded projects cover the same object with the same method, the finding escalates: the 通讯评审人 is plausibly one of those PIs, and an undifferentiated draft reads as a rerun.
 - **On empty result**: report "在 kd 已结题库中未命中，但存在约 4 年数据盲区，不能据此声称新颖". Never convert an empty result into a novelty claim.
+- **The 结题库 alone is not enough for this lookup.** The nearest competitors are usually funded in the three or four years before submission, which is exactly the blind spot — so a 结题库-only sweep can report a crowded topic as clear. The collision check is only meaningful when the applicant also runs 资助项目检索 (项目公布), captcha and all. If only the open endpoint was run, say so and mark the result 不完整.
 
 ### 2. 申请代码校准 (code routing)
 
@@ -57,6 +69,7 @@ Ranked by how much they change the revision list. Run 1 and 2 whenever the draft
 - **Read**: the realistic band of 论文/专利 output for that project type in that code.
 - **Convert to action**: if the draft promises well above the band, this maps directly onto canonical 通讯评议 negative comment #5 (预期成果过高，超出申请人基础与能力). Recommend restructuring 预期成果 by scientific question rather than by count, and bringing the counts into the observed band.
 - **Do not** report a mean as if it were a rule. Report it as "同类结题项目产出多在 X-Y 区间（样本 N，查询日期）".
+- **This lookup kills false alarms as often as it raises real ones.** A paper-count promise looks like over-promising until the band is measured, and the measured median in a given 代码 is often well above what the draft commits to — which turns the finding from "承诺过高" into "承诺偏保守，问题只在成果没按科学问题拆分". Measure before flagging, and drop the flag when the data does not support it.
 
 ### 4. 申请人自身项目连续性 (self-overlap and past performance)
 
