@@ -16,6 +16,7 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
    - For DOCX input, extract text while preserving headings and tables where possible.
    - For extracted Markdown/text folders, prefer `output.md`, `full.md`, or the largest readable Markdown/text file; inspect images only when visual logic diagrams or tables matter.
    - If the file is scanned or extraction is noisy, state the limitation in the report and avoid treating OCR artifacts as applicant mistakes.
+   - If a prior `本子诊断报告.md` (or an earlier revision list from this skill) sits next to the draft, read it before diagnosing and treat this run as a re-audit: grade each earlier 必改 item as 已改 / 未改 / 改动无效 against the current text, citing where in the new draft the change landed. Then diagnose the new draft normally. Do not re-derive the earlier findings from scratch, and do not silently drop an earlier 必改 item that is still unaddressed.
 
 2. Identify the review scope before judging.
    - Extract project category, research attribute, application code, title, abstract, keywords, applicant/team context, and section boundaries.
@@ -24,7 +25,7 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
 
 3. Load the right references.
    - Always read `references/benzi-logic.md` before diagnosing logic or writing suggestions.
-   - Read `references/audit-surfaces.md` for full diagnosis, structure/form checks, figure/readability checks, literature-current-status checks, or policy-risk triage.
+   - Read `references/audit-surfaces.md` for full diagnosis, structure/form checks, figure/readability checks, annual-plan and expected-outcome checks, budget-to-task mapping, literature-current-status checks, or policy-risk triage.
    - Read `references/question-distillation.md` when judging how well the scientific question is distilled: the 关键科学问题 importance argument, the rationale's convergence chain, the 科学问题属性 justification, drafts claiming 原创/独辟蹊径/卡脖子/瓶颈/学科交叉, or when the user asks whether the 科学问题凝练得好.
    - Read `references/representative-works.md` when the draft lists 代表性论著/代表作/主要论文, or when 研究基础 leans on the applicant's publications. Do not judge those works from titles alone — get the abstract and method from the applicant's PDFs first, else via the `paper-lookup` skill, else mark them 未核实.
    - Read `references/kd-lookup.md` when the audit needs external evidence rather than draft-internal logic: 撞题/选题重复风险, 申请代码是否送对学部, 预期成果是否超额承诺, 申请人自己已资助/已结题项目的重复度与绩效, or a draft claiming 国内尚无人开展. The applicant runs the queries on kd.nsfc.cn; never automate its login or captcha, and never report a lookup result without the query string, hit count, and date.
@@ -61,7 +62,7 @@ Do not write a formal peer-review opinion unless the user explicitly asks for co
 
 8. Output a Markdown report.
    - Default filename: `本子诊断报告.md` next to the source draft when working in files; otherwise answer in chat.
-   - Include: overall judgment, one-page logic map, prioritized fixes, section-by-section findings, structure/form checks, figure/readability checks, data/validation evidence mapping, representative-works support (when listed), funding-landscape/topic-collision checks (when kd lookups were run), literature checks, consistency matrix, candidate rewrites, official-rule status, and limits.
+   - Include: overall judgment, one-page logic map, prioritized fixes, prior-round re-check (when re-auditing), section-by-section findings, annual-plan/expected-outcome findings, budget-to-task mapping (when the draft carries 预算表/预算说明), structure/form checks, figure/readability checks, data/validation evidence mapping, representative-works support (when listed), funding-landscape/topic-collision checks (when kd lookups were run), literature checks, consistency matrix, candidate rewrites, official-rule status, and limits.
    - If successful examples were used, include a short exemplar-derived pattern section with transferability limits.
    - Do not paste long extracted source text. Quote only short phrases needed to support findings.
 

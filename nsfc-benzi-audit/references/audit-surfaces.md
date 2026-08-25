@@ -78,8 +78,6 @@ Conventions strong drafts reliably follow (expect these; flag their absence):
 - A 立项依据示意图 using 实线=known / 虚线(或问号)=hypothesis — the dashed part is the project's innovation.
 - Research design principles to check in the route figure: 随机、对照、重复 where the field expects them.
 
-Annual-plan do's and don'ts: 4-6 lines per year, layered; do not spend dedicated time on "购买试剂 / 查阅文献 / 预试验" or "结题 / 整理资料 / 撰文"; schedule long-lead work (model building, animal-model prep, patient enrollment) early.
-
 Figure-fidelity caveat: when the source is a converted/extracted draft (e.g. mineru), a 流程图/示意图 may be re-rendered as broken mermaid or lost. Do not judge figure logic from a mangled mermaid block — consult the original image (the `images/` directory) before flagging figure-logic problems, and note extraction loss as a limitation rather than an applicant mistake.
 
 Flag:
@@ -129,6 +127,53 @@ Flag:
 - Platform/data outputs whose quality metrics, openness, annotation rules, uncertainty, or validation use are unclear.
 - A team basis section that proves general strength but not who can solve which proposed bottleneck.
 
+## Annual Plan And Expected Outcomes
+
+Use this surface whenever the draft contains 年度研究计划 or 预期研究结果. It is where reviewers test whether the plan is executable and whether the applicant knows their own capacity.
+
+年度计划 checks:
+
+- 4-6 lines per year, layered, each traceable to a research content.
+- Do not spend dedicated schedule time on 购买试剂 / 查阅文献 / 预试验 or on 结题 / 整理资料 / 撰文 — those are not research progress.
+- Long-lead work (model building, animal-model prep, patient enrollment, data campaign, field season) is scheduled early.
+- Dependencies in the content chain are respected: a content consuming another's output cannot start in the window that output is produced.
+- The year-by-year effort implied by the schedule matches the budget's year distribution.
+
+预期成果 checks:
+
+- Outcomes are split by scientific question, not by count. "SCI 6 篇 / 专利 2 项 / 硕士 3 名" is a workload indicator, not a scientific product; the strong form names, for each key scientific question, what will be known, established, or made verifiable.
+- Outcome scale must be defensible against the demonstrated basis — this is canonical 通讯评议 negative comment #5 (预期成果过高) in `current-rules.md`. Before flagging counts as over-promised, calibrate them against same-code same-category 结题项目 with lookup 3 in `kd-lookup.md`; the measured band clears a suspected over-promise as often as it confirms one.
+- Deliverables such as datasets, software, platforms, standards, or atlases must say how they test a scientific claim, not only that they will be produced (see the key-project surface above).
+
+Flag:
+
+- An annual plan that restates the research contents once per year with no progression.
+- Outcomes that promise what the research basis already delivers.
+- Milestones with no verification event — no comparison, no baseline, no validation scene.
+
+## Budget And Task Mapping
+
+Use this surface when the draft includes 预算表, 预算说明, or a 经费需求 discussion. Budget is a logic surface, not only a compliance one: reviewers read it as a second statement of what the project actually plans to do, so a budget that disagrees with the research plan damages both.
+
+Map every budget line to a research content or technical-route step, the same way 研究基础 is mapped:
+
+| 预算科目 | 金额 | 对应的研究内容/方案步骤 | 测算依据 | 缺口 |
+| --- | --- | --- | --- | --- |
+
+Check:
+
+- Each 科目 traces to a named research content or plan step. A line item serving no content is padding, or evidence of a task the draft never stated.
+- Conversely, each content needing data, samples, computing, testing, fieldwork, or fabrication has a line behind it. A content that costs nothing is a common tell that it was added for structure, not for execution.
+- 设备费 scale matches the project type; a 青年 draft buying large instruments is a mismatch.
+- 测试化验加工费, data acquisition/annotation, and 机时 match the data and validation scale claimed in 研究方案.
+- 劳务费 matches the team size and duration described in 研究基础.
+- 合作转拨/外拨 implies a named collaborator whose role is visible in 研究方案 and 研究基础.
+- 工作条件 and 预算 agree on what must be purchased versus what already exists.
+
+For the rule side — 直接/间接费用 boundary, the 差旅费+会议费+国际合作交流费 测算依据 threshold, 万元 formatting — use `current-rules.md`. Do not restate amounts, caps, or 科目 names here, and report them as 需申请人按当年指南确认.
+
+Do not invent 测算依据, equipment prices, or collaborator shares. When a number carries no stated basis, report it as 依据缺失 and leave the number to the applicant.
+
 ## Literature And Current Status
 
 The literature review should support the argument for this project, not merely prove the applicant read papers.
@@ -170,7 +215,7 @@ Common triage items:
 - AI-assisted writing declaration or other current-year AI-use requirements.
 - Scientific integrity: no fabricated references, data, preliminary work, achievements, authorship, or collaborations.
 - Ethics, biosafety, data security, human/animal subjects, geographic/sensitive data, field sampling, and collaboration commitments where relevant.
-- Budget and missing-condition consistency.
+- Budget rule compliance only — amounts, caps, 科目 names, and formatting. The budget-to-task logic check lives in `Budget And Task Mapping` above; keep the two findings separate.
 
 Report uncertain issues as "需申请人按当年指南确认", not as definitive rule violations.
 
@@ -192,6 +237,16 @@ For each supplementary surface, keep findings short:
 ### 数据、验证与研究基础映射
 - 风险：
 - 依据：
+- 建议：
+
+### 年度计划与预期成果
+- 风险：
+- 依据：
+- 建议：
+
+### 预算与任务映射
+- 风险：
+- 依据缺失的科目：
 - 建议：
 
 ### 文献与研究现状
