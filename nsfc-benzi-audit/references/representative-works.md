@@ -48,6 +48,7 @@ Then build the support matrix (see the report template): every 研究内容 shou
 
 - 青年: thin or partly adjacent basis is tolerable — potential and an independent, focused story weigh more than volume. Do not demand a 面上-scale track record.
 - 面上: continuity matters. Representative works should show an accumulating line that the proposal extends, plus completion status of prior NSFC projects.
+- 面上 转向 (the proposal opens a new direction rather than extending the old one): a funded case has been observed where every 代表作 was 唯一一作/唯一通讯 but matched the proposal on the **方法轴 only** (modelling, estimation, and detection capability carried over from the applicant's previous direction) with no work at all on the new 对象; the 对象 axis was carried entirely by unpublished 预研 figures on real data. So "内容 with no representative work on any axis" stays the top finding, but "内容 with no representative work on the 对象 axis" is not by itself fatal — check first whether 研究基础 carries that axis with preliminary results, and whether the draft declares the switch (see the adjacent-basis strong form in `benzi-logic.md`). Silent switching is the flag; declared switching with 预研 evidence is a funded shape.
 - 地区: calibrate to regional positioning; do not penalize venue tier alone.
 
 ## Optional Deep Signal

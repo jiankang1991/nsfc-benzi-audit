@@ -77,6 +77,7 @@ Conventions strong drafts reliably follow (expect these; flag their absence):
 - For content chains that are bidirectional / 协同 / feedback, the content-architecture figure should show feedback arrows, not a straight pipeline.
 - A 立项依据示意图 using 实线=known / 虚线(或问号)=hypothesis — the dashed part is the project's innovation.
 - Research design principles to check in the route figure: 随机、对照、重复 where the field expects them.
+- For a draft claiming a new observation dimension or a measurement beyond an existing limit, the load-bearing preliminary figure is a **对照式实证图**: the same target rendered in the incumbent representation (where the effect is invisible) beside the proposed one (where it is obvious), plus an independent reference — optical/ground truth, or a simulation with known input whose predicted curve is overlaid on the observed one. One such panel does more work than a page of sensitivity prose. Its absence in a "new modality" draft is a real finding, because nothing else can show that the claimed signal exists in real data.
 
 Figure-fidelity caveat: when the source is a converted/extracted draft (e.g. mineru), a 流程图/示意图 may be re-rendered as broken mermaid or lost. Do not judge figure logic from a mangled mermaid block — consult the original image (the `images/` directory) before flagging figure-logic problems, and note extraction loss as a limitation rather than an applicant mistake.
 
@@ -145,6 +146,8 @@ Use this surface whenever the draft contains 年度研究计划 or 预期研究�
 - Outcome scale must be defensible against the demonstrated basis — this is canonical 通讯评议 negative comment #5 (预期成果过高) in `current-rules.md`. Before flagging counts as over-promised, calibrate them against same-code same-category 结题项目 with lookup 3 in `kd-lookup.md`; the measured band clears a suspected over-promise as often as it confirms one.
 - Deliverables such as datasets, software, platforms, standards, or atlases must say how they test a scientific claim, not only that they will be produced (see the key-project surface above).
 
+Priority calibration: funded drafts routinely break the finer rules above — a bare 3-line-per-year plan, "撰写结题报告" occupying the last year, count-style 预期成果 — and are funded anyway. Keep these as low-priority polish unless the plan also breaks a content dependency, contradicts the research basis, or schedules long-lead work late. What actually distinguishes a strong 预期成果 block is the *ordering*: named scientific products first (物理模型 / 理论方法 / 判据 / 精度界 / 数据集), counts after. Do not lead an audit with annual-plan nitpicks.
+
 Flag:
 
 - An annual plan that restates the research contents once per year with no progression.
@@ -201,6 +204,15 @@ Flag:
 - Missing comparison with obvious competing methods or adjacent fields.
 - Literature gaps that do not lead to the proposed method.
 - Reference formatting inconsistency if references are provided.
+
+Empty-field rationale (when the research proposition really is new). "经广泛文献调研，暂未发现针对……的研究报道" cannot be *reviewed* — there is nothing there to survey. Do not stop at flagging the claim; check whether the draft replaces the missing survey with the four neighborhoods that bound the gap:
+
+1. 物理/理论溯源 — the home field the idea is borrowed from, with its classic literature and the invariance that licenses the transfer (pair with the 跨域类比三件套 in `question-distillation.md`).
+2. 邻近建模工作 — what existing models of the *same object* do cover, and the structural reason they cannot cover this: the strong form shows the gap is by construction (the incumbent model class only admits mechanism A, so the mechanism this project studies falls outside its assumptions), not merely unstudied.
+3. 同现象的定性工作 — who has already *seen or displayed* the phenomenon without quantifying it, which converts "no one studied this" into the far stronger "the phenomenon is known, the quantitative mapping is missing".
+4. 现有主流手段的物理局限 — the incumbent competitor's limits argued from its operating principle (what it must assume, what it must repeat, which theoretical limit bounds it), not from its measured performance.
+
+A bare 空白声明 carrying none of the four is the real finding. Route the claim itself to the 撞题核查 in `kd-lookup.md`; note that recent funded projects sit in the 结题库 blind spot, so a null lookup does not confirm the blank.
 
 Do not invent missing papers. If the literature appears weak, suggest search directions and keywords rather than fabricating citations.
 
