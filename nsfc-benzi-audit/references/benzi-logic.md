@@ -2,12 +2,9 @@
 
 Use this reference to audit the internal logic of an NSFC application draft. It uses generic proposal-diagnosis language and avoids author-specific labels.
 
-## What Reviewers Weight Most
+## Diagnosis Dimensions
 
-Lead every audit with the factors reviewers weight above all else, then drill into sections.
-
-- Three decisive funding factors (三大中标要素): 创新性 (novelty), 技术路线 (technical route), 前期研究基础 (prior basis). A draft can be logically tidy and still fail if any of these three is weak.
-- Three scored axes (评审三要素): 课题 (importance + novelty + feasibility), 申请人 (academic level/potential), 研究条件 (resources). The weighting shifts by project type — 青年 leans on applicant potential; 面上 also weighs prior track record and results. Do not audit 课题 alone; check whether 申请人 and 条件 are separately demonstrated.
+Assess novelty, technical route, applicant contribution and available resources. A tidy argument can still have weak evidence or an infeasible plan. These are qualitative diagnostic dimensions, not an official scoring formula or a funding forecast. Separate required form fields from optional ways to make evidence visible.
 
 ## Scope
 
@@ -28,23 +25,17 @@ Do not apply one universal writing standard to every application. First calibrat
 
 For goal-oriented projects, do not reject a draft merely because the wording mentions performance, prediction, detection, platform, or application. Diagnose whether it converts a task into a constrained scientific problem: `specific object + specific data/condition + specific bottleneck + model/mechanism/method question + verifiable outcome`.
 
-Empirical weighting heuristics (experience values, not official rules — label them as such when reporting):
+Project-specific emphasis (qualitative, not scoring weights):
 
-- 青年 ≈ 70% novelty weight: the idea/proposal outweighs paper count, and novelty outweighs continuity. Youth reviewing "need not over-stress team size or accumulated work" — a focused independent story wins.
-- 面上 ≈ 40% novelty weight: paper basis outweighs the proposal and continuity outweighs pure novelty; reviewers also check completion of prior NSFC projects and their relation to in-progress work.
-- 地区基金: do not over-stress local conditions; its positioning is to stabilize and grow talent in eligible regions, so calibrate scope and resources to that, not to youth/general-project compactness.
+- 青年 C类: assess a focused independent proposal and the capacity to start. Accept field-appropriate evidence of personal contribution; do not demand a general-project publication volume or a fixed team composition.
+- 面上: explain both continuity and justified changes of direction; examine prior-project overlap and remaining work.
+- 地区: calibrate resources and scope to the project's regional context; do not penalize venue labels or local conditions alone.
 
-## Research Attribute Statement
+## Research Attribute And Form Version
 
-Recent application forms require selecting one of four 科学问题属性. Whether the block exists depends on submission year — older drafts carry no attribute tag, so do not assume it is present.
+Use the application year and actual form, as described in `current-rules.md`. Current binary 研究属性 (自由探索类/目标导向类基础研究) and the earlier four 科学问题属性 are different fields. Do not require the historical four-category block on a current form.
 
-When it exists, audit it:
-
-- The four categories: 鼓励探索、突出原创 (0→1 originality); 聚焦前沿、独辟蹊径 (1→N frontier); 需求牵引、突破瓶颈 (demand-pull / 卡脖子); 共性导向、交叉融通 (cross-disciplinary). Engineering/materials/information drafts usually fit category 2 or 3.
-- Preferred two-段 justification: paragraph one anchors the first four characters of the chosen attribute, paragraph two anchors the last four; the statement must cross-validate with the key scientific questions.
-- 需求牵引/卡脖子 still must extract a scientific problem, not stay at engineering need; 聚焦前沿 needs originality evidence, not just topicality.
-- Map the attribute statement as a row in the one-page logic map and the consistency matrix.
-- For the strong form of each attribute's argument (原创须引可核对的"不可能/空白"对立面, 独辟蹊径须论证主流路线的结构性死结, 需求牵引须走完五步凝练链并量化瓶颈, 交叉融通须给出交叉产物与双向反哺), see `question-distillation.md`.
+For a historical form that carries it, check whether its justification is consistent with the key questions. The labels are 鼓励探索、突出原创; 聚焦前沿、独辟蹊径; 需求牵引、突破瓶颈; 共性导向、交叉融通. Two paragraphs can help explain a compound label but are not a required structure. On any form, demand-pull, originality and interdisciplinary claims can be assessed with `question-distillation.md` when the text actually makes those claims. Do not mechanically map a binary attribute to exactly one historical category.
 
 ## Core Logic Elements
 
@@ -115,15 +106,15 @@ Diagnostic questions:
 - Does the abstract preview the same logic that later appears in research contents and scientific questions?
 - Does the final significance follow from the proposed achievement, or does it jump to broad social value?
 
-Concrete abstract rules (the abstract is ≤400 字, sits at the very front, and reviewers read it hardest — no wasted words):
+Abstract length and structure: check the target form's actual character limit and counting convention. Use the four logical moves as a writing aid, not fixed paragraphs.
 
-- Rough length budget for the four moves ≈ 100 / 100 / 200 / 50 字; the third move (contents + objectives + key questions + innovation) is the longest and must correspond word-for-word to the body.
+- If the applicable limit is 400 characters, an illustrative allocation is 80 / 80 / 180 / 40 = 380, leaving room for transitions. The total, not each allocation, must fit the verified form limit; summarize body contents faithfully without requiring verbatim wording.
 - Write in third person; no formulas or figures; do not make the abstract a near-duplicate of the research objectives.
 - Flag vague quantifiers ("不同体系", "多种条件") and missing concrete parameters (ratios, temperature ranges, scales) — these should be specified or removed.
 - Reusable skeletons (logic aid only; the applicant verifies every fact):
   - `采用[方法]，进行[对象]研究，阐明[机制]/揭示[规律]，为[目标]提供[思路/基础]`
   - `[对象/问题]危害大（问题）→ 主要症结在于（凝练问题）→ 前期研究发现（工作基础）→ 因而提出[假设]→ 拟用[方法]开展[内容]→ 探索/证明[目的]→ 对阐明[X]有重要意义（价值）`
-- The third move may or may not use ordering words (首先/其次/最后): both are defensible and sources disagree, so do not enforce either — the binding requirement is that each point maps one-to-one to a body research content.
+- Ordering words (首先/其次/最后) are optional. The abstract should faithfully cover the core question and contents without an enforced one-to-one sentence mapping.
 
 ## Title
 
@@ -183,7 +174,7 @@ For applied AI/remote-sensing/engineering drafts, a question may be acceptable e
 
 ### Scientific-Question Phrasing
 
-Funded Chinese proposals almost never phrase the key-scientific-question *title* as an interrogative. The canonical form is a compact noun phrase bundling object + relation word — 机理 / 机制 / 联合测度 / 耦合 / 矛盾 / 博弈 / 协同 (e.g. "散射机理约束", "安全性与可靠性之间的博弈", "动态低时延业务与资源实时智能适配"). The constrained "how/why" lives in the body sentence beneath the title.
+A key-scientific-question title may be an interrogative or a compact noun phrase bundling object + relation word — 机理 / 机制 / 联合测度 / 耦合 / 矛盾 / 博弈 / 协同 (e.g. "散射机理约束", "安全性与可靠性之间的博弈", "动态低时延业务与资源实时智能适配"). The constrained "how/why" lives in the body sentence beneath the title.
 
 - Do not flag a normal noun-phrase question as "task-like" merely because it is not interrogative.
 - Audit the body sentence, not the title form: does it hold a describable, computable, or verifiable relation under stated conditions? Use the interrogative "Under [conditions], how do [variables] constrain [model/mechanism]?" only as an internal test of that body sentence.
@@ -198,10 +189,10 @@ Correlation is not mechanism. For data-/ML-driven drafts, a regression or associ
 Different draft archetypes have specific completeness tests. Apply the ones that match the draft; do not force all onto every draft.
 
 - Mechanism-type ("××机理研究"): must be answerable as 内因(structure) × 外因(environment) × 演化阶段(孕育 → 发展 → 终止) and how they interact. 机理 (process principle) ≠ 规律 (result trend) ≠ single-factor experiment ≠ structural analysis. Drafts about 防治/调控 must first anchor which evolution stage they target.
-- Model-type ("建立××模型"): check for 基本假设 / 状态或控制方程 / 拐点·极值·转化点判据 / 定解条件 (initial + boundary) / 求解方法 (analytic or numerical) / 验证-修正-优化 / 应用. The two most commonly missing pieces are the 判据 and the 定解条件. Especially load-bearing for E/F-code and remote-sensing inversion drafts.
+- Model-type: inspect assumptions, variables, formulation, solver and validation. Governing equations, transition criteria and initial/boundary conditions matter when the model uses them; they are not mandatory elements of every statistical, discrete or learning model.
 - Inverse-problem-type (inversion, retrieval, diagnosis, identification, 由果推因 — remote-sensing retrieval, InSAR parameter estimation, and fault diagnosis all qualify): must be handled as an inverse problem — existence/uniqueness/stability (ill-posedness), regularization and priors, and causal exclusion/tracing/perturbation. Writing an inverse problem with forward-problem logic is a named common error.
-- Statistical/data-type: see "Correlation is not mechanism" above; require a sample-size floor, a stated reason for discarding outliers, and a path from the statistical finding to a mechanism question.
-- New-measurement-modality type (新观测维度 / 新测量体制 / 突破分辨率·精度·灵敏度物理极限): must carry four pieces. (a) A **quantified sensitivity relation** — an analytic ∂观测量/∂待测量 carrying real numbers under named system parameters ("在[波段/带宽/孔径]条件下，待测量变化 1 个单位 → 观测量漂移 N 个单位"), not the adjective "高灵敏". (b) A **precision-limit derivation** (CRLB / Fisher 信息 / 误差传递链 σ_观测量 → σ_中间量 → σ_待测量) stating how good the modality can get and at what SNR/信杂比. (c) An **observability criterion** saying which targets, geometries, or scales produce a usable signal at all under the system's bandwidth/PRF/孔径 constraints — a new modality that never says what it *cannot* see is overselling. (d) A stated **relation to the incumbent modality**: which of its physical limits this one sidesteps and which it inherits. The strong form promotes (b) into a 关键科学问题 instead of leaving it as an evaluation detail. A draft claiming to beat a physical limit with no sensitivity coefficient and no bound is asserting a magic amplifier — that is the finding.
+- Statistical/data-type: match sample size and validation to the claim; justify exclusions and distinguish association, prediction and causal inference. Mechanistic follow-up is required for a mechanism claim, not for every statistical-method project.
+- New-measurement-modality type: for claims of a new observable or improved physical precision, inspect (a) sensitivity under named parameters, (b) a proposed or preliminary precision-bound/error analysis, (c) observability limits and (d) comparison with the incumbent modality. State the observation/noise model, nuisance parameters and assumptions behind any CRLB/Fisher or error-propagation argument. Distinguish achieved preliminary evidence from bounds the project proposes to derive; require a credible derivation/validation plan rather than a finished theorem. An asserted breakthrough with neither supporting evidence nor a way to test its limit is the substantive gap.
 
 ## Rationale
 
@@ -234,17 +225,17 @@ Audit the rationale as a converging funnel and find which link is missing:
 
 1. Engineering/academic background → 2. its scientific essence and the scientific problem behind it → 3. what prior work already solved → 4. what remains unsolved → 5. what this project proposes to solve → 6. the key scientific (and technical) problems.
 
-Nesting must hold: 科学问题 ⊋ 拟解决的科学问题 ⊋ 关键科学问题. Write the 拟解决的科学问题 as itemized "如何……" points.
+Distinguish the wider field question from the narrower question the project can answer. This is a focusing aid, not a strict set hierarchy or a required interrogative format.
 
 Additional rationale checks:
 
-- The current-status review must be organized by *scientific angle* (concept / theory / method / model / mechanism), not by engineering task, region, or domestic-vs-foreign. Re-sorting a chronological or geographic survey into scientific angles is a real finding.
+- Organize the review around the relevant scientific gaps. Geographic or chronological subsections are acceptable if they still synthesize evidence and explain the proposed work; assess the argument rather than its heading scheme.
 - The engineering phenomenon in the background must first be classified into a scientific essence (mechanics / physics / chemistry / biology / mathematics problem) before a scientific question is extracted. Different phenomena can share one essence; one phenomenon can carry several essences.
 - Scientific significance must be argued from the scientific angle (concept / principle / method / model / mechanism / law and its place in the discipline). Replacing it with economic loss, national strategy, or social stability is a high-frequency deduction.
 - Application prospect ≠ direct application: stress the breadth reached *after* the problem is abstracted; "the problem is only a special case with no generality" is a rejection reason.
 - Background must focus to the same layer as the title's modifier (a low-permeability-grouting title should discuss low-permeability grouting, not high-speed-rail settlement). Cliché openers ("随着我国经济迅速发展……", "随着大数据时代的到来……") are filler — flag them.
-- The hypothesis should be grounded in the applicant's own preliminary work, not inferred from literature or by "refereeing" debates in the literature. A 立项依据示意图 with 实线=known / 虚线(或问号)=hypothesis is a recommended device; the dashed part is exactly the project's innovation.
-- Consider a dedicated closing subsection ("本项目研究思路的确立及意义", ~2 段, 300-500 字) that concentrates thread-task-outcome and makes the research contents feel 呼之欲出 while highlighting the key question and distinctive innovation. Flag its absence in longer rationales.
+- A hypothesis may arise from literature, theoretical reasoning, public data, new observations, technology or the applicant's own results. Verify its source and then separately assess the applicant's ability to test it. An optional rationale figure may distinguish established evidence from planned hypotheses; it is not a required source of novelty.
+- A concise rationale closing paragraph can help connect the gap, proposed tasks and expected knowledge. Suggest one when the argument is hard to follow, not merely because a separately titled closing subsection is absent.
 
 ## Research Contents And Objectives
 
@@ -265,18 +256,18 @@ Flag issues:
 - The project is too wide for the funding period.
 - Experiments or simulations are listed without saying what scientific question each resolves.
 
-Content-confusion flags (mechanically checkable — research contents are the "施工队", the plan is the "设计院"):
+Content–objective–method checks:
 
-- Contents restate the rationale or the literature/current status instead of naming what will be done.
-- Contents describe research thinking/route ("研究思路") rather than concrete tasks.
-- Contents are written as objectives — a content item that starts with "为了……" or uses goal verbs (揭示 / 探明 / 摸清 / 明确) has been written as a purpose, not a task.
-- Contents just stack the title's phrases, or re-pose the question instead of answering how it will be studied.
-- Contents write the research *method* in place of the content.
-- Contents do not 归题 (trace back to the title). Decompose the title's problem into 4-5 sub-scientific-questions, then map each to a content item.
+- Identify what will be studied, what result is sought, how it will be studied and how it will be evaluated, wherever these appear. The 2026 flexible research-content block may combine them.
+- Report actual repetition or missing operational detail; a goal verb or method appearing in research contents is not by itself a defect.
+- Check the scope against the period and resources. Proving or disproving a hypothesis can both be valid outcomes.
 
-Objectives should use verbs such as 揭示 / 阐明 / 建立 / 解释 / 提出 / 形成, set 3-4 objectives around the hypothesis that are logically interlinked, and end at a scientific target, not product performance. Proving *or* disproving the hypothesis are equally valid outcomes.
+Coverage, not equal counts: scientific questions, contents, objectives and validation have a many-to-many relationship. One question may need modeling, solving and validation tasks; one task may serve multiple questions. Use the map below and report only uncovered questions, unsupported objectives or tasks with no explained scientific role. Paragraph form and unequal list lengths alone are not findings.
 
-Count traceability: strong drafts often align the counts of 挑战 / 关键科学问题 / 研究内容 / 目标 and repeat a numbered refrain across sections. Check whether these trace 1:1; a mismatch (e.g. three scientific questions but only two contents carry them) is a real finding — an unaddressed key question, or a content with no question behind it. If a count cannot even be taken because a section is written as one paragraph instead of itemized points (objectives are the common case), that missing itemization is itself the finding.
+| Scientific question | Research contents | Objective | Validation/evidence | Gap |
+| --- | --- | --- | --- | --- |
+| Q1 | One or several tasks | | | |
+| Q2 | May share tasks with Q1 | | | |
 
 ## Research Content Dependency Graph
 
@@ -360,9 +351,9 @@ Flag innovation points that name only a technology stack, a fashionable model, a
 
 Concrete innovation rules:
 
-- Ceiling: keep genuine innovation *claims* fewer than 4 (1-2 is often best). Count the innovation claims, not the lines in a combined "特色与创新之处" section — that section legitimately mixes 特色 (distinctive features) with 创新 (novelty claims), so separate the two before judging and do not flag it merely for listing 4 items. Reviewers are 小同行 大专家 — one over-claimed point can sink the whole draft.
-- Banned phrases: 率先 / 首先 / 首次 / 填补空白, and hollow scope words 综合研究 / 系统研究 / 集成研究 / 多层次研究. "填补空白 / 研究者很少 / 学术热点 / 学术前沿" and vague "多学科交叉 / 非线性科学 / 系统科学" do not count as innovation — focus to a specific knowledge point (a specific soliton, a specific mechanism).
-- Novelty is a near-veto: NSFC funds "第一" not "第二", and a single retrieved prior report of the same work can trigger a 创新性 "一票否决". Do not routinely flag "no novelty search shown" — few drafts show one, so that is a low-signal finding. Instead, when a specific overlapping prior work is known or a "首次/填补空白" claim is suspiciously broad, prompt the applicant to run a novelty search (万方 / PubMed / prior funded-project database, keyword combinations) before asserting first-ness.
+- Keep innovation claims focused and supported. Separate distinctive features from novelty claims in a combined section; do not flag an arbitrary number of items when each is coherent and justified.
+- Scrutinize unsupported priority and scope claims such as 首次、填补空白、系统研究. Words alone are not proof of novelty or grounds for rejection; require the comparison and evidence appropriate to the claim.
+- A known overlapping prior work calls for comparison of object, conditions, assumptions and contribution. Explain the missing distinction rather than asserting an automatic novelty veto. When a broad priority claim is unsupported, suggest a focused literature/project search and preserve its search limits.
 - Three innovation types to help classify: 学术思想 / 技术方法 / 研究模式. State features and innovations as itemized points and argue why each *is* an innovation.
 
 ## Research Basis And Conditions
@@ -383,22 +374,16 @@ Flag issues:
 - The draft implies the core content has already been finished.
 - Equipment purchase or missing conditions are too large for the project type.
 
-Basis structure and thresholds:
+Basis and personal contribution:
 
-- Layer the basis 根/干/枝叶: 相关工作基础 (root context) / 直接工作基础 (trunk — the branches and leaves plus a list of directly-related publications) / 初步预实验结果 (enough to show 胸有成竹, not a finished project). Figure count is field-dependent: ~5-8 preliminary figures/tables is reasonable for experiment-heavy fields, but information/GIS/engineering drafts often show basis as deployed systems, awards, and ongoing projects in text — do not hard-count figures; judge whether each research content is evidenced.
-- Completion floor and ceiling: reviewers want to see roughly ~20% of the work already piloted (a floor the "don't look finished" ceiling does not give). Too little basis reads as high risk; the core content already finished reads as nothing left to fund.
-- Fatal omissions that draw explicit "不予推荐": no first-author SCI paper by the applicant; no introduction of the other team members; no preliminary results. List all authors accurately and never falsely mark first/corresponding authorship.
-- Calibration on the team omission: it is context-dependent, unlike the other two. A funded 面上 has been observed with an entirely empty 主要参与者 table — PI plus graduate students only, the team shown solely as the host lab's platform, equipment, and academic leader. Report a missing team section as a real finding when the plan needs capabilities the PI demonstrably does not have; otherwise keep it low priority. The first-author-paper and preliminary-result omissions stay hard.
+- Separate relevant prior work, directly supporting results and preliminary tests when useful. Evidence may be theory/proofs, journal or conference work, correspondence-author contributions, unpublished pilot data, software, instruments or verified access to resources. Judge relevance and personal contribution, not the evidence label alone.
+- Require enough support to assess critical risks and the ability to start, without a fixed percentage of already-completed work. Distinguish preliminary feasibility from the proposed result; a new direction may legitimately rely on transferable capabilities.
+- No first-author SCI paper, no separately labeled pre-experiment or no team table is not an automatic defect. Report the specific unproven capability or unsupported critical assumption, if any, after considering other evidence.
+- For each task, distinguish literature support for the idea, applicant/team capacity and access to resources. A representative publication need not exist for every task; an unpublished pilot or existing resource can supply the missing axis.
 
-Adjacent-basis strong form (topic-switching 面上). A track record sitting *next to* the proposal rather than on it is survivable — but only when the draft declares the adjacency itself:
+Adjacent basis (for a change of direction): explain which prior capabilities transfer to the new object and which assumptions or resources still need testing. Separating directly relevant work from transferable methods can help, but no prescribed sentence or publication-list layout is required. Preliminary work on the new object strengthens feasibility when available. The substantive risk is adjacent work represented as direct evidence when it does not support the claim.
 
-- split the publication list into 本项目相关的预研成果 and 方法论支撑成果, with the two groups labeled, not interleaved;
-- state in one explicit sentence that the second group "不属于本项目研究的科学问题", then name which transferable capability it does carry (信号建模 / 参数估计与精度界 / 特征分析 / 平台与数据获取);
-- carry the 对象 axis with preliminary results — figures on the *actual new object* — instead of with papers.
-
-The fatal version is adjacent work presented as if it were direct, which reads as either padding or misrepresentation. This is the positive counterpart of the "prior work was on a different organ" rejection recorded in `exemplar-learning.md`; the difference between the funded and rejected shape is the declaration, not the amount of adjacency.
-
-For 青年项目, check whether the basis proves applicant independence: first/corresponding work, self-owned datasets or methods, clear personal contribution, and a future plan not merely inherited from the supervisor/team. Team composition: students and mid-level members should dominate, with only a modest fraction of senior members (~12.7% is typical); avoid an over-large team ("保姆现象") and name-dropping senior figures. A team of only senior members plus students has been flagged by reviewers as ill-composed for a youth project.
+For 青年项目, assess independence through documented personal contribution, methods, data, proofs or other relevant work. Team needs follow the tasks: a PI with students can be adequate; a specialized plan needs the corresponding expertise. Do not prescribe senior-member percentages or penalize collaboration itself.
 
 For 面上项目, check whether the basis explains a natural continuation: what previous project/work solved, what new bottleneck emerged, and how this application deepens or expands it without duplicating completed work.
 

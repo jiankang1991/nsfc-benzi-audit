@@ -6,3 +6,6 @@ __pycache__/
 dist/
 build/
 /benzi/
+/.claude/settings.local.json
+/.remember/
+本子诊断报告*.md

@@ -103,6 +103,8 @@ Credible validation should make three layers visible:
 
 Check whether the draft explains data source, scale, representativeness, preprocessing, registration, annotation quality, permissions, security sensitivity, and continuity. For no-reference or hard-to-observe tasks, look for proxy ground truth, downstream-task metrics, field measurements, or uncertainty bounds.
 
+For learned models, check split independence at the unit of the generalization claim: adjacent/overlapping patches, repeated views of the same target and shared acquisitions can leak across random splits. A claimed cross-region, cross-time or cross-sensor result needs a corresponding held-out design; random splits can remain appropriate for a narrower within-source claim. Verify preprocessing and tuning use only allowed training/validation information.
+
 ## Research Basis Mapping
 
 Strong geospatial basis sections usually map:
@@ -134,7 +136,7 @@ Integration must be cashed out as a mechanism. When a draft's spine is 一体化
 
 ## Figure Conventions
 
-Funded geospatial/RS drafts front-load figures heavily (often 15+). Expect the framework/technical-route figures from `audit-surfaces.md`, plus field-specific ones: a 数据源 → 技术方法 → 研究内容 → 结果 → 效应 multi-lane master figure; a knowledge-graph schema figure (e.g. 形态类型 | 成因类型) for taxonomy/KG drafts; per-technique method flowcharts. Flag a geospatial draft that argues a data/knowledge/model/validation chain in prose with no framework figure.
+Use figures to expose spatial relations, data provenance, model structure or validation when they materially improve understanding. A shared overview, a schema or selected method diagrams may help; choose them against the applicable page limit. Do not require a framework figure or a historical figure-count norm from every draft.
 
 ## Report Add-On
 

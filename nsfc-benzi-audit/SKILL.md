@@ -1,76 +1,58 @@
 ---
 name: nsfc-benzi-audit
-description: Use when a user wants applicant-facing diagnosis and revision advice on a Chinese NSFC (国自然) application draft — asks for 本子把脉, 本子体检, 国自然申请书修改建议, NSFC benzi audit, 帮我看国自然本子, 标书逻辑诊断, 青年/面上/地区基金申请书修改, 对照已中本子, 从中标样本提炼写法规律, 选题撞题核查, or 申请代码选得对不对 — or wants critique of the title, abstract, key scientific questions, rationale, research contents, innovation, feasibility, research basis, 代表作/代表性论著 quality and support, or cross-section consistency. Accepts PDF/DOCX/Markdown/text or extracted draft text. This is applicant revision advice, not formal communication-review opinions; for expert review forms use nsfc-review.
+description: Use for applicant-facing diagnosis or re-audit of a Chinese NSFC (国自然) application draft — 本子把脉、申请书修改建议、标书逻辑诊断、对照已中本子、科学问题凝练、代表作支撑、选题撞题核查 or 申请代码检查. Accepts PDF/DOCX/Markdown/text and checks title, rationale, research contents, innovation, feasibility and cross-section consistency. For 青年/面上/地区 and related project types, calibrate to the application year and form. Does not write applications from scratch or provide formal expert-review opinions.
+license: MIT; see LICENSE
 ---
 
 # NSFC Benzi Audit
 
-Use this skill to produce applicant-facing diagnosis and revision advice for NSFC application drafts. The goal is to expose logic breaks, weak scientific-question framing, mismatched sections, and high-impact fixes before submission.
+Produce applicant-facing diagnosis and revision advice grounded in the supplied draft. Expose substantive logic breaks, weak evidence and high-impact fixes. Do not fabricate literature, results, project histories, budgets or official requirements.
 
-Do not write a formal peer-review opinion unless the user explicitly asks for communication review; route that to `nsfc-review`. Do not fabricate facts, papers, project histories, budgets, or official rule details. Keep final advice grounded in the draft text and clearly mark uncertain extraction/OCR issues.
+This workflow gives applicant revision advice. If the user requests formal communication review, identify that separate scope and use a suitable review skill only if available. No companion skill is required for draft-internal diagnosis.
 
 ## Workflow
 
-1. Locate and extract the draft.
-   - For PDF input, use PDF extraction/OCR as needed. Prefer existing extracted Markdown such as `full.md` or `output.md` when available.
-   - For DOCX input, extract text while preserving headings and tables where possible.
-   - For extracted Markdown/text folders, prefer `output.md`, `full.md`, or the largest readable Markdown/text file; inspect images only when visual logic diagrams or tables matter.
-   - If the file is scanned or extraction is noisy, state the limitation in the report and avoid treating OCR artifacts as applicant mistakes.
-   - If a prior `本子诊断报告.md` (or an earlier revision list from this skill) sits next to the draft, read it before diagnosing and treat this run as a re-audit: grade each earlier 必改 item as 已改 / 未改 / 改动无效 against the current text, citing where in the new draft the change landed. Then diagnose the new draft normally. Do not re-derive the earlier findings from scratch, and do not silently drop an earlier 必改 item that is still unaddressed.
+1. Select the source and establish the review scope.
+   - Prioritize the source and revision explicitly identified by the user. Separate target drafts, funded examples, old reports, templates and notes. Never select a draft merely because it is the largest Markdown file or named `full.md`/`output.md`.
+   - Reuse extracted text only after matching its title, revision and contents to the selected original. Record source path/version and extraction provenance. If multiple plausible drafts cannot be distinguished, ask which one to use.
+   - For PDF/DOCX, use available extraction/OCR tools and preserve headings and tables. If extraction is unavailable, state the limitation and work on readable supplied material; do not invent a tool or require a named companion skill.
+   - Inspect original figures when judging visual logic or evidence, including preliminary results. Converted mermaid/OCR is not authoritative. Missing extraction is a material gap, not proof that the applicant omitted content.
+   - Record application year, exact project category (including 青年 A/B/C where known), form version/source, funding mode (包干制/预算制/待确认), research attribute, application code and source completeness. Keep historical-example years separate from the target year.
+   - Use questions, goals and methods as analytical dimensions wherever they occur. Require separate headings only when the applicable form requires them. If year or form is unknown, continue content diagnosis and mark rule applicability unresolved.
+   - For a quick pass, focus on title, abstract, scientific questions, contents, innovation and basis. For full diagnosis, cover all supplied sections. Do not report absent attachments or omitted excerpts as confirmed defects in the original application.
 
-2. Identify the review scope before judging.
-   - Extract project category, research attribute, application code, title, abstract, keywords, applicant/team context, and section boundaries.
-   - If the user asks for a quick pass, inspect title, abstract, scientific questions, research contents, innovations, and research basis first.
-   - If the user asks for full diagnosis, inspect the whole application by section.
+2. Load the relevant references.
+   - Always read `references/benzi-logic.md` for logic diagnosis and writing advice.
+   - Read `references/current-rules.md` before judging form, year/category compliance, research attributes, application codes, budgets, ethics or integrity requirements. It contains a dated 2026 baseline; verify rules for the target year and stage.
+   - Read `references/audit-surfaces.md` for full diagnosis, figures, validation, annual plans, outcomes, budgets, literature or form checks.
+   - Read `references/question-distillation.md` for question-source and distillation quality, or claims of 原创/独辟蹊径/瓶颈/交叉/跨域类比. Treat exemplary argument patterns as contextual tests, not mandatory headings or universal proof prerequisites.
+   - Read `references/representative-works.md` when the draft lists representative works or relies on publications. Prefer supplied PDFs, then available DOI/publisher/preprint lookup tools. `paper-lookup` is an optional integration if installed. Distinguish bibliographic verification, abstract access and full-method verification; mark remaining evidence 未核实.
+   - Read `references/kd-lookup.md` for topic collision, code calibration, output comparisons or applicant-requested self-overlap checks. The applicant runs portal queries; never automate login or captcha. Record module, query, year fields, date, error/zero-hit status and counts before making coverage claims.
+   - Read `references/exemplar-learning.md` for funded/successful examples or improvement from sample applications. Use matched contexts, anonymized patterns and transferability limits; do not copy facts or distinctive wording into the target.
+   - Read `references/information-communication.md` for information science, communications, networks, applied AI, security, quantum communication or related information engineering.
+   - Read `references/geospatial-remote-sensing.md` for remote sensing, GIS, SAR/InSAR, optical/hyperspectral imagery, DEM/terrain, point clouds, spatial databases/graphs, trajectories, video GIS or city 3D models.
+   - Read `references/medical-biomedical.md` for medicine, cohorts/specimens, disease mechanisms, cell/animal/organoid models, biomarkers, interventions, ethics or biosafety.
+   - Use `assets/report-template.md` as an adaptable report shape unless the user requests another format.
 
-3. Load the right references.
-   - Always read `references/benzi-logic.md` before diagnosing logic or writing suggestions.
-   - Read `references/audit-surfaces.md` for full diagnosis, structure/form checks, figure/readability checks, annual-plan and expected-outcome checks, budget-to-task mapping, literature-current-status checks, or policy-risk triage.
-   - Read `references/question-distillation.md` when judging how well the scientific question is distilled: the 关键科学问题 importance argument, the rationale's convergence chain, the 科学问题属性 justification, drafts claiming 原创/独辟蹊径/卡脖子/瓶颈/学科交叉, drafts whose core idea is borrowed from another discipline or scale (借鉴/类比/受……启发), or when the user asks whether the 科学问题凝练得好.
-   - Read `references/representative-works.md` when the draft lists 代表性论著/代表作/主要论文, or when 研究基础 leans on the applicant's publications. Do not judge those works from titles alone — get the abstract and method from the applicant's PDFs first, else via the `paper-lookup` skill, else mark them 未核实.
-   - Read `references/kd-lookup.md` when the audit needs external evidence rather than draft-internal logic: 撞题/选题重复风险, 申请代码是否送对学部, 预期成果是否超额承诺, 申请人自己已资助/已结题项目的重复度与绩效, or a draft claiming 国内尚无人开展. The applicant runs the queries on kd.nsfc.cn; never automate its login or captcha, and never report a lookup result without the query string, hit count, and date.
-   - Read `references/exemplar-learning.md` when the user provides already-funded/successful examples, asks to compare with "中的本子"/"中标本子", or asks to improve this skill from sample applications.
-   - Read `references/information-communication.md` when the draft or provided examples involve information science, communication networks, optical networks, computer networks, data centers, remote sensing information processing, applied AI, network security, quantum communication, or related information-engineering directions.
-   - Read `references/geospatial-remote-sensing.md` when the draft or provided examples involve remote sensing, GIS, geospatial intelligence, DEM/terrain/geomorphology, spatial databases, point clouds, SAR/optical/hyperspectral imagery, video GIS, camera networks, POI/trajectory/location data, city 3D modeling, or geospatial knowledge graphs.
-   - Read `references/medical-biomedical.md` when the draft or provided examples involve medicine, clinical research, biomedicine, disease mechanisms, patient cohorts, specimens, animal/cell/organoid models, biomarkers, diagnostics, therapy/intervention, immunology, ethics, or biosafety.
-   - Read `references/current-rules.md` when checking current-year compliance, research attributes, application-code risk, budget/ethics/scientific-integrity issues, or anything tied to official NSFC rules.
-   - Use `assets/report-template.md` as the output shape unless the user requests another format.
+3. Build the logic and evidence maps.
+   - Extract object/scenario, problem/goal, method/path, innovation, validation and expected significance; track them across title, abstract, rationale, contents, objectives, questions, route and basis.
+   - Include the actual research attribute and any historical scientific-question statement when relevant, without mixing their form versions.
+   - Build a many-to-many question–content–objective–validation map. Report uncovered questions or tasks with no explained scientific role, not unequal item counts. Supporting methods and validation tasks can share a question.
+   - Distinguish the source of a question (literature, theory, observation, own work, demand) from the applicant's capacity to study it. Assess personal contribution, available resources and preliminary evidence in field-appropriate forms; no universal first-author SCI or pre-experiment threshold.
 
-4. If successful examples are provided, separate exemplar learning from target diagnosis.
-   - Treat funded examples as pattern evidence, not as text to copy or proof of causality.
-   - Anonymize names, project numbers, institutions, unpublished data, and sensitive achievements before extracting patterns.
-   - Prefer patterns repeated across matched examples: same project type, similar discipline/application code, similar research attribute, or comparable career stage.
-   - Apply exemplar patterns as contrastive questions: what does the target draft fail to make visible that successful examples make visible?
+4. Recheck prior findings when a prior report/list is supplied in files or chat.
+   - First match it to the same application. Check every earlier 必改 item against both the new text and the applicable evidence/rule, then diagnose the current draft normally.
+   - Use 已解决 / 部分落实 / 仍存在 / 改动无效 / 原意见撤销或不再适用 / 材料不足无法判断. Explain withdrawals, changed scope and incomplete evidence. Do not silently drop old items or preserve an incorrect finding merely because an earlier report said it.
 
-5. Build the one-page logic map.
-   - Extract the draft's core logic elements: object/scenario, focused problem or goal, method/path, distinctive feature or innovation, and data/validation loop.
-   - Extract the abstract logic chain: object/problem, method/goal, contents/innovation, achievement/significance.
-   - Map these terms across title, abstract, rationale, research contents, scientific questions, innovation, feasibility, and research basis.
-   - If a 科学问题属性 statement exists, map it too and check it cross-validates the key scientific questions.
-   - Mark missing, vague, inconsistent, or duplicated elements.
+5. Diagnose by impact and give concrete actions.
+   - Assess novelty, route, applicant contribution and resources. These are diagnosis dimensions, not fixed scoring weights or funding predictions.
+   - High priority: substantive unanswered questions, unsupported innovation, broken coverage, infeasible critical steps or verified material rule violations.
+   - Medium priority: section-level argument or evidence gaps. Low priority: presentation preferences and local expression. Item counts, heading style and figure counts alone do not justify a substantive defect.
+   - For each major finding cite the supplied location/short phrase, explain its consequence and give an actionable fix. Separate verified official requirements, logic/evidence risks and optional presentation suggestions.
+   - Use fact-conditional revision skeletons with placeholders, not invented results or ready-made application claims. Label proposed expressions for applicant verification.
 
-6. Diagnose by priority, not by page order.
-   - Lead with the three decisive funding factors (创新性、技术路线、前期研究基础) and the three scored axes (课题、申请人、研究条件); see `references/benzi-logic.md`. Because 会评 leans on 通讯意见 + title + abstract (see `references/current-rules.md`), weight title/abstract/通讯-facing clarity accordingly.
-   - High priority: flaws likely to affect funding judgment, such as no real scientific question, engineering/technical task posing as basic research, object too broad, problem not focused, innovation unsupported, methods not tied to scientific questions, or research basis unrelated.
-   - Medium priority: section-level weaknesses, such as literature review not pointing to proposed contents, research objectives not scientific enough, feasibility too generic, innovation phrased as slogans, required columns that may be missing, figures that do not match the text, or literature gaps that weaken the rationale.
-   - Low priority: expression, structure, title length, repeated wording, formatting, and local polishing.
-
-7. Give concrete revision actions.
-   - For every major finding, cite the draft section or quoted phrase briefly, explain why it is a problem, and give an actionable fix.
-   - Prefer rewrite recipes and replacement skeletons over generic advice.
-   - When suggesting rewritten text, label it as a draft example that the applicant must verify against facts and literature.
-
-8. Output a Markdown report.
-   - Default filename: `本子诊断报告.md` next to the source draft when working in files; otherwise answer in chat.
-   - Include: overall judgment, one-page logic map, prioritized fixes, prior-round re-check (when re-auditing), section-by-section findings, annual-plan/expected-outcome findings, budget-to-task mapping (when the draft carries 预算表/预算说明), structure/form checks, figure/readability checks, data/validation evidence mapping, representative-works support (when listed), funding-landscape/topic-collision checks (when kd lookups were run), literature checks, consistency matrix, candidate rewrites, official-rule status, and limits.
-   - If successful examples were used, include a short exemplar-derived pattern section with transferability limits.
-   - Do not paste long extracted source text. Quote only short phrases needed to support findings.
-
-## Style
-
-- Write in simplified Chinese unless the user asks otherwise.
-- Be direct, specific, and applicant-facing: "建议将..." rather than "评审认为..." unless simulating review.
-- Separate "must fix before submission" from "can polish later".
-- Avoid empty comments such as "加强创新性"; say which scientific question, mechanism, model, method, experiment, or evidence must be changed.
-- Preserve academic integrity: do not invent literature, data, publications, patents, collaborations, preliminary results, or official policy requirements.
-- Do not copy distinctive wording, structure, data, or undisclosed ideas from successful examples into another applicant's draft.
+6. Write the report and preserve its evidence trail.
+   - Default filename: `本子诊断报告.md` next to the selected draft; otherwise answer in chat. Before replacing an existing report, preserve it under a unique dated/revision filename and record which prior report was compared.
+   - Include scope, overall assessment, maps, prioritized actions, prior-item recheck when applicable, section findings and requested rewrites. For full diagnosis include relevant supplementary surfaces, applicable field checks and the consistency matrix.
+   - Populate optional sections only when relevant. Record 已核查 / 部分核查 / 未核查 / 不适用 per surface, with evidence scope, sources and dates. Generate limitations from actual work rather than copying blanket disclaimers.
+   - Write in simplified Chinese unless asked otherwise. Keep advice applicant-facing, quote only short supporting phrases, and separate 必改 from 可润色.

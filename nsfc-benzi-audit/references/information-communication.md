@@ -36,7 +36,7 @@ Weak signs:
 - National strategy, standards, or industrial demand is long, but the scientific bottleneck remains one sentence.
 - The draft lists fashionable methods without explaining why existing methods fail under this project's constraint.
 
-Science-elevation devices (audit that at least one is present — these are how funded info-comm drafts turn scheduling/networking from a task into science):
+Possible ways to expose the scientific contribution (illustrative, not exhaustive requirements):
 
 - Unified mathematical description of heterogeneous multi-resources (e.g. 频谱/时隙/密钥, or 算力/路由/波长) plus mining their intrinsic constraint or coupling.
 - An analytic performance model (e.g. 阻塞率解析模型) plus a theoretical-condition proof (e.g. 严格无阻塞条件).
@@ -125,7 +125,7 @@ In information drafts, "first use of a model", "combined algorithm", "platform i
 
 Integration must be cashed out as a mechanism: when the spine is 一体化 / 协同 / 融合 (e.g. 通算融合, 通感一体), verify it resolves to a joint/unified objective, a shared resource model, or an explicit coupling mechanism — not a bundling slogan.
 
-Figure conventions: expect the framework and 总-分 技术路线 figures from `audit-surfaces.md`, plus architecture figures (e.g. multi-plane SDN, resource-scheduling/blocking flowcharts) and a "研究对象-需求-科学问题-内容-目标-验证" relationship figure. Flag an info-comm draft that argues an architecture→model→optimization→validation chain with no framework figure.
+Figures: use the options in `audit-surfaces.md` when an architecture or resource dependency is difficult to explain. A clear table or concise text can serve the same purpose; no fixed framework or per-content figure count is required.
 
 ## Report Add-On
 

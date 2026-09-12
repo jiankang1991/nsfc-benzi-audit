@@ -1,0 +1,12 @@
+[
+  {
+    "asset": "pics/case-2-mismatch.png",
+    "tool": "built-in image_gen.imagegen",
+    "prompt": "Edit only the annotation text of this Chinese academic application audit image. Preserve every original research-content and scientific-question body text verbatim, with all original glyphs, line wrapping, white background, boxes, dimensions and style. Do not paraphrase, invent or change the application text. Change heading '拟解决的关键科学问题（2.3）— 只有 2 条' to '拟解决的关键科学问题（2.3）— 写了 2 条'. Replace the bottom red box text with exactly '条数不同不等于逻辑断裂：先核查问题与内容的覆盖关系'. Replace the bottom red caption with exactly '建议说明内容③如何支撑前两项科学问题的求解或验证；无需为了凑数新增科学问题'. The corrected annotation must not assert the absence of a third question proves a problem. All other content stays unchanged. Sharp fully legible simplified Chinese typography."
+  },
+  {
+    "asset": "pics/case-4-outcomes.png",
+    "tool": "built-in image_gen.imagegen",
+    "prompt": "Edit only the bottom red annotation caption of this Chinese academic application audit image. Preserve all original application text verbatim, including item (1) about theories, optimization models, parallel processing and items (2),(3), with original line wrapping, heading, white background, dimensions, red highlight box and type styling. No new manuscript text and no rephrasing of the body. Replace the bottom red sentence that begins '① 只有数量指标' with exactly: '① 已有理论与方法成果；建议进一步明确各项成果对应的科学问题及验证标准'. It must acknowledge item (1) and must no longer assert '只有数量指标'. All remaining pixels/content should stay unchanged. Sharp readable simplified Chinese."
+  }
+]

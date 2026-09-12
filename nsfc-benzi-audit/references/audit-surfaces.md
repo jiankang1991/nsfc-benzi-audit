@@ -14,14 +14,9 @@ Look for:
 - Ongoing projects, completed NSFC projects, representative works, collaborations, ethics/safety, and other explanatory fields that appear relevant but are absent from the provided material.
 - Attachments or figures referenced in text but missing from extraction.
 
-Ranked 形式审查 checklist (most-frequent failure first — verify current-year specifics):
+Form checks must follow the target year, category and submission stage in `current-rules.md`. Verify applicant/project limits, code scope and required attachments only when their applicability and the supplied material are known. Do not rank rejection causes without a dated source. Distinguish application-stage electronic materials, institutional commitments and post-award signature/seal pages.
 
-- 人员超项 (members over the concurrent-project limit) — the single most common 形审 rejection.
-- Wrong 申请代码 (routes to the wrong 学部).
-- 依托单位 / 公章 inconsistency; missing or non-handwritten signature (笔迹一致).
-- Missing attachments: 伦理批件; two recommendation letters when the applicant has only a mid-level title and no doctorate; in-station postdoc consent letter; biosafety commitment; the "≤5 related papers" attachment limit.
-
-Keyword-reconstruction test: the keyword list should let a reader rebuild the draft's main thread. Flag first-level discipline names and over-broad words (安全、保护、曲线、工程) used as keywords; the second application code carries little weight while a wrong first code is costly.
+The title, object, methods and contribution should help explain the code and keywords. Broad keywords may reduce specificity, but neither keyword order nor the second code has a universal fixed reviewer-routing weight.
 
 Report as:
 
@@ -51,9 +46,9 @@ Flag:
 - Overuse of slogans such as "重大意义", "国际领先", "填补空白", or unsupported "首次".
 - Cliché openers that carry no information: "随着我国经济迅速发展……", "随着大数据时代的到来……" and similar.
 
-Reviewer-impression check ("酒香也怕巷子深"): a skimming reviewer should catch the load-bearing claims without slow reading. Check whether the key scientific question, the scientific hypothesis, preliminary results, and the distinctive feature are bold-highlighted, backed by one key-data figure, and reinforced by citing the applicant's own related papers.
+Fast-read check: are important questions, hypotheses, evidence and contributions easy to locate? Topic sentences, selective emphasis, tables or figures are alternatives; a lack of bold text or self-citations alone is not a finding.
 
-Concept-precision check: inconsistent or misused core concepts are cited as 函评 deductions. Watch high-frequency confusions — 强度 ≠ 稳定性, 机理 ≠ 规律, over-narrowing 本构关系 to stress-strain, and 耦合 used without saying which variables couple, how, and how they are decoupled for solution. A single mixed-terminology case (e.g. "2型糖尿病" and "Ⅱ型糖尿病" both used) has been cited by a reviewer as a reason to withhold funding in a competitive year — so terminology consistency is not always a low-priority polish item.
+Concept-precision check: flag terminology that changes the scientific meaning or confuses variables, mechanisms and results. Rank notation variants and local wording by their actual impact; do not predict rejection from a single cosmetic inconsistency.
 
 ## Figure And Visual Evidence
 
@@ -69,15 +64,15 @@ Check for:
 
 Strong figures often act as navigation: a reviewer should be able to reconstruct "why these contents, in this order, with these data and expected outputs" from the figure plus nearby paragraph.
 
-Conventions strong drafts reliably follow (expect these; flag their absence):
+Useful visual devices (select by complexity and information gain; absence alone is not a defect):
 
-- One 研究思路/总体框架图 that maps 对象/需求 → 挑战 → 关键科学问题 → 研究内容 → 目标 (→ 验证) in a single graph. A draft that presents research contents as prose with no framework figure is a real finding.
-- A 总-分 技术路线图 with swimlanes (e.g. 结构/科学问题/内容/方法/成果) as a clean framework diagram, not prose. Prefer 框架图 form so 研究对象、建模/实验方法、分组、观察指标、检测方法、研究目标 are 一目了然.
-- One method flowchart per 研究内容; a 总图 + 分图 split is fine.
+- An overview can map object/demand, challenges, questions, contents, objectives and validation. Recommend it when the relationships are otherwise hard to reconstruct; concise prose or a coverage table can also suffice.
+- A total-then-parts route figure can expose methods, samples, groups and evaluation. Choose swimlanes or another readable form if it clarifies the actual project.
+- Add per-method flowcharts only for steps whose complexity warrants them; do not require one per research content or a fixed number of figures.
 - For content chains that are bidirectional / 协同 / feedback, the content-architecture figure should show feedback arrows, not a straight pipeline.
 - A 立项依据示意图 using 实线=known / 虚线(或问号)=hypothesis — the dashed part is the project's innovation.
 - Research design principles to check in the route figure: 随机、对照、重复 where the field expects them.
-- For a draft claiming a new observation dimension or a measurement beyond an existing limit, the load-bearing preliminary figure is a **对照式实证图**: the same target rendered in the incumbent representation (where the effect is invisible) beside the proposed one (where it is obvious), plus an independent reference — optical/ground truth, or a simulation with known input whose predicted curve is overlaid on the observed one. One such panel does more work than a page of sensitivity prose. Its absence in a "new modality" draft is a real finding, because nothing else can show that the claimed signal exists in real data.
+- For a claimed new observable, paired evidence under the incumbent/proposed representations and an independent reference can be persuasive. Inspect available pilot data or simulation and the planned validation; if the signal has neither evidence nor a credible test, report that gap without requiring a particular panel layout.
 
 Figure-fidelity caveat: when the source is a converted/extracted draft (e.g. mineru), a 流程图/示意图 may be re-rendered as broken mermaid or lost. Do not judge figure logic from a mangled mermaid block — consult the original image (the `images/` directory) before flagging figure-logic problems, and note extraction loss as a limitation rather than an applicant mistake.
 
@@ -134,16 +129,16 @@ Use this surface whenever the draft contains 年度研究计划 or 预期研究�
 
 年度计划 checks:
 
-- 4-6 lines per year, layered, each traceable to a research content.
-- Do not spend dedicated schedule time on 购买试剂 / 查阅文献 / 预试验 or on 结题 / 整理资料 / 撰文 — those are not research progress.
+- Describe substantive milestones at the resolution needed to judge progress; no fixed line count per year.
+- Literature work, procurement, pilot experiments and reporting may appear as enabling or closing activities. Check whether substantive research milestones remain visible, rather than banning these activities from the schedule.
 - Long-lead work (model building, animal-model prep, patient enrollment, data campaign, field season) is scheduled early.
-- Dependencies in the content chain are respected: a content consuming another's output cannot start in the window that output is produced.
-- The year-by-year effort implied by the schedule matches the budget's year distribution.
+- Check milestone order and usable intermediate outputs. Upstream and downstream tasks may occur within the same year or overlap in an iterative plan; report only a real dependency conflict.
+- If a budget or resource schedule is provided, compare its timing with the work plan. Do not demand an annual budget breakdown from a 包干制 application.
 
 预期成果 checks:
 
 - Outcomes are split by scientific question, not by count. "SCI 6 篇 / 专利 2 项 / 硕士 3 名" is a workload indicator, not a scientific product; the strong form names, for each key scientific question, what will be known, established, or made verifiable.
-- Outcome scale must be defensible against the demonstrated basis — this is canonical 通讯评议 negative comment #5 (预期成果过高) in `current-rules.md`. Before flagging counts as over-promised, calibrate them against same-code same-category 结题项目 with lookup 3 in `kd-lookup.md`; the measured band clears a suspected over-promise as often as it confirms one.
+- Compare expected outcomes with the scientific tasks, time and demonstrated capacity. Comparable kd outputs can provide context when available, but counts are not quotas or proof of feasibility. If no suitable lookup is available, state that limit and judge only the support in the draft; do not invent a comparison band.
 - Deliverables such as datasets, software, platforms, standards, or atlases must say how they test a scientific claim, not only that they will be produced (see the key-project surface above).
 
 Priority calibration: funded drafts routinely break the finer rules above — a bare 3-line-per-year plan, "撰写结题报告" occupying the last year, count-style 预期成果 — and are funded anyway. Keep these as low-priority polish unless the plan also breaks a content dependency, contradicts the research basis, or schedules long-lead work late. What actually distinguishes a strong 预期成果 block is the *ordering*: named scientific products first (物理模型 / 理论方法 / 判据 / 精度界 / 数据集), counts after. Do not lead an audit with annual-plan nitpicks.
@@ -156,7 +151,7 @@ Flag:
 
 ## Budget And Task Mapping
 
-Use this surface when the draft includes 预算表, 预算说明, or a 经费需求 discussion. Budget is a logic surface, not only a compliance one: reviewers read it as a second statement of what the project actually plans to do, so a budget that disagrees with the research plan damages both.
+First establish year, category, funding mode and document purpose using `current-rules.md`. A 包干制 application needs no budget; an optional internal estimate may still be checked for resource feasibility. Apply this surface to supplied formal budgets or resource estimates, labeling their role.
 
 Map every budget line to a research content or technical-route step, the same way 研究基础 is mapped:
 
@@ -165,15 +160,15 @@ Map every budget line to a research content or technical-route step, the same wa
 
 Check:
 
-- Each 科目 traces to a named research content or plan step. A line item serving no content is padding, or evidence of a task the draft never stated.
-- Conversely, each content needing data, samples, computing, testing, fieldwork, or fabrication has a line behind it. A content that costs nothing is a common tell that it was added for structure, not for execution.
-- 设备费 scale matches the project type; a 青年 draft buying large instruments is a mismatch.
+- Map spending to a task or shared need, allowing one line to serve multiple contents. Ask for the purpose of an unexplained line without presuming padding.
+- Each resource-dependent content needs a credible source: existing equipment/data, platform allocation, a shared budget line, other funding or new expenditure. No separate line or no incremental cost is not evidence that a task was added merely for structure.
+- Assess equipment necessity, access and cost against the actual method and resources; project category alone does not decide whether a purchase is inappropriate.
 - 测试化验加工费, data acquisition/annotation, and 机时 match the data and validation scale claimed in 研究方案.
 - 劳务费 matches the team size and duration described in 研究基础.
 - 合作转拨/外拨 implies a named collaborator whose role is visible in 研究方案 and 研究基础.
 - 工作条件 and 预算 agree on what must be purchased versus what already exists.
 
-For the rule side — 直接/间接费用 boundary, the 差旅费+会议费+国际合作交流费 测算依据 threshold, 万元 formatting — use `current-rules.md`. Do not restate amounts, caps, or 科目 names here, and report them as 需申请人按当年指南确认.
+For current categories, units and required measurement detail use `current-rules.md` and the applicable budget instructions. Never infer a universal ratio cap, explanation threshold or formal rejection outcome from old sample budgets.
 
 Do not invent 测算依据, equipment prices, or collaborator shares. When a number carries no stated basis, report it as 依据缺失 and leave the number to the applicant.
 
@@ -191,10 +186,10 @@ Check:
 
 Reference rules of thumb (adjust to field norms):
 
-- Roughly 20-30 references is a healthy band; far fewer suggests the applicant has not read the field.
+- Assess whether relevant foundational, competing and recent work is covered; do not infer inadequate reading from a universal reference-count band.
 - Include the newest work (submission year or the year before) and authoritative-venue work; too old-only reads as out of touch.
 - Include some of the applicant's/group's own related papers, but do not over-cite them.
-- English references may dominate, but keep some Chinese ones — most 通讯评审 reviewers are domestic.
+- Cite relevant work regardless of language; do not recommend a language quota or citations intended to appeal to presumed reviewers.
 - Each cited claim must be tied to a specific in-text citation point in the rationale, not just listed at the end.
 
 Flag:

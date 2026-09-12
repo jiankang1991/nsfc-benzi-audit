@@ -1,0 +1,25 @@
+--- a/nsfc-benzi-audit/references/question-distillation.md
++++ b/nsfc-benzi-audit/references/question-distillation.md
+@@ -20 +20 @@
+-These chains illustrate how evidence can motivate a question; adapt the links to the actual question source and claims. Neither a fixed sequence nor the applicant's own preliminary conclusion is mandatory:
++Strong cases present a complete logical chain; check for the *presence of each link* anywhere in the rationale, not for literal headings or ordering:
+@@ -22 +22 @@
+-General chain: 背景/方向 → 已有知识、观察或理论依据 → 科学问题 → 困难/局限 → 创新思路 → 知识增量 → 适用时的应用价值.
++General chain: 背景/方向选定 → 前期研究结论 → 据此凝练出科学问题 → 困难/局限 → 针对困难的创新手段 → 知识体系增量 → 应用价值.
+@@ -24 +24 @@
+-需求牵引 example: 应用需求 → 具体障碍 → 研究切入点及其证据 → 关键科学问题. Published results, theory and own prior work can each supply the evidence.
++需求牵引 variant (five steps): 应用需求 → 无法解决的具体障碍 → 研究切入点 → 依前期研究得出的结论 → 由此引出的关键科学问题.
+@@ -36 +36 @@
+-- 多问题关系: explain how the questions contribute to a coherent project, whether through dependency or complementary aspects. Judge coverage and achievable scope, not an exemplary count or a required serial order.
++- 多问题递进: 1-2 key questions is the norm in exemplary cases; when more are listed, they must show dependency or progression (谁的输出是谁的输入 / 根本—拓展—升华), not parallel enumeration.
+@@ -49 +49 @@
+-- 需求牵引、突破瓶颈: select the following checks according to the actual bottleneck claim.
++- 需求牵引、突破瓶颈: four checks beyond the five-step chain above.
+--- a/nsfc-benzi-audit/references/representative-works.md
++++ b/nsfc-benzi-audit/references/representative-works.md
+@@ -8 +8 @@
+-A draft can list strong works that are irrelevant to the proposal, or relevant works whose evidence quality or personal contribution is unclear. Assess those separately; neither venue nor author position alone establishes quality.
++A draft can list five strong papers that are irrelevant to the proposal, or five perfectly relevant papers that are all weak middle-author workshop entries. Report the two separately.
+@@ -34 +34 @@
+-- Venue context: use field conventions to interpret the work and its contribution, not as a prestige threshold or a demand to publish for a presumed reviewer community.
++- Venue fit: the venue's community should overlap the likely 通讯评审 community for the chosen 申请代码.

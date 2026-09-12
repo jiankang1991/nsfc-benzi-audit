@@ -97,7 +97,7 @@ Check model fit, not just experiment quantity:
 - Omics/bioinformatics: discovery versus validation split, batch effects, annotation, pathway inference, multiple-comparison control, and independent validation.
 - Drug/therapy/diagnostic work: mechanism, target engagement, pharmacodynamics/pharmacokinetics when relevant, toxicity, comparator, combination rationale, and translational boundary.
 
-For immunology or immunotherapy, inspect whether the model can actually represent the immune mechanism being claimed. Immunodeficient tumor models cannot by themselves prove T-cell, NK-cell, checkpoint, or microenvironment mechanisms.
+For immune-mechanism claims, identify strain/genotype, retained and missing immune components, reconstitution status and the mechanism actually tested. Nude mice retain NK activity whereas NSG lack functional NK cells; neither the broad label 免疫缺陷 nor a model name alone determines all mechanistic support. Flag a specific missing component/unsupported inference after checking controls and complementary evidence. Sources checked 2026-09-12: [JAX model selection](https://www.jax.org/news-and-insights/jax-blog/2020/may/top-tips-selecting-the-best-immunodeficient-mouse-model-for-your-research), [NSG FAQ](https://www.jax.org/jax-mice-and-services/find-mice/nsg-portfolio/frequently-asked-nsg-questions).
 
 ## Variant-Specific Checks
 

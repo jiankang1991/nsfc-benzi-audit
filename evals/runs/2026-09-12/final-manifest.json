@@ -1,0 +1,22 @@
+{
+  "nsfc-benzi-audit/LICENSE": "575233c0a1c393169225d385b7b709960f5397dfb37c5bd7ad7db378f1544d8d",
+  "nsfc-benzi-audit/SKILL.md": "de6aa529cffa2aa71c0b2882a0b9e4a9c50ca0e0bb87352c3af1f3e6fb32171f",
+  "nsfc-benzi-audit/agents/openai.yaml": "4e49104bd18d26e2bbc0c5702a1f8495fb3b951a1a2c82c7d30e7892faa042c7",
+  "nsfc-benzi-audit/assets/report-template.md": "5261677caadb8751199a6632f6447a59b95c6ec5b1b6eaa4ba177132e3d2debc",
+  "nsfc-benzi-audit/references/audit-surfaces.md": "0d8a69d5e50dda716607fdb08235880a8ad44cdb4b105386523384bf91d823fb",
+  "nsfc-benzi-audit/references/benzi-logic.md": "e02be0fb403c921b5ed229b8acec0e2127b20668c89f5520029fe7be6c6d1449",
+  "nsfc-benzi-audit/references/current-rules.md": "4df97e55bb986621080e74de77ca910e5abe8e20820cca4629ae3df0590daffa",
+  "nsfc-benzi-audit/references/exemplar-learning.md": "d4d91bff534b420ecd82175f2e776b75655d8b055d25deb05fb2d1f56b850a53",
+  "nsfc-benzi-audit/references/geospatial-remote-sensing.md": "c962d681d463da491deebee6fec29a5a2a29680cfcf74a1e85d73d09d7315fcd",
+  "nsfc-benzi-audit/references/information-communication.md": "7deddea43fc558bad1afeb3a07906993bb3c36ae90dadf3c652e5b7943d15eac",
+  "nsfc-benzi-audit/references/kd-lookup.md": "8a5822518aae62b54accdd48e7a3032e8909264916309a173653f2cf71f39fb2",
+  "nsfc-benzi-audit/references/medical-biomedical.md": "52facbeb34c6694ec4cfbee982f064eecc45e281f6125594b0de3e4be4ed8f53",
+  "nsfc-benzi-audit/references/question-distillation.md": "c26838ba025d638cd81646bfe3fe68306a0a44eaa2bf045e40213d1a50c31bb2",
+  "nsfc-benzi-audit/references/representative-works.md": "d0a562885da17ed0557e9d7c6a988182a52234cb9042a1d2396e81766a39b55e",
+  "evals/fixtures/lookup/results.md": "51f1383661e812b8c603378da0bb4d5f9dc1d25cd32d44fde16028d6ac5b7a37",
+  "evals/fixtures/medical/draft.md": "30579d077caf0ba471d5244d7215b7ccd5df02a608a8f8c36ef6cea3716e292e",
+  "evals/fixtures/revision/current-draft.md": "e9851a95ac40859ea5d695cc1f2da72a7c391f0666b3f9b6ac5b0bfce6513547",
+  "evals/fixtures/revision/full.md": "2a1c30e0a459047823e0cde3f5cc9ecfce01f305213e72d0e32f17104225db36",
+  "evals/fixtures/revision/previous-review.md": "b33d2acf4fcfdef2edf0dc77f32dcefa07c467625f9ff0c27cc9757c5c189b70",
+  "evals/fixtures/uncovered.md": "ab7b772a9dd27beba1301e5b30f2b7fb3b34c0c7875df63630f05256d2ce3872"
+}

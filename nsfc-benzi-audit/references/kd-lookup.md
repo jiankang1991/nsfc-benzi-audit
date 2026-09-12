@@ -2,11 +2,11 @@
 
 Use this reference when the audit needs evidence from outside the draft: whether the topic is already funded, whether the 申请代码 routes to the right community, whether 预期成果 is over-promised, whether the applicant's own funded projects overlap the proposal, or when the draft claims "国内尚无人开展".
 
-Everything else in this skill is a closed-world text audit: it judges the draft against itself. This surface is the only one that brings in external facts, so it is also the one where fabrication risk is highest. Every statement produced from this surface must carry a query string, a hit count, and an access date, or it does not go in the report.
+This surface, official-rule checks and literature verification all use external evidence. For kd coverage/count claims record the module, exact query/filter fields, year type, raw hits, screened/deduplicated sample size and access date. An individually verified project may be discussed when the total hit count is unavailable, but cannot support a frequency or coverage claim; mark that limit explicitly.
 
 ## What The Portal Exposes
 
-国家自然科学基金大数据知识管理服务门户 <https://kd.nsfc.cn/>. Observed 2026-08-21; re-check before relying on access details.
+国家自然科学基金大数据知识管理服务门户 <https://kd.nsfc.cn/>. Access mechanics last observed 2026-08-21. Reference consistency reviewed 2026-09-12; the portal could not be opened during that review, so no live mechanics were reverified. Re-check the form before relying on these details.
 
 | Module | Content | Access |
 | --- | --- | --- |
@@ -19,11 +19,11 @@ Everything else in this skill is a closed-world text audit: it judges the draft 
 
 Three constraints that shape every use of this surface:
 
-- **~4-year blind spot.** Abstracts and full text appear only after 结题. A project funded in year N surfaces around N+4 (青年 3 年 + 结题公开延迟). The freshest collision signal lives in 资助项目检索, which is captcha-gated. So a clean 撞题 result is weak evidence; a positive hit is strong evidence.
+- **Completion-index lag.** The 结题 module lags funding by the project duration and disclosure delay; roughly four years was a useful youth-project estimate in the recorded observations, not a universal freshness guarantee. The 资助 module includes funded/in-progress projects. State which modules and years were actually checked; a zero-hit result never establishes novelty.
 - **Application-code drift.** NSFC restructured 申请代码 in recent years (rolled out by 学部, not all at once). Old 结题项目 carry the code system in force at their 批准年度. When comparing code distributions, say which years the counts came from and do not treat an old code string as current. The current annual 指南 is authoritative for the code the applicant should file under.
 - **Selection bias.** Only funded projects are in the database. It shows what got funded, never what was rejected, so it cannot tell an applicant that a phrasing "works" — only that a topic is occupied.
 
-## Query Mechanics (verified against the portal, 2026-08-21)
+## Query Mechanics (last observed 2026-08-21, not reverified 2026-09-12)
 
 These decide whether a query returns anything at all. Tell the applicant, or a query comes back empty and gets misread as "no competing work".
 
@@ -40,7 +40,7 @@ Do not automate login, captcha, or bulk collection. Emit a 查询清单 for the 
 
 Rules:
 
-- Ask the applicant to paste back the result list (or a screenshot/CSV), including the query string, the filters used, and the hit count. Without the hit count, findings are unquotable.
+- Ask the applicant to paste back the result list (or a screenshot/CSV), including the query string, the filters used, and the hit count. Without a total hit count, restrict discussion to verifiable individual records and mark overall coverage/counts unknown.
 - If any scripting is used at all, restrict it to the open 结题项目检索 endpoint, cache every response, keep it at or below one request per second, and stop on the first 503 — the portal throttles aggressively and is a government service, not a data source to crawl.
 - Tell the applicant to search with **keywords only**. Never paste the abstract or research contents of an unsubmitted draft into an external search box.
 
@@ -50,32 +50,32 @@ Ranked by how much they change the revision list. Run 1 and 2 whenever the draft
 
 ### 1. 撞题核查 (topic collision)
 
-- **Query**: draft keywords (2-4 terms, one at a time) × 申请代码 × 批准年度 last 5-8 years, in both 结题项目检索 and 资助项目检索.
+- **Query**: run title-level keyword variants in both modules. For 结题项目检索 select one 结题年度 per query across the chosen completion-year range, then separately screen 批准年度 if needed. In 资助项目检索 use the available 批准年度 filters. Record both year fields; do not treat a funding-year range as a substitute for mandatory completion-year input.
 - **Read**: for each hit whose 摘要 overlaps the draft, name which 研究内容 it overlaps and on which axis (对象 / 数据条件 / 方法 / 验证).
 - **Convert to action**: overlap is not a veto — it is a demand for an explicit differentiation sentence. Write the fix as "在创新点第 N 条后补一句，说明相对 [某已资助方向] 新增的变量/关系/边界". If three or more funded projects cover the same object with the same method, the finding escalates: the 通讯评审人 is plausibly one of those PIs, and an undifferentiated draft reads as a rerun.
-- **On empty result**: report "在 kd 已结题库中未命中，但存在约 4 年数据盲区，不能据此声称新颖". Never convert an empty result into a novelty claim.
+- **On empty result**: distinguish a successfully executed query with 0 hits from invalid conditions, captcha failure, throttling or incomplete access. Report the queried module/year range and coverage limits; never infer novelty from zero hits.
 - **The 结题库 alone is not enough for this lookup.** The nearest competitors are usually funded in the three or four years before submission, which is exactly the blind spot — so a 结题库-only sweep can report a crowded topic as clear. The collision check is only meaningful when the applicant also runs 资助项目检索 (项目公布), captcha and all. If only the open endpoint was run, say so and mark the result 不完整.
 
 ### 2. 申请代码校准 (code routing)
 
 - **Query**: take 5-10 topics closest to the draft (from its own 参考文献 or its 代表作), search each by keyword without a code filter, and tally which 申请代码 the hits carry.
 - **Read**: compare that distribution with the code the draft plans to file under.
-- **Convert to action**: if the draft's chosen code holds few or no comparable projects while a sibling code holds many, this is a high-priority finding — a wrong code sends the application to a 学部 and reviewer pool that does not value the topic, and it is decided before any reviewer reads a word. Report the counts, name the candidate code, and tell the applicant to confirm against the current annual 指南 rather than against the historical distribution.
+- **Convert to action**: an unexpected code distribution prompts comparison with current code definitions and the project's scientific contribution. Do not escalate a historical count difference alone to a wrong-code finding; a high-priority rule issue requires a verified mismatch with the applicable code scope.
 - **Caveat**: code drift (above). A code that dominated 2016 hits may not exist in the current system.
 
 ### 3. 预期成果标定 (output calibration)
 
 - **Query**: same 申请代码 × same 项目类别 (青年/面上/地区), sample 10-20 结题项目, read their 成果 counts.
 - **Read**: the realistic band of 论文/专利 output for that project type in that code.
-- **Convert to action**: if the draft promises well above the band, this maps directly onto canonical 通讯评议 negative comment #5 (预期成果过高，超出申请人基础与能力). Recommend restructuring 预期成果 by scientific question rather than by count, and bringing the counts into the observed band.
+- **Convert to action**: compare outcomes with the plan, capacity, period and a suitably matched descriptive sample. An unusually high count is a prompt to check assumptions, not a requirement to move the promise into a historical band; an output count does not measure scientific contribution.
 - **Do not** report a mean as if it were a rule. Report it as "同类结题项目产出多在 X-Y 区间（样本 N，查询日期）".
-- **This lookup kills false alarms as often as it raises real ones.** A paper-count promise looks like over-promising until the band is measured, and the measured median in a given 代码 is often well above what the draft commits to — which turns the finding from "承诺过高" into "承诺偏保守，问题只在成果没按科学问题拆分". Measure before flagging, and drop the flag when the data does not support it.
+- **Avoid false alarms.** When the sample does not support an over-promise concern, drop it. Do not label an otherwise justified commitment too conservative merely because its count falls below historical outputs.
 
 ### 4. 申请人自身项目连续性 (self-overlap and past performance)
 
 - **Query**: applicant name × 依托单位 in 结题项目检索; also their 在研 project if the draft names it.
 - **Read**: content overlap between the proposal and the applicant's own funded/completed projects, plus what those projects actually produced.
-- **Convert to action**: overlap must be visible and explained in the draft, not hidden — reviewers run exactly this query. Weak output on a completed NSFC project maps to canonical negative comment #4 (已完成项目绩效不突出), and the draft should address it rather than leave the reviewer to find it. This feeds the duplication check in `representative-works.md`.
+- **Convert to action**: explain overlap with the applicant's prior projects and the proposed knowledge increment. Compare completed work with its stated goals and circumstances rather than inferring poor performance from counts alone. This complements the duplication check in `representative-works.md`.
 - **Privacy note**: only look up the applicant themselves, on their own request. Do not profile co-applicants or third parties.
 
 ### 5. 国内研究现状与文献覆盖 (domestic status, reviewer community)
@@ -92,7 +92,7 @@ Separate from auditing a draft. 结题项目 中文摘要 are public NSFC-publis
 - A 结题摘要 is not the 申请书摘要. It is written or revised after the work is done, so it shows funded-topic shape, not the winning application's argument structure. Use it for 选题/对象/问题粒度 patterns, not as a template for 立项依据 rhetoric.
 - Do not copy wording, structure, or ideas out of 结题报告 into another applicant's draft. Extract patterns; keep text.
 
-If absorbed samples change the skill's rules, follow the exemplar-learning update procedure and the README `Calibrated` badge convention.
+If samples change the rules, follow the exemplar-learning procedure and record source type/scope separately from behavioral validation; do not present an absorbed-source count as a test score.
 
 ## Interpretation Rules
 
@@ -107,12 +107,12 @@ If absorbed samples change the skill's rules, follow the exemplar-learning updat
 ### 资助格局与撞题核查
 
 - 核查方式：<申请人自查并回传 / 未核查及原因>
-- 查询式与命中数：<关键词 × 代码 × 年度区间 → N 条>（查询日期：）
+- 查询记录：<模块、词/代码/类别、结题年度、批准年度、原始命中数、去重筛选后样本数、查询状态与日期>
 - 撞题风险：
 - 申请代码校准：<当前代码 N1 条 / 候选代码 N2 条；需按当年指南确认>
 - 预期成果标定：<同类结题项目产出区间，样本 N>
 - 申请人自身项目重复度：
-- 盲区声明：kd 仅收录已结题项目，存在约 4 年数据盲区；申请代码体系近年有调整，旧项目沿用旧代码。
+- 覆盖限制：<实际查询的模块和年度；结题库滞后、资助库是否查询、截断/筛选/旧代码限制；未命中不证明新颖>
 
 | 相邻已资助/已结题项目 | 年度 | 申请代码 | 与本子重合的部分 | 需要显式切分的说法 |
 | --- | --- | --- | --- | --- |
@@ -121,19 +121,27 @@ If absorbed samples change the skill's rules, follow the exemplar-learning updat
 
 ## Query Card For The Applicant
 
-Hand this over when the surface is requested; the applicant runs it and pastes results back.
+Adapt the keywords and years; omit output/self-overlap checks that were not requested. These are separate forms, not interchangeable year filters.
 
 ```markdown
-请在 https://kd.nsfc.cn/ 依次执行以下检索，并把结果列表（含命中条数）回传：
+请在 https://kd.nsfc.cn/ 按下列清单检索，并回传查询条件及结果：
 
-1. 撞题：在「结题项目检索」和「资助项目检索」中，用关键词 [K1]、[K2]、[K3] 分别检索，
-   限定申请代码 [CODE]，批准年度 [近 5-8 年]。回传命中条数 + 与本子相近的项目名称和摘要。
-2. 代码校准：用同样的关键词检索，但**不限定申请代码**，回传命中项目各自挂的申请代码分布。
-3. 成果标定：检索申请代码 [CODE] + 项目类别 [青年/面上/地区] 的结题项目，抽 10-20 项，
-   回传它们的论文/专利产出数量。
-4. 自查：用你本人姓名 + 依托单位检索结题项目，回传你自己已结题项目的名称、摘要与产出。
+A. 结题项目检索
+- 每次选择一个「结题年度」[Y]；按 [Y1…Y2] 逐年查询。
+- 项目名称用 [K1]、[K2]、[K3] 等标题级词分别查询。撞题时可限定 [CODE]；代码校准时取消代码限制。
+- 如果还需限定批准时间，另记「批准年度」条件；表单不支持时从结果中筛选，并记录筛选范围。批准年度不能代替结题年度。
+- 成果标定（如请求）：同样逐个选择结题年度，加 [CODE] 与 [项目类别]，选取可比样本，回传论文/专利等数量、项目期限和筛选依据。
+- 本人项目自查（仅在请求时）：同样逐个选择结题年度，用本人姓名和单位检索。
 
-注意：检索框里只输关键词，不要粘贴未提交本子的摘要或研究内容原文。
+B. 资助项目检索
+- 按页面实际提供的批准年度 [A1…A2]、标题级词 [K1/K2/K3] 和适用代码检索。
+- 由你本人处理验证码；回传近邻项目及可见信息。摘要不可见就标不可见，不补写。
+- 代码校准时取消代码限制。不要把资助检索的批准年度填法套用到结题检索。
+
+每条查询回传：模块、查询词、代码/类别、结题年度、批准年度、日期、原始命中数；另记实际查看条数及筛选/去重后样本数。
+状态分开记录：成功零命中 / 成功有命中 / 条件错误 / 验证码或访问失败 / 结果截断。
+相近项目请附批准号或可核对来源、名称、年份、代码、可见摘要/成果。总数不可得时标未知，仍可分析来源明确的单个项目。
+只在检索框输入必要关键词，不要粘贴未提交本子的摘要或研究内容。若表单与此记录不同，回传实际字段，不把失败当零命中。
 ```
 
 ## Appendix: Observed Endpoints

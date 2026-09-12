@@ -10,7 +10,7 @@ Extract transferable proposal-quality patterns, not reusable text. A funded exam
 
 Before analyzing examples:
 
-- Ask the user to confirm that examples may be used for private skill improvement or diagnosis.
+- Use supplied examples within the diagnosis or improvement scope already authorized by the user. Clarify intended use only if ambiguous; do not re-request permission already supplied.
 - Redact names, project numbers, institutions, phone/email, unpublished data identifiers, exact budgets, confidential collaborations, and sensitive achievements unless the user explicitly says they are already public.
 - Keep project type, year, broad discipline/application code, research attribute, career stage, and result status if available; these fields are needed for comparison.
 - Separate `exemplars` from the `target draft`. Do not diagnose a target by silently merging its facts with exemplar facts.
@@ -93,7 +93,7 @@ When the user's goal is to improve the skill itself:
 3. Put exemplar-specific or field-specific details in a separate reference; do not bloat `SKILL.md`.
 4. Use synthetic or heavily anonymized examples if an example must be retained.
 5. Re-run basic validation and test with at least one draft that was not used to derive the pattern.
-6. If the absorbed sample set changes, update the README `Calibrated` badge count after the skill references are updated.
+6. Record the source type, scope, supporting/contrasting observations and validation separately. A count of absorbed applications/books is not a held-out test count or an accuracy score; preserve this distinction in public descriptions.
 
 Avoid overfitting:
 
@@ -105,10 +105,10 @@ Avoid overfitting:
 
 Learn from failures as well as successes. These patterns are drawn from published reviewer comments on failed and B-类 near-miss proposals; use them as contrastive questions, not verdicts:
 
-- Preliminary work must be *directly* on the proposed object/tissue/target, not merely adjacent. A proposal was rejected because the applicant's prior work was on a different organ than the one the mechanism concerned — "无前期工作基础，也无预实验结果" on the actual object.
+- A failed case had no relevant basis on the target tissue. Use this to ask what evidence supports transfer to the new object, not to require all prior work to be directly on it. Adjacent methods plus credible new-object validation can support a change of direction.
 - "现象观察层次" scores low: staying at observed correlation/phenomenon without a deeper mechanism draws "创新性较低".
-- Model/system mismatch: the model must convincingly represent the disease/scenario claimed (e.g. an immunodeficient model cannot prove an immune mechanism; a cell-line-only result "欠缺说服力" for an in-vivo claim).
-- Even a well-liked B-类 fails on the half-vote at 会评. Its typical sinking specifics: too many scientific questions, some research contents not set up in the literature review, and self-repetition ("同一对象在同一疾病中不同作用机制"). So: trim questions, ground every content in the rationale, and avoid restating the same story.
+- Model/system mismatch: inspect the biological components or scenario conditions needed for the exact claim. An immune model lacking the required component needs reconstitution or complementary evidence; do not reject all immune mechanisms solely from the label 免疫缺陷. See `medical-biomedical.md` for model-specific boundaries.
+- Near-miss comments can reveal unaddressed questions, contents not motivated in the rationale or unexplained duplication. Diagnose these substantive issues rather than inferring funding prospects from an A/B label or requiring a fixed number of questions.
 
 ## Public, Redaction-Free Calibration Samples
 
