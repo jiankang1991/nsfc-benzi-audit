@@ -1,0 +1,2 @@
+# Unified patches retain a context prefix on blank lines, including at EOF.
+*.patch whitespace=-blank-at-eol,-blank-at-eof

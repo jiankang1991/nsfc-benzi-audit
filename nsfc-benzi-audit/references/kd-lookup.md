@@ -46,13 +46,13 @@ Rules:
 
 ## The Five Lookups
 
-Ranked by how much they change the revision list. Run 1 and 2 whenever the draft's 申请代码 and keywords are known; the rest on demand.
+Choose lookups that resolve the requested question. A known code or keyword is not a reason to expand a scoped internal review into external work. If queries cannot be completed, finish the accessible review with the specific verification limit.
 
 ### 1. 撞题核查 (topic collision)
 
 - **Query**: run title-level keyword variants in both modules. For 结题项目检索 select one 结题年度 per query across the chosen completion-year range, then separately screen 批准年度 if needed. In 资助项目检索 use the available 批准年度 filters. Record both year fields; do not treat a funding-year range as a substitute for mandatory completion-year input.
 - **Read**: for each hit whose 摘要 overlaps the draft, name which 研究内容 it overlaps and on which axis (对象 / 数据条件 / 方法 / 验证).
-- **Convert to action**: overlap is not a veto — it is a demand for an explicit differentiation sentence. Write the fix as "在创新点第 N 条后补一句，说明相对 [某已资助方向] 新增的变量/关系/边界". If three or more funded projects cover the same object with the same method, the finding escalates: the 通讯评审人 is plausibly one of those PIs, and an undifferentiated draft reads as a rerun.
+- **Convert to action**: compare verified neighboring content against the specific claimed increment. If the distinction is unsupported, identify the comparison to add or the claim to narrow. Project counts alone neither establish duplication nor identify likely reviewers; use the NOVEL card in [research-claims.md](research-claims.md#novel--novelty-priority-and-knowledge-increment).
 - **On empty result**: distinguish a successfully executed query with 0 hits from invalid conditions, captcha failure, throttling or incomplete access. Report the queried module/year range and coverage limits; never infer novelty from zero hits.
 - **The 结题库 alone is not enough for this lookup.** The nearest competitors are usually funded in the three or four years before submission, which is exactly the blind spot — so a 结题库-only sweep can report a crowded topic as clear. The collision check is only meaningful when the applicant also runs 资助项目检索 (项目公布), captcha and all. If only the open endpoint was run, say so and mark the result 不完整.
 

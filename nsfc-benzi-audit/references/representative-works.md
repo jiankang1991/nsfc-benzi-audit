@@ -29,10 +29,10 @@ Service authentication/quotas may change. As checked 2026-09-12, [OpenAlex](http
 For each listed work:
 
 - Personal contribution: author position is one clue; inspect the supplied contribution statement, methods, software/data ownership and field conventions. Middle authorship, correspondence authorship or conference publication alone cannot establish or refute independent capability.
-- Independence: is the work distinguishable from the advisor's or team leader's line, or does it read as the applicant riding a group program? 青年 reviewers look for an independent story.
-- Recency: works clustered 5+ years before submission while the draft claims a fast-moving frontier is a mismatch worth flagging.
+- Independence: identify the applicant's actual contribution and ownership. Collaboration with an advisor/team is compatible with independent contribution; inspect evidence rather than infer dependence from the relationship.
+- Recency: assess whether the cited methods and capabilities remain relevant to the actual proposed step; age alone is not evidence of obsolescence.
 - Venue context: use field conventions to interpret the work and its contribution, not as a prestige threshold or a demand to publish for a presumed reviewer community.
-- Coherence across the list: five works pointing in five unrelated directions read as opportunistic rather than as an accumulating research line.
+- Coherence across the list: identify which capabilities each work supports. A diverse list is not evidence of opportunism; an unexplained capability gap should be tied to the proposed task.
 - Duplication with funded work: overlap with the applicant's 在研 or 已结题 NSFC projects must be visible and explained, not hidden.
 
 ## Relevance Checks
@@ -43,8 +43,8 @@ Build the support matrix against all available evidence, not just publications. 
 
 - A content lacking relevant evidence or required resources after considering both works and other basis → identify the specific capability, assumption or access gap. No matching publication alone is not a defect.
 - All publications support one content → inspect other basis for the remaining contents before concluding that the proposal exceeds the applicant's capability.
-- A work is cited in 研究基础 but its actual content does not do what the draft implies → integrity risk, report explicitly with the source consulted.
-- The works already deliver the proposed outcome → reviewers will ask what remains to be funded (same flag as `audit-surfaces.md` 前期证据过于完整).
+- A work's verified content does not support its attributed result → report the specific attribution mismatch and source; do not infer intent or fabrication without evidence.
+- If verified prior work already delivers the specific proposed advance, identify what remains new; distinguish completed components from planned advances using [EVD](benzi-logic.md#evd--evidence-readiness-and-resource-support).
 
 ## Calibration By Project Type
 
@@ -58,6 +58,8 @@ Build the support matrix against all available evidence, not just publications. 
 Citation context can help explain influence if verifiable citing text is available. Treat citation counts as descriptive context, not a sufficient quality measure or a funding threshold. Detailed impact analysis is optional and requires suitable access; do not make extra crawlers or API credentials a prerequisite for the normal audit.
 
 ## Output Pattern
+
+Use this table only when a work-level comparison is useful. Keep method-verification limits explicit, and reference existing finding IDs for gaps already explained elsewhere.
 
 ```markdown
 ### 代表作质量与支撑度

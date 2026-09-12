@@ -1,0 +1,297 @@
+{
+  "assessment_type": "independent_blind_semantic_review",
+  "scope": "Only files under this judge directory were read as assessment material. No condition mapping, web access, or delegated agents were used.",
+  "issue_id_mapping": {
+    "02-A": "判据第二组问题 A：无新区标注运行承诺与十二地块人工校准输入冲突",
+    "02-B": "判据第二组问题 B：固定执行清单将同一原始地块版本分到训练和验证",
+    "03-1": "判据第三组唯一预设问题：及时发现定义与验收字段计算不一致"
+  },
+  "counting_rule": "仅按相互独立的实质问题计数；可选澄清不计为额外实质发现或误报；正常稿明确无需实质整改予以认可。没有综合加权分或准确率。",
+  "cases": [
+    {
+      "id": "01",
+      "arms": {
+        "A": {
+          "required_total": 0,
+          "required_found": [],
+          "required_missed": [],
+          "normal_manuscript_judgment": {
+            "correct": true,
+            "report_evidence": "01/A.md:3、7：未发现范围内必须纠正的内部矛盾，无需实质整改；必须纠正的问题：未发现。",
+            "source_evidence": "../../mechanism/fixtures/01/application.md:5、9、13、15、17、21、23、25、29、31、35：日块预测对象、研究支撑、单元隔离、封存、时间相关处理和结论边界相容。"
+          },
+          "additional_supported_findings": [],
+          "unsupported_strong_findings": [],
+          "old_opinion_results": [],
+          "location_and_repair_notes": [
+            "01/A.md:9–15 用章节加原文引句核查预测对象、两科学问题、数据封存和结论范围，定位正确。",
+            "01/A.md:19–33 的覆盖匹配与总体汇总建议有原文第四节及第三节支持，并明确未证明比较或计算已错误；示例修订可执行。",
+            "01/A.md:35–49 的七日块长及数据字典建议属于可选细化，明确没有证明块长不足、字段缺失或未来日志泄漏，不构成强制新增材料或能力。",
+            "无需实质修复；四项可选建议未被设置为通过前提。"
+          ],
+          "redundancy_notes": [
+            "结论、通过依据及判断限制有轻微重述，但没有重复计数问题。",
+            "可选项多于另一个报告不构成实质缺陷；七日块长与数据字典细化各有自己的文本依据。"
+          ]
+        },
+        "B": {
+          "required_total": 0,
+          "required_found": [],
+          "required_missed": [],
+          "normal_manuscript_judgment": {
+            "correct": true,
+            "report_evidence": "01/B.md:5、9：本次范围内未发现必须纠正的实质矛盾；必须纠正的问题：无。",
+            "source_evidence": "../../mechanism/fixtures/01/application.md:5、9、13、15、17、21、23、25、29、31、35：研究、数据用途与结论边界对应。"
+          },
+          "additional_supported_findings": [],
+          "unsupported_strong_findings": [],
+          "old_opinion_results": [],
+          "location_and_repair_notes": [
+            "01/B.md:33–36 的对应关系表准确定位科学问题、日块预测、分层与理论边界及年度安排。",
+            "01/B.md:13–27 给出覆盖率匹配和总体汇总的两项可选修订，明确不能认定评估反向调参或汇总口径已混用。",
+            "建议能通过局部定义或一句汇总规则落实，没有要求增加研究任务或实验规模。"
+          ],
+          "redundancy_notes": [
+            "开头通过结论与必改项为无略有重复，属于回答结构。",
+            "对应关系表对两项澄清作交叉引用，没有将其计作缺陷。"
+          ]
+        }
+      }
+    },
+    {
+      "id": "02",
+      "arms": {
+        "A": {
+          "required_total": 2,
+          "required_found": ["02-A", "02-B"],
+          "required_missed": [],
+          "required_finding_evidence": [
+            {
+              "id": "02-A",
+              "report_location": "02/A.md:9–16",
+              "report_quote": "完整方法在新区需要十二个地块的人工标签，因而其评价结果不能直接验证第一节承诺的无标注运行能力。",
+              "source_evidence": "../../mechanism/fixtures/02/application.md:7 承诺无人工标注且仅使用影像及时间；:15 要求在待部署区标注十二地块并纳入交付流程；:38、42 确认校准输入和标注成本。",
+              "judgment": "完整识别目标、实际输入与验证条件冲突，正确区分校准标签与评价标签。"
+            },
+            {
+              "id": "02-B",
+              "report_location": "02/A.md:20–24",
+              "report_quote": "X017 的不同版本实际跨越训练、验证集合，验证样本来自训练中已出现的原始地块，不能满足所述‘面对未见地块’的验证条件。",
+              "source_evidence": "../../mechanism/fixtures/02/application.md:23 要求原始地块隔离；:25 清单直接执行；:29–32 将 X017-v1 列验证，其余 X017 版本列训练；:48 再确认固定清单。",
+              "judgment": "完整识别固定清单与隔离原则矛盾，并正确限制对影响规模的推断。"
+            }
+          ],
+          "additional_supported_findings": [],
+          "unsupported_strong_findings": [],
+          "old_opinion_results": [],
+          "location_and_repair_notes": [
+            "章节、附表样本编号与引文定位准确。",
+            "02-A 提供保留少量标注流程而修订目标、或保留无标注目标而修改路线的两个有效分支。保留十二地块流程时，原文第一节第 2 段替换即可解决预设冲突。",
+            "02/A.md:16 进一步建议将条件写入科学问题与工作安排，属于条件显式说明；现有相关章节不构成独立缺陷，不需新增研究任务。",
+            "02-B 明确将 X017-v1 改为训练为最直接修法；完整表核查唯一归属和四比一比例合理。只在错误清单已经用于选择时要求重做，未虚构实验已运行。",
+            "02/A.md:28–42 关于变化类别及两区归因的建议均明确为可选，且承认标注规范和对照细节不足；没有强制增加地区或独立归因实验。"
+          ],
+          "redundancy_notes": [
+            "问题 02-A 的目标、路线、成本和结论后果没有拆成多项。",
+            "已有对应关系部分再次说明标签隔离和两案例边界，用于防止误解，未重复计分。",
+            "少量标注路线对科学问题和年度安排的再说明并非消除矛盾的最小必要编辑，但未造成额外实质任务。"
+          ]
+        },
+        "B": {
+          "required_total": 2,
+          "required_found": ["02-A", "02-B"],
+          "required_missed": [],
+          "required_finding_evidence": [
+            {
+              "id": "02-A",
+              "report_location": "02/B.md:9–18",
+              "report_quote": "当前完整流程检验的是需要新区人工标注的迁移方法，不能据此证明第一章承诺的无标注运行能力。",
+              "source_evidence": "../../mechanism/fixtures/02/application.md:7 无新区人工标注；:15 待部署区十二地块标签参与映射和阈值；:38、42 校准用途与成本进一步确认。",
+              "judgment": "完整识别输入条件矛盾，并明确评价标签隔离及成本披露不能解决它。"
+            },
+            {
+              "id": "02-B",
+              "report_location": "02/B.md:22–26",
+              "report_quote": "同一原始地块的变换版本将同时进入训练和验证，无法保持第三章所承诺的未见地块验证条件。",
+              "source_evidence": "../../mechanism/fixtures/02/application.md:23 原始地块隔离；:25 直接执行固定清单；:29–32 X017 版本跨训练验证；:48 后续网络选择继续使用该清单。",
+              "judgment": "完整识别直接冲突，没有从邻接关系或节选比例另造泄漏和比例错误。"
+            }
+          ],
+          "additional_supported_findings": [],
+          "unsupported_strong_findings": [],
+          "old_opinion_results": [],
+          "location_and_repair_notes": [
+            "报告用‘章’称原文‘节’，但编号、段序、样本编号与引文均能准确定位，属于名称习惯差异。",
+            "02/B.md:16 直接提供少量标注条件下的第一节替换表述；另一分支保留无标注目标时要求实际算法不读新区标签，修订逻辑成立。",
+            "02/B.md:26 将 X017 四版本统一归训练，等价于修正 X017-v1 单元格；完整清单核查与已有四比一规则对应。",
+            "明确说明材料是拟执行安排，重做配置选择以旧清单实际已用为前提；没有虚构已发生的性能偏差。",
+            "没有要求补充新案例、像素面积精度、政策材料或其他未承诺研究能力。"
+          ],
+          "redundancy_notes": [
+            "R1 与 R2 在对应关系表内被再次引用，但仍只计算两个独立问题。",
+            "没有独立表达建议不影响满足请求，实际必要同步已在两项实质问题中覆盖。"
+          ]
+        }
+      }
+    },
+    {
+      "id": "03",
+      "arms": {
+        "A": {
+          "required_total": 1,
+          "required_found": ["03-1"],
+          "required_missed": [],
+          "required_finding_evidence": [
+            {
+              "id": "03-1",
+              "report_location": "03/A.md:11–24",
+              "report_quote": "正文增加了时限，指标计算却仍沿用整个事件区间内命中即成功的规则。",
+              "source_evidence": "../../mechanism/fixtures/03/application.md:31 仅前两个时间窗内报警才计入及时发现；:33 全事件任意报警即 timely_hit=1，验收直接用 timely_rate，延迟不参与赋值。",
+              "judgment": "完整识别计算冲突和旧意见三部分落实，用假设五窗事件说明差异，没有把例子冒充真实结果。"
+            }
+          ],
+          "additional_supported_findings": [],
+          "unsupported_strong_findings": [],
+          "old_opinion_results": [
+            {
+              "opinion_id": "1",
+              "reported_status": "已解决（方案文字）",
+              "judgment": "成立",
+              "report_location": "03/A.md:38",
+              "source_evidence": "../../mechanism/fixtures/03/previous.md:19 按窗随机；../../mechanism/fixtures/03/application.md:9、21 留站目标与 14/4/6 站划分，同站同组，前期三站归开发。",
+              "notes": "没有用旧稿继续判定当前稿同站跨组。"
+            },
+            {
+              "opinion_id": "2",
+              "reported_status": "已解决（方案文字）",
+              "judgment": "成立",
+              "report_location": "03/A.md:39",
+              "source_evidence": "../../mechanism/fixtures/03/previous.md:13、19、23 全体标准化与测试选配置；../../mechanism/fixtures/03/application.md:15、21、23、25 开发组参数、测试前固定、封存后评分。",
+              "notes": "准确核查信息用途，未要求额外数据流图才关闭意见。"
+            },
+            {
+              "opinion_id": "3",
+              "reported_status": "部分落实",
+              "judgment": "成立",
+              "report_location": "03/A.md:40 及 :11–26",
+              "source_evidence": "../../mechanism/fixtures/03/comments.md:7 要求及时性计算一致和并列报警负担；../../mechanism/fixtures/03/application.md:29、31 已有负担与时限，:33 计算仍用全事件。",
+              "notes": "准确区分已写入的指标与未同步的验收计算。"
+            },
+            {
+              "opinion_id": "4",
+              "reported_status": "已解决（部分边界旧稿已有）",
+              "judgment": "成立",
+              "report_location": "03/A.md:41",
+              "source_evidence": "../../mechanism/fixtures/03/previous.md:5、11、15 已有限制损伤解释、最低通道数和原因来源；../../mechanism/fixtures/03/application.md:5、9、17 明确复核用途、数据不足与真实原因边界。",
+              "notes": "既确认当前满足，也准确承认旧稿已有合适安排。"
+            },
+            {
+              "opinion_id": "5",
+              "reported_status": "已解决（方案文字）",
+              "judgment": "成立",
+              "report_location": "03/A.md:42",
+              "source_evidence": "../../mechanism/fixtures/03/application.md:29、35、39 分站统计、同事件及同屏蔽结果、同原始分母、前期不作最终性能证据；../../mechanism/fixtures/03/previous.md:23、29 已有部分配对与前期边界。",
+              "notes": "没有重开已解决问题，并说明前期用途边界的延续。"
+            }
+          ],
+          "location_and_repair_notes": [
+            "文件、节段、行号及引文定位准确。",
+            "03/A.md:22–24 将及时报警区间限定为 s ≤ t ≤ min(s+1,e)，保留全部事件分母和数据不足处理，修法有效且可执行。",
+            "事件发现标记、及时发现标记与延迟分别输出对应原文既有指标，不构成新增研究任务。第二年封存评价规则及核对少量样例属于既定任务落实。",
+            "03/A.md:30–32 的合成观测集与合成代号名称澄清有跨文件依据，明确可选且不要求补真实数据实验。"
+          ],
+          "redundancy_notes": [
+            "主问题在旧意见三表格再次引用是逐条复审所需，未重复计数。",
+            "可选项编号‘六’略不自然，但它位于可选表达改进下，不导致误认旧意见内容或新增必改项。"
+          ]
+        },
+        "B": {
+          "required_total": 1,
+          "required_found": ["03-1"],
+          "required_missed": [],
+          "required_finding_evidence": [
+            {
+              "id": "03-1",
+              "report_location": "03/B.md:9–22",
+              "report_quote": "timely_rate 实际计算的是事件发现率，没有执行前两个时间窗的限制。",
+              "source_evidence": "../../mechanism/fixtures/03/application.md:31 前两个窗才计及时发现；:33 全事件任意报警记 timely_hit=1，并直接填及时发现验收表，延迟只绘图。",
+              "judgment": "完整识别及时性定义与实际字段不符，假设例准确，保留对虚高幅度及实际验收影响的判断限制。"
+            }
+          ],
+          "additional_supported_findings": [],
+          "unsupported_strong_findings": [],
+          "old_opinion_results": [
+            {
+              "opinion_id": "1",
+              "reported_status": "已处理",
+              "judgment": "成立",
+              "report_location": "03/B.md:28",
+              "source_evidence": "../../mechanism/fixtures/03/previous.md:19 按窗随机；../../mechanism/fixtures/03/application.md:9、21 留站检验、14/4/6 分站、同站同组及前期站归开发。",
+              "notes": "当前推广单位与划分单位确已对应。"
+            },
+            {
+              "opinion_id": "2",
+              "reported_status": "已处理",
+              "judgment": "成立",
+              "report_location": "03/B.md:29",
+              "source_evidence": "../../mechanism/fixtures/03/previous.md:13、19、23 全体标准化与测试选阈值；../../mechanism/fixtures/03/application.md:15、21、23、25 改为开发参数、测试前固定以及封存后使用测试标签。",
+              "notes": "正确接受文字中的完整信息用途限制，没有强制补不存在的附件。"
+            },
+            {
+              "opinion_id": "3",
+              "reported_status": "部分处理",
+              "judgment": "成立",
+              "report_location": "03/B.md:30 及 :9–22",
+              "source_evidence": "../../mechanism/fixtures/03/comments.md:7；../../mechanism/fixtures/03/application.md:29、31 已给负担及时限，:33 仍未执行前两窗计数。",
+              "notes": "表格明确报警负担已有对应指标。主问题中‘只完成了时间要求的文字补充’应结合此表理解，不算遗漏负担处理。"
+            },
+            {
+              "opinion_id": "4",
+              "reported_status": "已明确",
+              "judgment": "成立",
+              "report_location": "03/B.md:31",
+              "source_evidence": "../../mechanism/fixtures/03/application.md:5、9、17 明确复核提示、不直接定损伤、少于四通道数据不足及未记录变化不事后归因。../../mechanism/fixtures/03/previous.md:5、11、15 已有部分相同边界。",
+              "notes": "当前状态判断正确，报告未声称这些边界全部本次新增，也未把旧意见视为旧稿必然存在错误的证明。"
+            },
+            {
+              "opinion_id": "5",
+              "reported_status": "已处理",
+              "judgment": "成立",
+              "report_location": "03/B.md:32",
+              "source_evidence": "../../mechanism/fixtures/03/application.md:29、35、39 分站及合并统计、同事件目录和屏蔽结果、相同原始事件分母、前期不估计最终测试性能。../../mechanism/fixtures/03/previous.md:23、29 已有部分配对及前期证据边界。",
+              "notes": "未将随机屏蔽混作随机数据划分，未虚构事件分母膨胀或前期站污染。"
+            }
+          ],
+          "location_and_repair_notes": [
+            "文件、标题及节段加必要引文满足定位要求。",
+            "03/B.md:19–21 给出 s ≤ t ≤ min(s+1,e) 的有效区间及可替换计算说明，并保留全部测试事件分母，最小修复可执行。",
+            "固定评价脚本、核对短事件和迟报边界落实原定目标，不要求更改研究任务或年度框架。",
+            "03/B.md:36–38 对合成观测集、代号资料及真实监测关系作可选澄清，保留歧义，不据此要求新增真实实验。"
+          ],
+          "redundancy_notes": [
+            "及时性问题在正文与旧意见表重复出现属于复核结构，没有重复计数。",
+            "计算建议的公式、分母与可替换文字有一定展开，但均用于使同一修订可执行，没有另造问题。"
+          ]
+        }
+      }
+    }
+  ],
+  "rubric_caveats": [
+    {
+      "case_id": "03",
+      "type": "short_event_boundary_ambiguity",
+      "rubric_location": "rubric.md 第 03 组的一处最小修改检验",
+      "caveat": "判据替换句只写前两个窗，未显式限制在事件结束前。对只持续一个窗的事件，字面解释可能纳入事件结束后的第二窗报警。",
+      "source_evidence": "../../mechanism/fixtures/03/application.md:29 规定事件结束前始终没有报警记为未发现；:31 沿用事件发现分母并规定前两个窗；:33 原执行条件本身限事件起止区间。",
+      "scoring_effect": "两报告取 [s,min(s+1,e)] 是由既有事件定义支持的合理细化，不算误报、任务扩展或修法偏离。该保留不改变唯一预设冲突的计数。"
+    },
+    {
+      "case_id": "03",
+      "type": "hidden_material_context_not_a_textual_resolution",
+      "rubric_location": "rubric.md 合成材料说明与自查记录",
+      "caveat": "判据的合成背景不属于审核方收到的申请材料，不能用来消除正文‘合成观测集’与‘合成代号’的名称歧义。",
+      "source_evidence": "../../mechanism/fixtures/03/application.md:5 称合成观测集 B，:17 区分可控模拟与真实监测；../../mechanism/fixtures/03/previous.md:27 称资料使用合成代号管理。",
+      "scoring_effect": "两报告的名称建议均为有依据的可选澄清，不计额外实质发现，不计无依据强整改。没有因此增加判据实质问题总数。"
+    }
+  ]
+}

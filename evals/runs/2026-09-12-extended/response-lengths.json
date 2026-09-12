@@ -1,0 +1,120 @@
+{
+  "claims": {
+    "01": {
+      "skill": {
+        "report.md": {
+          "raw_sha256": "a8c86cc973de27df502d0042a5e6afe859e4249a3186216d7759484d1abc0e19",
+          "archived_sha256": "a8c86cc973de27df502d0042a5e6afe859e4249a3186216d7759484d1abc0e19",
+          "characters": 631,
+          "hanzi": 500
+        }
+      },
+      "plain": {
+        "report.md": {
+          "raw_sha256": "4813aa02cc961900e474417515f9b3c3a46a1267f50644a5fee8c82674e09c7e",
+          "archived_sha256": "4813aa02cc961900e474417515f9b3c3a46a1267f50644a5fee8c82674e09c7e",
+          "characters": 237,
+          "hanzi": 208
+        }
+      }
+    },
+    "02": {
+      "plain": {
+        "report.md": {
+          "raw_sha256": "bc5ad700ce6327eeeb415112de06b365a64471869b737ff73c529f9c2d6473af",
+          "archived_sha256": "bc5ad700ce6327eeeb415112de06b365a64471869b737ff73c529f9c2d6473af",
+          "characters": 592,
+          "hanzi": 491
+        }
+      },
+      "skill": {
+        "report.md": {
+          "raw_sha256": "7e9029f952a5ca08ab967d42e4e2fcd67d6168cae245c3b31b70be9a62efed46",
+          "archived_sha256": "7e9029f952a5ca08ab967d42e4e2fcd67d6168cae245c3b31b70be9a62efed46",
+          "characters": 672,
+          "hanzi": 514
+        }
+      }
+    },
+    "03": {
+      "plain": {
+        "report.md": {
+          "raw_sha256": "3158d8d663269be68c39949c57247c96135163c35cac932239ac2dbfcb478e87",
+          "archived_sha256": "3158d8d663269be68c39949c57247c96135163c35cac932239ac2dbfcb478e87",
+          "characters": 323,
+          "hanzi": 260
+        }
+      },
+      "skill": {
+        "report.md": {
+          "raw_sha256": "53ff2642f9de52fc3defee1216602d5f07c105f162307c539db5f4d5bbb35932",
+          "archived_sha256": "53ff2642f9de52fc3defee1216602d5f07c105f162307c539db5f4d5bbb35932",
+          "characters": 527,
+          "hanzi": 337
+        }
+      }
+    },
+    "04": {
+      "skill": {
+        "report.md": {
+          "raw_sha256": "fccb50b1b74709e7099a787a489386a418aeeb1ec31e19c532ad8d951df67cb7",
+          "archived_sha256": "fccb50b1b74709e7099a787a489386a418aeeb1ec31e19c532ad8d951df67cb7",
+          "characters": 656,
+          "hanzi": 451
+        }
+      },
+      "plain": {
+        "report.md": {
+          "raw_sha256": "a49a4fdd605b0c486c9408d5cf4705cee70fb822e2c16d160eae8636729d181f",
+          "archived_sha256": "a49a4fdd605b0c486c9408d5cf4705cee70fb822e2c16d160eae8636729d181f",
+          "characters": 614,
+          "hanzi": 457
+        }
+      }
+    }
+  },
+  "long": {
+    "final": {
+      "report.md": {
+        "raw_sha256": "e63ccc60b20abd418395a897490328c743fe85c5ffed63144cdac34fdaaa7b83",
+        "archived_sha256": "e63ccc60b20abd418395a897490328c743fe85c5ffed63144cdac34fdaaa7b83",
+        "characters": 1555,
+        "hanzi": 1062
+      },
+      "appendix.md": {
+        "raw_sha256": "bdda7eced3d31e895de97223902bd0d04655f016538217fb148d80fb43f88106",
+        "archived_sha256": "bdda7eced3d31e895de97223902bd0d04655f016538217fb148d80fb43f88106",
+        "characters": 4955,
+        "hanzi": 2917
+      }
+    },
+    "before": {
+      "report.md": {
+        "raw_sha256": "7a804c6cf8b209e8bdd129600a85b88ae8f3efcc4e3e021782c3236c4fef212b",
+        "archived_sha256": "7de5bd5d43f13cc4766eb8be680ac22398c451532116b36cb7bfef7f58e9ca02",
+        "characters": 1639,
+        "hanzi": 1114
+      },
+      "appendix.md": {
+        "raw_sha256": "8cc2782b298d2a99746381f8f1af550625a3bd5859326a623a18122392294e21",
+        "archived_sha256": "93cd9e81fe228b8b181c366f4f20d9fd2142b3efe81e388f4c89722888436831",
+        "characters": 3473,
+        "hanzi": 1880
+      }
+    },
+    "plain": {
+      "report.md": {
+        "raw_sha256": "9c50d8790d901ee83f59daadb45cd878a947ef14ebc5f471b5458c0a6903805b",
+        "archived_sha256": "9c50d8790d901ee83f59daadb45cd878a947ef14ebc5f471b5458c0a6903805b",
+        "characters": 1478,
+        "hanzi": 1034
+      },
+      "appendix.md": {
+        "raw_sha256": "7ac236766cfcd4e1a517cc16b6bc338d7ce7aec1b746f05a06ecf619f209f609",
+        "archived_sha256": "3f0ab54c64c3489c92bddbfe91efac057cf6da9be73b8860e4c36f8dc10b3d7d",
+        "characters": 4159,
+        "hanzi": 2421
+      }
+    }
+  }
+}

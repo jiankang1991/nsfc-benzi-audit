@@ -1,0 +1,959 @@
+{
+  "schema_version": "1.0",
+  "assessment_mode": "blinded_semantic_item_assessment",
+  "combined_weighted_score_used": false,
+  "source": {
+    "path": "input/application.md",
+    "physical_lines": 267,
+    "hanzi": 15947,
+    "characters_including_newlines": 18372
+  },
+  "required_problem_definitions": {
+    "P1": {
+      "name": "到达信息与全范围精确目标冲突",
+      "source_front": [
+        13,
+        41,
+        69,
+        123
+      ],
+      "source_constraints": [
+        9,
+        23,
+        37,
+        39
+      ],
+      "source_back": [
+        167,
+        171,
+        172,
+        173,
+        174,
+        176,
+        178
+      ],
+      "calculation": "H的全部输入均为(8,1,2)，但R-01的可达下界为8/2=4，R-02为5+4/2=7，同一输出无法同时精确。"
+    },
+    "P2": {
+      "name": "批次等权参数与读数等权汇总冲突",
+      "source_front": [
+        45,
+        47
+      ],
+      "source_back": [
+        210,
+        214,
+        215,
+        217,
+        219
+      ],
+      "calculation": "正文θ=(2+8)/2=5秒；程序(9×2+8)/10=2.6秒，隐式权重9:1，差值−2.4秒。"
+    },
+    "P3": {
+      "name": "正式运行槽位需求超过唯一窗口容量",
+      "source_front": [
+        101,
+        103,
+        119
+      ],
+      "source_back": [
+        149,
+        151,
+        153
+      ],
+      "calculation": "需求120×12=1440槽分钟；供给4×240=960；无额外开销最多80轮，缺40轮，四槽纯运行至少360分钟。"
+    },
+    "P4": {
+      "name": "D0.4可行输出错误地充当全局最优真值",
+      "source_front": [
+        55
+      ],
+      "source_back": [
+        229,
+        231,
+        233,
+        237,
+        238,
+        239,
+        240,
+        241,
+        243,
+        249
+      ],
+      "calculation": "旧规则及记录返回7；一台3+3、另一台2+2+2均在6完成，总量下界12/2=6，故C*=6，旧合法输出差距1。"
+    }
+  },
+  "arms": {
+    "A": {
+      "required_total": 4,
+      "required_found": 4,
+      "required_missed": 0,
+      "required_found_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "required_missed_ids": [],
+      "unsupported_strong_findings": [],
+      "additional_supported_findings": [],
+      "main_hanzi": 1062,
+      "main_budget": {
+        "requested_max_approx_hanzi": 1800,
+        "satisfied": true,
+        "interpretation": "尽量控制在1800以内；不要求接近1800"
+      },
+      "required_findings": {
+        "P1": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "H的全部输入均为(8,1,2)，但R-01的可达下界为8/2=4，R-02为5+4/2=7，同一输出无法同时精确。",
+          "report_locators": {
+            "report_lines": [
+              3
+            ],
+            "appendix_lines": [
+              3,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11,
+              13,
+              15,
+              17,
+              19
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              13,
+              41,
+              69,
+              85,
+              79,
+              123
+            ],
+            "note": "主3及附19允许完整到达信息或保留类别—到达关系的表示；明确另一分支为零到达范围，并同步任务、验证和成果。具体表示与范围仍需选择。",
+            "author_choice_required": true,
+            "confirmation_type": "研究范围及输入表示设计选择；无需新增实测事实",
+            "closed_minimal_path": true
+          }
+        },
+        "P2": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "正文θ=(2+8)/2=5秒；程序(9×2+8)/10=2.6秒，隐式权重9:1，差值−2.4秒。",
+          "report_locators": {
+            "report_lines": [
+              7
+            ],
+            "appendix_lines": [
+              43,
+              47,
+              48,
+              49,
+              50,
+              51,
+              53,
+              55
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              217,
+              219,
+              127,
+              223
+            ],
+            "note": "保留45—47的θ定义和全部有效读数，程序先批均值后等权；参数/测试为5，旧版2.6留档。附55另改统计对象是可选分支，不能仅改名。",
+            "author_choice_required": false,
+            "confirmation_type": "按既定θ修复无需新目标选择；实际程序修改和用例仍须执行",
+            "closed_minimal_path": true
+          }
+        },
+        "P3": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "需求120×12=1440槽分钟；供给4×240=960；无额外开销最多80轮，缺40轮，四槽纯运行至少360分钟。",
+          "report_locators": {
+            "report_lines": [
+              9
+            ],
+            "appendix_lines": [
+              57,
+              61,
+              62,
+              63,
+              64,
+              65,
+              67,
+              69,
+              71
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              149,
+              151,
+              153
+            ],
+            "note": "首选冻结后至少360分钟纯运行并留准备余量，保持四槽120轮；实际时段未落实。改集合/资源仅为备用方向，尚无完整替代清单。",
+            "author_choice_required": true,
+            "confirmation_type": "设备时段落实及未知准备耗时；备用分支另需选择资源或覆盖改变",
+            "closed_minimal_path": true
+          }
+        },
+        "P4": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "旧规则及记录返回7；一台3+3、另一台2+2+2均在6完成，总量下界12/2=6，故C*=6，旧合法输出差距1。",
+          "report_locators": {
+            "report_lines": [
+              5
+            ],
+            "appendix_lines": [
+              21,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              34,
+              36,
+              37,
+              39,
+              41
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              55,
+              121,
+              243,
+              73,
+              117,
+              204
+            ],
+            "note": "保留旧输出7并撤回最优标签/全范围声明，新基准6有构造及下界；其他真值须独立依据，未认定所有旧值均错误。",
+            "author_choice_required": false,
+            "confirmation_type": "本例修正无需新事实；其他实例仍须逐条解析或枚举",
+            "closed_minimal_path": true
+          }
+        }
+      },
+      "location_and_repair_notes": {
+        "P1": {
+          "source_edit_lines": [
+            13,
+            41,
+            69,
+            85,
+            79,
+            123
+          ],
+          "note": "主3及附19允许完整到达信息或保留类别—到达关系的表示；明确另一分支为零到达范围，并同步任务、验证和成果。具体表示与范围仍需选择。",
+          "author_choice_required": true,
+          "confirmation_type": "研究范围及输入表示设计选择；无需新增实测事实",
+          "closed_minimal_path": true
+        },
+        "P2": {
+          "source_edit_lines": [
+            217,
+            219,
+            127,
+            223
+          ],
+          "note": "保留45—47的θ定义和全部有效读数，程序先批均值后等权；参数/测试为5，旧版2.6留档。附55另改统计对象是可选分支，不能仅改名。",
+          "author_choice_required": false,
+          "confirmation_type": "按既定θ修复无需新目标选择；实际程序修改和用例仍须执行",
+          "closed_minimal_path": true
+        },
+        "P3": {
+          "source_edit_lines": [
+            149,
+            151,
+            153
+          ],
+          "note": "首选冻结后至少360分钟纯运行并留准备余量，保持四槽120轮；实际时段未落实。改集合/资源仅为备用方向，尚无完整替代清单。",
+          "author_choice_required": true,
+          "confirmation_type": "设备时段落实及未知准备耗时；备用分支另需选择资源或覆盖改变",
+          "closed_minimal_path": true
+        },
+        "P4": {
+          "source_edit_lines": [
+            55,
+            121,
+            243,
+            73,
+            117,
+            204
+          ],
+          "note": "保留旧输出7并撤回最优标签/全范围声明，新基准6有构造及下界；其他真值须独立依据，未认定所有旧值均错误。",
+          "author_choice_required": false,
+          "confirmation_type": "本例修正无需新事实；其他实例仍须逐条解析或枚举",
+          "closed_minimal_path": true
+        }
+      },
+      "usability_notes": {
+        "decision_readiness": "四项均有可审阅的最小修复路径；数值更正可直接确定，P1范围/表示与P3预约仍需选择或落实。",
+        "real_world_usability_established": false,
+        "scientific_or_operational_repair_executed": false,
+        "main_report_evidence_sufficient": true,
+        "appendix": {
+          "role": "adds_evidence_and_repeats_some_repair_advice",
+          "evidence_additions": [
+            "完整的上下界构造",
+            "隐含约束的反向核查",
+            "参数层与模型层隔离",
+            "任务、成果与进度对应"
+          ],
+          "duplication_note": "各问题修复在主报告、分项证据及覆盖表有重复；附录并非仅重复建议。",
+          "anonymized_auxiliary_files": [
+            "index-v1.json",
+            "checks.py",
+            "checks.json"
+          ],
+          "auxiliary_dependency_assessment": "四项必要论证均在两份文本中写出；匿名包未附辅助文件不记作者缺失。",
+          "present": true,
+          "hanzi": 2917
+        },
+        "preserved_valid_arrangements": [
+          "指定形式化时长与实测参数分层",
+          "独立核验/观察与最优值依据分工",
+          "开发正式编号/种子隔离不冒充泛化",
+          "十二分钟占槽不等于模型C",
+          "一秒容差仅用于读数",
+          "Q-17合成来源和同长零到达范围",
+          "不外推生产率因果或外部优先性",
+          "计划未完成不等于实际不存在"
+        ],
+        "coverage_claim_assessment": "两份文本跨正文与五个附件的具体证据支持所报范围；覆盖表不作为独立阅读证明。",
+        "optional_clarifications": [
+          {
+            "report_locator": "appendix.md:67",
+            "quote": "这是把初始化等额外延迟都按零计的乐观上限",
+            "assessment": "标准初始化已经在附62及12分钟中计入；措辞宜明确“规程外延迟”，不记强误报或额外问题。"
+          }
+        ]
+      }
+    },
+    "B": {
+      "required_total": 4,
+      "required_found": 4,
+      "required_missed": 0,
+      "required_found_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "required_missed_ids": [],
+      "unsupported_strong_findings": [],
+      "additional_supported_findings": [],
+      "main_hanzi": 1114,
+      "main_budget": {
+        "requested_max_approx_hanzi": 1800,
+        "satisfied": true,
+        "interpretation": "尽量控制在1800以内；不要求接近1800"
+      },
+      "required_findings": {
+        "P1": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "H的全部输入均为(8,1,2)，但R-01的可达下界为8/2=4，R-02为5+4/2=7，同一输出无法同时精确。",
+          "report_locators": {
+            "report_lines": [
+              3,
+              5
+            ],
+            "appendix_lines": [
+              7,
+              12,
+              14,
+              15,
+              17
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              13,
+              41,
+              69,
+              85,
+              79,
+              123
+            ],
+            "note": "提供每项类别与到达或等价联合计数的可行修复方向，保留排列不变；零到达替代分支需同步范围、任务和成果。",
+            "author_choice_required": true,
+            "confirmation_type": "选择逐件信息/联合计数或收窄精确范围",
+            "closed_minimal_path": true
+          }
+        },
+        "P2": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "正文θ=(2+8)/2=5秒；程序(9×2+8)/10=2.6秒，隐式权重9:1，差值−2.4秒。",
+          "report_locators": {
+            "report_lines": [
+              11,
+              13
+            ],
+            "appendix_lines": [
+              9,
+              28
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              217,
+              219,
+              127,
+              223
+            ],
+            "note": "改两层均值、参数及测试期望5，历史2.6保留；无需条数配平，也不改变形式化输入。",
+            "author_choice_required": false,
+            "confirmation_type": "定义与算式已确定；实际程序和用例修改仍待实施",
+            "closed_minimal_path": true
+          }
+        },
+        "P3": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "需求120×12=1440槽分钟；供给4×240=960；无额外开销最多80轮，缺40轮，四槽纯运行至少360分钟。",
+          "report_locators": {
+            "report_lines": [
+              15,
+              17
+            ],
+            "appendix_lines": [
+              10,
+              30
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              149,
+              151,
+              153
+            ],
+            "note": "明确冻结后至少6小时的执行窗口，加准备余量且更新设备时段；主17直接写明实际时段尚须落实。",
+            "author_choice_required": true,
+            "confirmation_type": "预约窗口与准备耗时需落实，不能把理想下界当实际预约",
+            "closed_minimal_path": true
+          }
+        },
+        "P4": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "旧规则及记录返回7；一台3+3、另一台2+2+2均在6完成，总量下界12/2=6，故C*=6，旧合法输出差距1。",
+          "report_locators": {
+            "report_lines": [
+              7,
+              9
+            ],
+            "appendix_lines": [
+              8,
+              19,
+              23,
+              24,
+              26
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              55,
+              121,
+              243,
+              73,
+              117,
+              204
+            ],
+            "note": "改可行基线，独立核定基准，本例6，保留历史7及日志；其他条目有解析/穷尽依据后才称真值。",
+            "author_choice_required": false,
+            "confirmation_type": "本例无新选择；其他基准仍需实际核定工作",
+            "closed_minimal_path": true
+          }
+        }
+      },
+      "location_and_repair_notes": {
+        "P1": {
+          "source_edit_lines": [
+            13,
+            41,
+            69,
+            85,
+            79,
+            123
+          ],
+          "note": "提供每项类别与到达或等价联合计数的可行修复方向，保留排列不变；零到达替代分支需同步范围、任务和成果。",
+          "author_choice_required": true,
+          "confirmation_type": "选择逐件信息/联合计数或收窄精确范围",
+          "closed_minimal_path": true
+        },
+        "P2": {
+          "source_edit_lines": [
+            217,
+            219,
+            127,
+            223
+          ],
+          "note": "改两层均值、参数及测试期望5，历史2.6保留；无需条数配平，也不改变形式化输入。",
+          "author_choice_required": false,
+          "confirmation_type": "定义与算式已确定；实际程序和用例修改仍待实施",
+          "closed_minimal_path": true
+        },
+        "P3": {
+          "source_edit_lines": [
+            149,
+            151,
+            153
+          ],
+          "note": "明确冻结后至少6小时的执行窗口，加准备余量且更新设备时段；主17直接写明实际时段尚须落实。",
+          "author_choice_required": true,
+          "confirmation_type": "预约窗口与准备耗时需落实，不能把理想下界当实际预约",
+          "closed_minimal_path": true
+        },
+        "P4": {
+          "source_edit_lines": [
+            55,
+            121,
+            243,
+            73,
+            117,
+            204
+          ],
+          "note": "改可行基线，独立核定基准，本例6，保留历史7及日志；其他条目有解析/穷尽依据后才称真值。",
+          "author_choice_required": false,
+          "confirmation_type": "本例无新选择；其他基准仍需实际核定工作",
+          "closed_minimal_path": true
+        }
+      },
+      "usability_notes": {
+        "decision_readiness": "四项均有可审阅的最小修复路径；数值更正可直接确定，P1范围/表示与P3预约仍需选择或落实。",
+        "real_world_usability_established": false,
+        "scientific_or_operational_repair_executed": false,
+        "main_report_evidence_sufficient": true,
+        "appendix": {
+          "role": "adds_evidence_with_limited_repair_repetition",
+          "evidence_additions": [
+            "两端定位表",
+            "完整合法6的安排与旧规则轨迹",
+            "4/7安排及下界",
+            "权重与30波运行排程"
+          ],
+          "duplication_note": "实质建议大体留在主报告，附录以复算和边界证据为主。",
+          "anonymized_auxiliary_files": [
+            "work-notes.md",
+            "arithmetic.json"
+          ],
+          "auxiliary_dependency_assessment": "文字已有完整算式、构造和下界，无须依赖匿名包未附的辅助结果。",
+          "present": true,
+          "hanzi": 1880
+        },
+        "preserved_valid_arrangements": [
+          "指定形式化时长与实测参数分层",
+          "独立核验/观察与最优值依据分工",
+          "开发正式编号/种子隔离不冒充泛化",
+          "十二分钟占槽不等于模型C",
+          "一秒容差仅用于读数",
+          "Q-17合成来源和同长零到达范围",
+          "不外推生产率因果或外部优先性",
+          "计划未完成不等于实际不存在"
+        ],
+        "coverage_claim_assessment": "两份文本跨正文与五个附件的具体证据支持所报范围；覆盖表不作为独立阅读证明。",
+        "optional_clarifications": []
+      }
+    },
+    "C": {
+      "required_total": 4,
+      "required_found": 4,
+      "required_missed": 0,
+      "required_found_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "required_missed_ids": [],
+      "unsupported_strong_findings": [],
+      "additional_supported_findings": [],
+      "main_hanzi": 1034,
+      "main_budget": {
+        "requested_max_approx_hanzi": 1800,
+        "satisfied": true,
+        "interpretation": "尽量控制在1800以内；不要求接近1800"
+      },
+      "required_findings": {
+        "P1": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "H的全部输入均为(8,1,2)，但R-01的可达下界为8/2=4，R-02为5+4/2=7，同一输出无法同时精确。",
+          "report_locators": {
+            "report_lines": [
+              3
+            ],
+            "appendix_lines": [
+              3,
+              5,
+              9,
+              11,
+              12,
+              14,
+              16
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              13,
+              41,
+              69,
+              85,
+              79,
+              123,
+              167,
+              178
+            ],
+            "note": "首选明确H(n_(c,r),p,m)，另要求重排不变与改变到达结构两类核查；附16声明新表示不自动证明新算法最优。零到达为替代分支。",
+            "author_choice_required": true,
+            "confirmation_type": "采用首选表示还是零到达分支的设计选择；首选分支接口已具体，无需编造数据",
+            "closed_minimal_path": true
+          }
+        },
+        "P2": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "正文θ=(2+8)/2=5秒；程序(9×2+8)/10=2.6秒，隐式权重9:1，差值−2.4秒。",
+          "report_locators": {
+            "report_lines": [
+              7
+            ],
+            "appendix_lines": [
+              36,
+              38,
+              40,
+              42,
+              44,
+              46
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              217,
+              219,
+              127,
+              223
+            ],
+            "note": "版本化改两层均值与期望5；旧2.6可另列为单次读数均值或保留历史，不能继续标同一θ；后续逐类别批次沿用修正规则。",
+            "author_choice_required": false,
+            "confirmation_type": "按原定义无新选择；是否附加另名2.6仅为可选编辑，程序修正仍待实施",
+            "closed_minimal_path": true
+          }
+        },
+        "P3": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "需求120×12=1440槽分钟；供给4×240=960；无额外开销最多80轮，缺40轮，四槽纯运行至少360分钟。",
+          "report_locators": {
+            "report_lines": [
+              9
+            ],
+            "appendix_lines": [
+              48,
+              50,
+              52,
+              54,
+              55,
+              56,
+              57,
+              58,
+              60
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              149,
+              151,
+              153
+            ],
+            "note": "至少360分钟纯运行并另加准备/周转；附60提出由预演准备耗时确定具体起止，未声称现有9—15已足够。",
+            "author_choice_required": true,
+            "confirmation_type": "预演准备耗时或等价依据及设备时段需落实，当前未有可填定数值",
+            "closed_minimal_path": true
+          }
+        },
+        "P4": {
+          "required_found": true,
+          "required_missed": false,
+          "identification": "explicit_contradiction",
+          "two_end_locations": "present_and_verified",
+          "decisive_reasoning": "complete_and_correct",
+          "decisive_reasoning_note": "旧规则及记录返回7；一台3+3、另一台2+2+2均在6完成，总量下界12/2=6，故C*=6，旧合法输出差距1。",
+          "report_locators": {
+            "report_lines": [
+              5
+            ],
+            "appendix_lines": [
+              18,
+              20,
+              24,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              34
+            ]
+          },
+          "unsupported_strong_findings": [],
+          "additional_supported_findings": [],
+          "location_and_repair_notes": {
+            "source_edit_lines": [
+              55,
+              121,
+              243,
+              73,
+              117,
+              204
+            ],
+            "note": "保留合法历史7，撤回最优标签，新建解析基准6，其他条目独立确认；若有依赖旧真值的汇总则复核。",
+            "author_choice_required": false,
+            "confirmation_type": "本例修正确定；其他真值及相应汇总需要后续实际复核，不能认定已完成",
+            "closed_minimal_path": true
+          }
+        }
+      },
+      "location_and_repair_notes": {
+        "P1": {
+          "source_edit_lines": [
+            13,
+            41,
+            69,
+            85,
+            79,
+            123,
+            167,
+            178
+          ],
+          "note": "首选明确H(n_(c,r),p,m)，另要求重排不变与改变到达结构两类核查；附16声明新表示不自动证明新算法最优。零到达为替代分支。",
+          "author_choice_required": true,
+          "confirmation_type": "采用首选表示还是零到达分支的设计选择；首选分支接口已具体，无需编造数据",
+          "closed_minimal_path": true
+        },
+        "P2": {
+          "source_edit_lines": [
+            217,
+            219,
+            127,
+            223
+          ],
+          "note": "版本化改两层均值与期望5；旧2.6可另列为单次读数均值或保留历史，不能继续标同一θ；后续逐类别批次沿用修正规则。",
+          "author_choice_required": false,
+          "confirmation_type": "按原定义无新选择；是否附加另名2.6仅为可选编辑，程序修正仍待实施",
+          "closed_minimal_path": true
+        },
+        "P3": {
+          "source_edit_lines": [
+            149,
+            151,
+            153
+          ],
+          "note": "至少360分钟纯运行并另加准备/周转；附60提出由预演准备耗时确定具体起止，未声称现有9—15已足够。",
+          "author_choice_required": true,
+          "confirmation_type": "预演准备耗时或等价依据及设备时段需落实，当前未有可填定数值",
+          "closed_minimal_path": true
+        },
+        "P4": {
+          "source_edit_lines": [
+            55,
+            121,
+            243,
+            73,
+            117,
+            204
+          ],
+          "note": "保留合法历史7，撤回最优标签，新建解析基准6，其他条目独立确认；若有依赖旧真值的汇总则复核。",
+          "author_choice_required": false,
+          "confirmation_type": "本例修正确定；其他真值及相应汇总需要后续实际复核，不能认定已完成",
+          "closed_minimal_path": true
+        }
+      },
+      "usability_notes": {
+        "decision_readiness": "四项均有可审阅的最小修复路径；数值更正可直接确定，P1范围/表示与P3预约仍需选择或落实。",
+        "real_world_usability_established": false,
+        "scientific_or_operational_repair_executed": false,
+        "main_report_evidence_sufficient": true,
+        "appendix": {
+          "role": "adds_evidence_and_elaborates_repair_advice",
+          "evidence_additions": [
+            "联合计数变量与接口细化",
+            "完整五项合法安排",
+            "一般隐式权重公式",
+            "容量表与边界检查"
+          ],
+          "duplication_note": "各节重复并细化主报告建议，但同时补充可核查证据。",
+          "anonymized_auxiliary_files": [],
+          "auxiliary_dependency_assessment": "无需其他工作文件；不因此另加分。",
+          "present": true,
+          "hanzi": 2421
+        },
+        "preserved_valid_arrangements": [
+          "指定形式化时长与实测参数分层",
+          "独立核验/观察与最优值依据分工",
+          "开发正式编号/种子隔离不冒充泛化",
+          "十二分钟占槽不等于模型C",
+          "一秒容差仅用于读数",
+          "Q-17合成来源和同长零到达范围",
+          "不外推生产率因果或外部优先性",
+          "计划未完成不等于实际不存在"
+        ],
+        "coverage_claim_assessment": "两份文本跨正文与五个附件的具体证据支持所报范围；覆盖表不作为独立阅读证明。",
+        "optional_clarifications": [
+          {
+            "report_locator": "appendix.md:73",
+            "quote": "第95行集合比较单独不能检测重复次数，但第59、95行另有重复检查要求；无源码，不据此断言实际漏检。",
+            "source_counterbalance": [
+              37,
+              59,
+              95
+            ],
+            "assessment": "主动保留反证的实现澄清，不是确定漏检断言，不计强误报/额外问题。"
+          },
+          {
+            "report_locator": "appendix.md:78",
+            "quote": "正式回放120次也不能单独证明全范围精确性",
+            "source_counterbalance": [
+              117,
+              125,
+              139
+            ],
+            "assessment": "正确的证据边界提醒，原文没有主张单凭回放普遍证明，不另计实质发现。"
+          }
+        ]
+      }
+    }
+  },
+  "rubric_caveats": [
+    {
+      "id": "R1",
+      "topic": "综合评分",
+      "note": "不采用rubric建议的100分权重，不生成加权总分、格式分或隐含综合排名。required_found只计四个独立根因。"
+    },
+    {
+      "id": "R2",
+      "topic": "汉字预算",
+      "note": "请求为尽量在1800汉字以内，而不是必须接近1800；按U+4E00–U+9FFF含标题表格计数。三份均满足。"
+    },
+    {
+      "id": "R3",
+      "topic": "六小时预约",
+      "note": "149行窗口开始生成冻结，153行冻结后运行但未给前置耗时；六小时是纯运行下界，9—15并非已确认充足的实际时段。准备余量提醒不是新的独立缺陷。"
+    },
+    {
+      "id": "R4",
+      "topic": "额外发现独立性",
+      "note": "错误真值影响后续差距、接口影响成果、参数隐式权重等仍分别归入P4/P1/P2，不拆成新发现。"
+    },
+    {
+      "id": "R5",
+      "topic": "集合与重复",
+      "note": "95行单靠集合比较不能检测重复次数，但37、59、95行同时要求恰好一次与重复检查；C附73是有保留的实现澄清，不是已证漏检。"
+    },
+    {
+      "id": "R6",
+      "topic": "有限回放与证明",
+      "note": "117、125、139行区分回放与独立最优依据；C附78提醒120次回放不能单独证明全范围，是合理边界，不是第五项矛盾。"
+    },
+    {
+      "id": "R7",
+      "topic": "可执行性含义",
+      "note": "能够映射到具体编辑不证明新算法已实现、其他真值已核定、设备已预约或实际作者体验良好。"
+    },
+    {
+      "id": "R8",
+      "topic": "匿名工作文件",
+      "note": "统一补充说明指出工作文件在原运行中存在但为隐藏工作方式未随匿名包提供；三组同等按报告与附录评分，不据未附辅助文件归责作者。没有发现关键论证必须依赖未展示结果。"
+    },
+    {
+      "id": "R9",
+      "topic": "覆盖声明",
+      "note": "报告展示的跨章证据支持其所报范围，但索引或覆盖表不独立证明生成过程中的语义阅读；不反推实际阅读轨迹。"
+    },
+    {
+      "id": "R10",
+      "topic": "初始化措辞",
+      "note": "A附67“初始化等额外延迟”可误读；附62和原文103已包含标准2分钟初始化。宜改“规程外准备/切换延迟”，不认定其容量算式实际漏算初始化。"
+    }
+  ],
+  "scope": {
+    "read_only_source_directory": "/tmp/nsfc-long-claims-ysfwwer1/judge-long",
+    "external_files_read": false,
+    "network_used": false,
+    "delegation_used": false,
+    "source_modified": false,
+    "conditions_inferred": false
+  },
+  "assessment_artifacts": [
+    "assessment.md",
+    "scores.json",
+    "repair-map.md"
+  ]
+}

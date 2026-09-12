@@ -1,0 +1,81 @@
+{
+  "inverse_counterexample": [
+    {
+      "t": "0",
+      "first": [
+        "1",
+        "3"
+      ],
+      "second": [
+        "2",
+        "2"
+      ],
+      "readings": [
+        "4",
+        "8"
+      ]
+    },
+    {
+      "t": "1/2",
+      "first": [
+        "3/2",
+        "5/2"
+      ],
+      "second": [
+        "5/2",
+        "3/2"
+      ],
+      "readings": [
+        "4",
+        "8"
+      ]
+    },
+    {
+      "t": "1",
+      "first": [
+        "2",
+        "2"
+      ],
+      "second": [
+        "3",
+        "1"
+      ],
+      "readings": [
+        "4",
+        "8"
+      ]
+    }
+  ],
+  "measurement_given_model": {
+    "noise_variance": "1/25000",
+    "reference_mse": "11/25000",
+    "difference_mse": "1/25000",
+    "mse_ratio": "11",
+    "scope": "Arithmetic under the explicitly supplied model only; hardware assumptions not validated"
+  },
+  "novelty_reparameterization": {
+    "rho": "1/5",
+    "beta": "4/5",
+    "old_state_coefficient": "4/5",
+    "new_input_coefficient": "1/5",
+    "scope": "Same update coefficients, inputs and initial state imply same recurrence and normalized output"
+  },
+  "long_source_checks": {
+    "same_counts_different_release_targets": [
+      4,
+      7
+    ],
+    "batch_equal_mean": "5",
+    "pooled_mean": "13/5",
+    "required_slot_minutes": 1440,
+    "available_slot_minutes": 960,
+    "maximum_runs_in_window": 80,
+    "required_window_minutes_with_four_slots": 360,
+    "D04_greedy_loads": [
+      7,
+      5
+    ],
+    "D04_optimum_by_32_assignments": 6,
+    "scope": "Given finite model and supplied records only; no actual equipment or historical code execution"
+  }
+}

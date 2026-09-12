@@ -4,6 +4,10 @@
 
 已执行记录：[2026-09-12 产物、快照与验收](runs/2026-09-12/README.md)。
 
+后续机制改造增加了 [自然材料对照](runs/2026-09-12-mechanism/README.md)：三组普通申请书节选、六次使用/不使用 skill 的独立运行、隐藏组别评分，以及医学和检索的两次回归运行。原始材料与判据分开保存在 [mechanism](mechanism/README.md)。原有四组用例用于定向检查已知边界，其正文提示较明显，不能单独证明审核能力提升。
+
+进一步的 [长稿与主张边界对照](runs/2026-09-12-extended/README.md) 增加四份节选、约 1.6 万汉字长稿和十一份独立审核报告；长稿包含普通审核、上一轮 skill 和新版 skill 三种条件。另有索引工具的实际中断续审检查及依据报告修订原文的独立测试。材料与判据在 [extended](extended/README.md)，版本快照、原始运行和评分均保留。
+
 ## 给独立评估者的请求
 
 - **revision**：使用本 skill 审核 `fixtures/revision/current-draft.md` v2，并逐条复核 `previous-review.md`；同目录的 `full.md` 是历史材料。仅根据已提供内容和 skill 的已注明来源范围诊断，不执行外部检索。输出到独立临时目录。

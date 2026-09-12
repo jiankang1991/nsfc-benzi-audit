@@ -1,268 +1,70 @@
 # Supplementary Audit Surfaces
 
-Use this reference when the user asks for a full diagnosis or when the draft includes enough material to check more than core scientific logic. These checks are inspired by common NSFC preparation workflows, but all rule-sensitive points must be verified against current official NSFC documents before being stated as binding.
+Use relevant sections for supplied material; for full review check all applicable surfaces and keep a concise coverage record. Finding decisions and evidence scope are maintained in [benzi-logic.md](benzi-logic.md), official applicability in [current-rules.md](current-rules.md), claim-specific burdens in [research-claims.md](research-claims.md), and expression aids in [writing-advice.md](writing-advice.md).
 
 ## Structure And Form
 
-Check whether the draft preserves the application form's required columns and expected section boundaries. Do not claim a heading is mandatory unless verified against the current annual guide or application template.
+Compare the selected source against its actual year/category/form and stage. Check internal consistency of category, attributes, code, duration, project information and any supplied attachments. A required heading or attachment is a compliance finding only with verified applicability and knowledge of the submitted material set.
 
-Look for:
+Unfinished text, a broken reference or contradictory form fields can be located in the draft. A figure or attachment missing from extraction first calls for the original source; distinguish that access gap from an omission in the application. Unknown eligibility, codes, ethics and AI declarations remain specific verification limits rather than assumed violations.
 
-- Missing or renamed major sections in the provided draft.
-- Empty subsections or unfinished-marker text left in the draft.
-- Project category, research attribute, application code, keywords, budget, duration, and team information not reflected consistently in the narrative.
-- Ongoing projects, completed NSFC projects, representative works, collaborations, ethics/safety, and other explanatory fields that appear relevant but are absent from the provided material.
-- Attachments or figures referenced in text but missing from extraction.
+## Figures And Original Evidence
 
-Form checks must follow the target year, category and submission stage in `current-rules.md`. Verify applicant/project limits, code scope and required attachments only when their applicability and the supplied material are known. Do not rank rejection causes without a dated source. Distinguish application-stage electronic materials, institutional commitments and post-award signature/seal pages.
+Inspect original figures when they support a diagnosis. Converted mermaid, OCR and missing images are not substitutes for the original. If the image cannot be read, state what visual claim cannot be checked.
 
-The title, object, methods and contribution should help explain the code and keywords. Broad keywords may reduce specificity, but neither keyword order nor the second code has a universal fixed reviewer-routing weight.
+Useful questions:
 
-Report as:
+- Does the figure agree with the nearby text about objects, task relationships, data, assumptions and outcomes?
+- Are labels, units, groups and legends sufficient to interpret the claimed result?
+- Does a claimed feedback relationship appear in the actual design, including relevant prose?
+- Are established findings and planned hypotheses distinguishable?
 
-- `规则风险`: only when verified against official current-year documents.
-- `形式风险`: when the provided draft appears incomplete or internally inconsistent but official status was not checked.
-- `材料缺口`: when more source files are needed before judging.
+Overview, task, route, basis and annual-plan figures are optional communication devices. Recommend one when it resolves an observed reading difficulty; no fixed figure count, panel arrangement, boldface or compulsory “known/hypothesis” layout applies. Report visual contradictions once alongside the corresponding textual issue; cosmetic legibility issues have their actual local impact.
 
-## Fast-Read Path
+## Resources And Validation
 
-Assume reviewers may first form an impression from title, abstract, headings, figures, and research basis. Diagnose whether those elements communicate the proposal without requiring slow reconstruction.
+Use the core EVD map to connect critical tasks to data, samples, instruments, computations, expertise and access. Credible evidence may be in work conditions or an appendix; its location alone is not a defect.
 
-Check:
+Inspect whether planned comparisons, theoretical checks, metrics, reference values and uncertainty match the scientific claim. For prediction and transfer, select PRED/TRANSFER; for mechanisms, CAUSAL; for recovery or precision, INVERSE/MEASURE. Do not require controlled experiments, real-scene deployment and downstream applications for every project.
 
-- Title and abstract expose the same object, problem, method/path, and contribution.
-- Headings are informative and parallel.
-- Key claims are visible in topic sentences, not buried in long paragraphs.
-- The proposal can be understood from title + abstract + rationale summary + one overview figure.
-- Terminology remains consistent across sections.
-- Research-content headings expose the dependency chain, not only method names.
-- Research basis visibly supports the proposed contents before the reviewer has to search for it.
+Resource descriptions should support the scale and timing of the plan. When access is stated but its attachment is unprovided, identify the unverified part; when the plan explicitly consumes a resource before it becomes available, cite both passages as the contradiction. Shared infrastructure, existing data and zero incremental equipment cost are legitimate possibilities.
 
-Flag:
+## Larger Projects And Platform Outputs
 
-- Long paragraphs without topic sentences.
-- Important innovations first appearing late in the draft.
-- Repeated background that delays the scientific question.
-- Overuse of slogans such as "重大意义", "国际领先", "填补空白", or unsupported "首次".
-- Cliché openers that carry no information: "随着我国经济迅速发展……", "随着大数据时代的到来……" and similar.
+For large-team or platform-heavy projects, inspect how tasks contribute to coherent scientific goals and how shared data, interfaces, evaluation and integration are handled. A joint model, complementary hypotheses or a common evaluation framework can provide coherence; a single serial task chain is not mandatory.
 
-Fast-read check: are important questions, hypotheses, evidence and contributions easy to locate? Topic sentences, selective emphasis, tables or figures are alternatives; a lack of bold text or self-citations alone is not a finding.
-
-Concept-precision check: flag terminology that changes the scientific meaning or confuses variables, mechanisms and results. Rank notation variants and local wording by their actual impact; do not predict rejection from a single cosmetic inconsistency.
-
-## Figure And Visual Evidence
-
-Figures should reduce reviewer effort, not decorate the draft.
-
-Check for:
-
-- Overview/concept figure: shows object, problem, method/path, contents, and expected output.
-- Research content relationship figure: shows how tasks depend on or support each other.
-- Technical route figure: maps each research content to method, data/sample, experiment/model, validation, and expected result.
-- Research basis figure/table: maps prior work to proposed tasks without implying the project is already completed.
-- Annual plan/Gantt-style figure: milestones are concrete and aligned with research contents.
-
-Strong figures often act as navigation: a reviewer should be able to reconstruct "why these contents, in this order, with these data and expected outputs" from the figure plus nearby paragraph.
-
-Useful visual devices (select by complexity and information gain; absence alone is not a defect):
-
-- An overview can map object/demand, challenges, questions, contents, objectives and validation. Recommend it when the relationships are otherwise hard to reconstruct; concise prose or a coverage table can also suffice.
-- A total-then-parts route figure can expose methods, samples, groups and evaluation. Choose swimlanes or another readable form if it clarifies the actual project.
-- Add per-method flowcharts only for steps whose complexity warrants them; do not require one per research content or a fixed number of figures.
-- For content chains that are bidirectional / 协同 / feedback, the content-architecture figure should show feedback arrows, not a straight pipeline.
-- A 立项依据示意图 using 实线=known / 虚线(或问号)=hypothesis — the dashed part is the project's innovation.
-- Research design principles to check in the route figure: 随机、对照、重复 where the field expects them.
-- For a claimed new observable, paired evidence under the incumbent/proposed representations and an independent reference can be persuasive. Inspect available pilot data or simulation and the planned validation; if the signal has neither evidence nor a credible test, report that gap without requiring a particular panel layout.
-
-Figure-fidelity caveat: when the source is a converted/extracted draft (e.g. mineru), a 流程图/示意图 may be re-rendered as broken mermaid or lost. Do not judge figure logic from a mangled mermaid block — consult the original image (the `images/` directory) before flagging figure-logic problems, and note extraction loss as a limitation rather than an applicant mistake.
-
-Flag:
-
-- Figures not mentioned or explained in nearby text.
-- Figure logic contradicts the written research contents.
-- Overloaded "八卦图 / 迷魂阵" figures — too many boxes, arrows, colors, or abbreviations that dazzle rather than guide.
-- Low-resolution screenshots, illegible labels, inconsistent numbering, or mismatched terminology.
-- Figures list modules but omit dependencies, validation data, or expected outputs.
-
-## Evidence And Validation Resources
-
-Use this surface when the draft depends on datasets, samples, instruments, computing resources, platforms, collaborations, field sites, or application scenarios.
-
-Check:
-
-- Each research content has at least one credible evidence/resource basis.
-- Preliminary work is mapped to future tasks, not just listed by paper count.
-- Data/sample access is concrete: source, scale, representativeness, preprocessing/annotation, permissions, and continuity.
-- Validation plan names baselines, metrics, controls, comparisons, or application cases appropriate to the field.
-- Computing/instrument/platform needs match the methods and budget.
-- Collaborations are specific enough to support access, expertise, or verification.
-
-Flag:
-
-- "数据丰富", "平台完备", "基础扎实" without task-level mapping.
-- Feasibility rests on a collaborator or platform that is not evidenced in the provided material.
-- Validation uses only a convenient demonstration case and cannot test the core scientific claim.
-- Preliminary evidence is so complete that reviewers may ask what remains to be funded.
-
-## Key Project And Platform-Heavy Drafts
-
-Use this surface for 重点项目, large-team projects, or drafts whose outputs include datasets, knowledge bases, software platforms, prototype systems, maps, atlases, standards, or field demonstrations.
-
-Check:
-
-- Whether the enlarged scope is justified by one central scientific problem rather than by a list of deliverables.
-- Whether each subtask has a scientific role: shared data/knowledge foundation, representation/model, fusion/optimization/control, evaluation/feedback, or scenario validation.
-- Whether team members, platforms, data sources, and field sites map to subtasks instead of being listed as general strength.
-- Whether expected outputs such as datasets, maps, systems, software, or atlases are used to test scientific claims, not only to show workload.
-- Whether annual plans show dependency and integration milestones, not just parallel subteam schedules.
-
-Flag:
-
-- A broad "system construction" project with no unifying model, mechanism, representation, taxonomy, or law.
-- Many modules named by technology or deliverable, but no explanation of why they must be studied together.
-- Platform/data outputs whose quality metrics, openness, annotation rules, uncertainty, or validation use are unclear.
-- A team basis section that proves general strength but not who can solve which proposed bottleneck.
+Datasets, software, atlases, standards or systems can be scientific outputs. Check the claimed contribution, quality criterion and validation role. Do not demand that every output be a mechanism, or infer low novelty from the deliverable name alone. Unexplained disconnected modules and a genuinely unsupported integration claim should be tied to their consequences.
 
 ## Annual Plan And Expected Outcomes
 
-Use this surface whenever the draft contains 年度研究计划 or 预期研究结果. It is where reviewers test whether the plan is executable and whether the applicant knows their own capacity.
+Inspect usable prerequisites, milestones and planned evidence. Literature work, procurement, pilot studies and reporting can appear as enabling/closing activities. Same-year staged tasks, parallel studies and iteration can be coherent; find an actual dependency conflict before demanding rescheduling.
 
-年度计划 checks:
+Match promised results to tasks and proposed tests. Existing solver/code components do not mean a new theorem, model boundary or setting has already been completed. Conversely, a claimed new result already explicitly delivered in the basis needs an explanation of the remaining increment.
 
-- Describe substantive milestones at the resolution needed to judge progress; no fixed line count per year.
-- Literature work, procurement, pilot experiments and reporting may appear as enabling or closing activities. Check whether substantive research milestones remain visible, rather than banning these activities from the schedule.
-- Long-lead work (model building, animal-model prep, patient enrollment, data campaign, field season) is scheduled early.
-- Check milestone order and usable intermediate outputs. Upstream and downstream tasks may occur within the same year or overlap in an iterative plan; report only a real dependency conflict.
-- If a budget or resource schedule is provided, compare its timing with the work plan. Do not demand an annual budget breakdown from a 包干制 application.
-
-预期成果 checks:
-
-- Outcomes are split by scientific question, not by count. "SCI 6 篇 / 专利 2 项 / 硕士 3 名" is a workload indicator, not a scientific product; the strong form names, for each key scientific question, what will be known, established, or made verifiable.
-- Compare expected outcomes with the scientific tasks, time and demonstrated capacity. Comparable kd outputs can provide context when available, but counts are not quotas or proof of feasibility. If no suitable lookup is available, state that limit and judge only the support in the draft; do not invent a comparison band.
-- Deliverables such as datasets, software, platforms, standards, or atlases must say how they test a scientific claim, not only that they will be produced (see the key-project surface above).
-
-Priority calibration: funded drafts routinely break the finer rules above — a bare 3-line-per-year plan, "撰写结题报告" occupying the last year, count-style 预期成果 — and are funded anyway. Keep these as low-priority polish unless the plan also breaks a content dependency, contradicts the research basis, or schedules long-lead work late. What actually distinguishes a strong 预期成果 block is the *ordering*: named scientific products first (物理模型 / 理论方法 / 判据 / 精度界 / 数据集), counts after. Do not lead an audit with annual-plan nitpicks.
-
-Flag:
-
-- An annual plan that restates the research contents once per year with no progression.
-- Outcomes that promise what the research basis already delivers.
-- Milestones with no verification event — no comparison, no baseline, no validation scene.
+Scientific outcomes should be identifiable wherever they appear. Paper/patent/student counts can accompany them without a prescribed ordering or one outcome per question. Historical kd output counts are descriptive context, not quotas. If no suitable sample was checked, do not invent a funding-performance comparison or an over-promise finding.
 
 ## Budget And Task Mapping
 
-First establish year, category, funding mode and document purpose using `current-rules.md`. A 包干制 application needs no budget; an optional internal estimate may still be checked for resource feasibility. Apply this surface to supplied formal budgets or resource estimates, labeling their role.
+First establish funding mode and the document's purpose. A 包干制 application does not require an application budget; a voluntarily supplied internal estimate can still be reviewed for resource feasibility. Formal amounts/categories/units follow the applicable instructions in current-rules.
 
-Map every budget line to a research content or technical-route step, the same way 研究基础 is mapped:
+| Resource or expense | Task(s), including shared use | Availability or measurement basis | Relevant finding ID |
+| --- | --- | --- | --- |
+| Existing source / shared allocation / new expense | | | |
 
-| 预算科目 | 金额 | 对应的研究内容/方案步骤 | 测算依据 | 缺口 |
-| --- | --- | --- | --- | --- |
-
-Check:
-
-- Map spending to a task or shared need, allowing one line to serve multiple contents. Ask for the purpose of an unexplained line without presuming padding.
-- Each resource-dependent content needs a credible source: existing equipment/data, platform allocation, a shared budget line, other funding or new expenditure. No separate line or no incremental cost is not evidence that a task was added merely for structure.
-- Assess equipment necessity, access and cost against the actual method and resources; project category alone does not decide whether a purchase is inappropriate.
-- 测试化验加工费, data acquisition/annotation, and 机时 match the data and validation scale claimed in 研究方案.
-- 劳务费 matches the team size and duration described in 研究基础.
-- 合作转拨/外拨 implies a named collaborator whose role is visible in 研究方案 and 研究基础.
-- 工作条件 and 预算 agree on what must be purchased versus what already exists.
-
-For current categories, units and required measurement detail use `current-rules.md` and the applicable budget instructions. Never infer a universal ratio cap, explanation threshold or formal rejection outcome from old sample budgets.
-
-Do not invent 测算依据, equipment prices, or collaborator shares. When a number carries no stated basis, report it as 依据缺失 and leave the number to the applicant.
+Compare scale, timing, source and any proposed purchases with the actual method. A task need not have a separate budget line; an unexplained amount does not prove padding. Distinguish an unprovided estimate from an explicitly impossible allocation. Do not invent prices, collaborator shares or financial rules.
 
 ## Literature And Current Status
 
-The literature review should support the argument for this project, not merely prove the applicant read papers.
+Check whether the provided literature argument identifies what existing work solves, the relevant assumptions/limits and the proposed increment. Relevant foundations, competing methods and recent developments matter according to the topic; there is no universal reference count, language ratio, self-citation quota or publication-year cutoff.
 
-Check:
+Bibliography verifies identity; an abstract supports only what it states; method-level comparisons need adequate method evidence. Use [representative-works.md](representative-works.md) for access and verification levels. Unavailable sources leave a comparison unverified, not automatically false.
 
-- Recent literature is represented where the topic is fast-moving.
-- Foundational/classic work is present when needed.
-- Domestic and applicant's own prior work are positioned appropriately, not overused.
-- Each literature subsection ends with a gap that points to one proposed research content or scientific question.
-- The cited limitations are specific: mechanism unknown, model not valid under certain conditions, data/source mismatch, unresolved relation, missing validation, etc.
+For a claimed research gap, consider applicable neighboring theory, models of the same object, qualitative observations and competing measurements. These are search directions, not four required neighborhoods. Match the exact claim using NOVEL/TRANSFER/MEASURE as relevant. A zero-hit kd query cannot confirm that no research exists.
 
-Reference rules of thumb (adjust to field norms):
+If a literature gap appears to be described elsewhere in the draft, connect those passages before issuing a finding. Suggest specific sources to supply or search directions when needed; never invent a paper or infer intent from an unsupported citation.
 
-- Assess whether relevant foundational, competing and recent work is covered; do not infer inadequate reading from a universal reference-count band.
-- Include the newest work (submission year or the year before) and authoritative-venue work; too old-only reads as out of touch.
-- Include some of the applicant's/group's own related papers, but do not over-cite them.
-- Cite relevant work regardless of language; do not recommend a language quota or citations intended to appeal to presumed reviewers.
-- Each cited claim must be tied to a specific in-text citation point in the rationale, not just listed at the end.
+## Coverage And Output
 
-Flag:
+Keep the full-review record proportional: source/form, scientific logic, evidence/validation, resources/schedule/outcomes, relevant field checks and any external verification actually attempted. Group surfaces sharing the same status and source, retaining important distinctions such as plan text checked versus execution unverified.
 
-- Chronological lists without synthesis.
-- Claims that "few studies exist" without evidence.
-- Missing comparison with obvious competing methods or adjacent fields.
-- Literature gaps that do not lead to the proposed method.
-- Reference formatting inconsistency if references are provided.
-
-Empty-field rationale (when the research proposition really is new). "经广泛文献调研，暂未发现针对……的研究报道" cannot be *reviewed* — there is nothing there to survey. Do not stop at flagging the claim; check whether the draft replaces the missing survey with the four neighborhoods that bound the gap:
-
-1. 物理/理论溯源 — the home field the idea is borrowed from, with its classic literature and the invariance that licenses the transfer (pair with the 跨域类比三件套 in `question-distillation.md`).
-2. 邻近建模工作 — what existing models of the *same object* do cover, and the structural reason they cannot cover this: the strong form shows the gap is by construction (the incumbent model class only admits mechanism A, so the mechanism this project studies falls outside its assumptions), not merely unstudied.
-3. 同现象的定性工作 — who has already *seen or displayed* the phenomenon without quantifying it, which converts "no one studied this" into the far stronger "the phenomenon is known, the quantitative mapping is missing".
-4. 现有主流手段的物理局限 — the incumbent competitor's limits argued from its operating principle (what it must assume, what it must repeat, which theoretical limit bounds it), not from its measured performance.
-
-A bare 空白声明 carrying none of the four is the real finding. Route the claim itself to the 撞题核查 in `kd-lookup.md`; note that recent funded projects sit in the 结题库 blind spot, so a null lookup does not confirm the blank.
-
-Do not invent missing papers. If the literature appears weak, suggest search directions and keywords rather than fabricating citations.
-
-## Policy And Integrity Triage
-
-For policy-related issues, route to `references/current-rules.md` and verify with official sources before final wording.
-
-Common triage items:
-
-- Current-year project type and eligibility.
-- Application code and research attribute consistency.
-- AI-assisted writing declaration or other current-year AI-use requirements.
-- Scientific integrity: no fabricated references, data, preliminary work, achievements, authorship, or collaborations.
-- Ethics, biosafety, data security, human/animal subjects, geographic/sensitive data, field sampling, and collaboration commitments where relevant.
-- Budget rule compliance only — amounts, caps, 科目 names, and formatting. The budget-to-task logic check lives in `Budget And Task Mapping` above; keep the two findings separate.
-
-Report uncertain issues as "需申请人按当年指南确认", not as definitive rule violations.
-
-## Output Pattern
-
-For each supplementary surface, keep findings short:
-
-```markdown
-### 形式与栏目完整性
-- 风险：
-- 依据：
-- 建议：
-
-### 图表与可读性
-- 风险：
-- 依据：
-- 建议：
-
-### 数据、验证与研究基础映射
-- 风险：
-- 依据：
-- 建议：
-
-### 年度计划与预期成果
-- 风险：
-- 依据：
-- 建议：
-
-### 预算与任务映射
-- 风险：
-- 依据缺失的科目：
-- 建议：
-
-### 文献与研究现状
-- 风险：
-- 依据：
-- 建议：
-
-### 政策与科研诚信
-- 风险：
-- 核查状态：
-- 建议：
-```
+Publish each distinct problem once using the core IDs. A section note or appendix should reference its existing ID. If a surface has no supported issue, a short coverage entry suffices; do not generate its own “risk/evidence/advice” block solely because it was examined.

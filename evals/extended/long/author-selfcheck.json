@@ -1,0 +1,66 @@
+{
+  "han_count": 15947,
+  "character_count": 18372,
+  "section_count": 15,
+  "line_count": 267,
+  "evidence_distances": [
+    {
+      "lines": [
+        13,
+        178
+      ],
+      "han_distance": 10402,
+      "char_distance": 11761,
+      "over_half_han": true,
+      "over_half_chars": true
+    },
+    {
+      "lines": [
+        45,
+        219
+      ],
+      "han_distance": 10442,
+      "char_distance": 11883,
+      "over_half_han": true,
+      "over_half_chars": true
+    },
+    {
+      "lines": [
+        55,
+        243
+      ],
+      "han_distance": 10852,
+      "char_distance": 12569,
+      "over_half_han": true,
+      "over_half_chars": true
+    }
+  ],
+  "arithmetic": {
+    "R01_optimal": 4,
+    "R02_optimal": 7,
+    "equal_batch_mean": 5.0,
+    "pooled_mean": 2.6,
+    "required_slot_minutes": 1440,
+    "available_slot_minutes": 960,
+    "maximum_runs_in_window": 80,
+    "minimum_wall_minutes": 360.0,
+    "D04_exhaustive_partition_result": [
+      6,
+      [
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "maximum_replay_seconds": 424
+  },
+  "identical_paragraphs": [],
+  "request_exact_match": true,
+  "forbidden_application_markers": []
+}
