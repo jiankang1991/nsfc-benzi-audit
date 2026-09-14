@@ -19,7 +19,7 @@ If confidentiality is unclear, summarize patterns without quoting source text.
 
 ## Match Before Generalizing
 
-Match the dimensions that affect the particular inference; counting any two matches is not enough. The same year/category does not make a field-specific evidence requirement transferable to another kind of research:
+Prefer patterns from examples that match the target along at least two dimensions:
 
 | Dimension | Why it matters |
 | --- | --- |
@@ -78,7 +78,7 @@ Useful pattern types:
 Use exemplar patterns as diagnostic contrast:
 
 1. State the matched context: which examples are comparable and why.
-2. Identify any consequential differences after checking whether the target already supplies equivalent evidence. There may be no gap, and no quota of three is required.
+2. Identify the top three gaps between successful-example patterns and the target draft.
 3. Convert each gap into a revision action: restructure, refocus, add evidence, remove unsupported claim, or rewrite a skeleton.
 4. Keep suggestions fact-free unless the target draft provides the fact. Use placeholders such as `[具体对象]`, `[关键变量]`, `[前期证据]`.
 
@@ -86,26 +86,14 @@ Do not say "中标本子都这样写, 所以必须这样写." Say "在可比样�
 
 ## Improving This Skill From Examples
 
-When the user authorizes skill improvement, separate observation, candidate rule and admitted diagnostic criterion. An observation that a funded example uses a format is evidence that the format occurred; repeated occurrence does not prove its absence is a defect.
+When the user's goal is to improve the skill itself:
 
-For a rule capable of producing a 必改 opinion, maintain a short record:
-
-| Field | What must be explicit |
-| --- | --- |
-| ID and canonical location | One maintained home; other references link to it rather than restating a stronger version |
-| Claim and applicability | What the applicant must actually be claiming for the criterion to apply; relevant year/field/scope |
-| Supporting evidence | Source type, available source locator, and why it supports this inference; distinguish formal rule, logical criterion and observed writing preference |
-| Exceptions/counterexample | A plausible valid proposal that superficially matches the trigger but must not be rejected |
-| Failure and smallest repair | The consequence when the criterion is violated; clarification/claim narrowing may suffice |
-| Validation and supersession | Cases used to derive it, independently tested cases, actual outcomes, and any old rule/wording it replaces |
-
-Core coverage/evidence/priority rules belong in [benzi-logic.md](benzi-logic.md); claim-family burdens in [research-claims.md](research-claims.md); official requirements in [current-rules.md](current-rules.md); writing devices in [writing-advice.md](writing-advice.md). Domain references specialize actual evidence conditions. A candidate without adequate support remains a contextual question or sample note, not a high-priority gate.
-
-Before admitting or changing a rule, search the entrypoint, references, report template and examples for the same concept, including contrary exceptions. Update the canonical source and its callers together; remove or narrow the superseded wording instead of appending another override. Retire a rule when its basis is invalidated or its scope no longer applies, recording why.
-
-Validate syntax/resources separately from behavior. Test a substantive failure and a plausible non-failure; at least one input should not have been used to derive the rule. For comparative evaluation, freeze raw materials and scoring criteria before observing outputs, provide the same request and tools to fresh contexts with and without the skill, and judge findings against source evidence. Do not insert the desired diagnosis into the draft text. Record scope, misses, unsupported strong opinions, source locators and usable repairs; output length alone is not quality.
-
-Use synthetic or properly anonymized artifacts for retained tests. Report the source type, scope, supporting/contrasting observations and validation separately. Absorbed-source counts, repeated runs and independently held-out cases are different quantities; none alone establishes accuracy or funding success.
+1. Build a table of repeated patterns and failure contrasts.
+2. Add only transferable rules to `references/benzi-logic.md` or `references/audit-surfaces.md`, written as signals that go through the countercheck and grading table in `benzi-logic.md`. For each rule that can produce 必改, record the claim it applies to, one plausible valid proposal that superficially matches but must not be flagged, and the smallest repair. When a rule turns out too strong, narrow its trigger or grade — do not delete the underlying observation.
+3. Put exemplar-specific or field-specific details in a separate reference; do not bloat `SKILL.md`.
+4. Use synthetic or heavily anonymized examples if an example must be retained.
+5. Re-run basic validation and test with at least one draft that was not used to derive the pattern.
+6. Record the source type, scope, supporting/contrasting observations and validation separately. A count of absorbed applications/books is not a held-out test count or an accuracy score; preserve this distinction in public descriptions.
 
 Avoid overfitting:
 
@@ -118,7 +106,7 @@ Avoid overfitting:
 Learn from failures as well as successes. These patterns are drawn from published reviewer comments on failed and B-类 near-miss proposals; use them as contrastive questions, not verdicts:
 
 - A failed case had no relevant basis on the target tissue. Use this to ask what evidence supports transfer to the new object, not to require all prior work to be directly on it. Adjacent methods plus credible new-object validation can support a change of direction.
-- A mechanism claim supported only by association may leave its causal inference unresolved. Apply CAUSAL to that claim; do not demand a mechanism from a scoped statistical-method study.
+- "现象观察层次" scores low: a *mechanism-framed* project that stays at observed correlation/phenomenon draws "创新性较低". A scoped prediction or statistical-method project is judged by its own validity claims instead.
 - Model/system mismatch: inspect the biological components or scenario conditions needed for the exact claim. An immune model lacking the required component needs reconstitution or complementary evidence; do not reject all immune mechanisms solely from the label 免疫缺陷. See `medical-biomedical.md` for model-specific boundaries.
 - Near-miss comments can reveal unaddressed questions, contents not motivated in the rationale or unexplained duplication. Diagnose these substantive issues rather than inferring funding prospects from an A/B label or requiring a fixed number of questions.
 

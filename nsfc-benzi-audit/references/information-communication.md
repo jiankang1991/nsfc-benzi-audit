@@ -2,7 +2,7 @@
 
 Use this reference when the draft or examples involve information science, communication networks, optical networks, computer networks, data centers, remote sensing information processing, applied AI, network security, quantum communication, or related NSFC information-engineering directions.
 
-Use these domain questions within the coverage and finding decisions in [benzi-logic.md](benzi-logic.md). For prediction, models, causality or transfer, the matching [claim card](research-claims.md) sets the evidence boundary. Read only sections relevant to the supplied claims.
+The goal is not to force every information proposal into one template. Use these checks to decide whether an application-oriented information draft has converted a demand or performance bottleneck into a reviewable basic-research problem.
 
 ## Context Calibration
 
@@ -56,11 +56,11 @@ Information and communication examples often use one of these content dependency
 Audit questions:
 
 - Can each research content be assigned a role: architecture, model, mechanism, optimization, control, evaluation, or validation?
-- Where dependencies are claimed, do the relevant tasks exchange the stated inputs and outputs? Parallel studies may answer complementary aspects of a coherent question.
+- Does a later content depend on outputs from an earlier content, or are the contents just parallel algorithms?
 - Does the final content validate the model/mechanism under the stated constraints, rather than only demonstrate an application system?
-- Does each task, including any integration step, have a clear scientific role?
+- If the project has 4 contents, is the fourth a necessary integration/validation step for the scientific claims?
 
-Judge scope against questions, time and resources; the architecture examples above do not prescribe task counts or a final validation task.
+For youth projects, three tightly linked contents are usually easier to defend than four broad modules. For general projects, four contents can work when the first two establish theory/model, the third optimizes or controls resources, and the fourth verifies system-level boundary conditions.
 
 ## Scientific Questions
 
@@ -73,7 +73,7 @@ Good information-field scientific questions often ask about:
 - physical, protocol, topology, or security constraints that change model behavior;
 - evaluation validity, uncertainty, and boundary conditions.
 
-Both noun phrases (e.g. "安全性与可靠性之间的博弈") and interrogatives can express a scientific question. Use the shape below to inspect the underlying proposition, not to prescribe its title form:
+Real funded info-comm SQs are noun phrases (e.g. "安全性与可靠性之间的博弈", "动态低时延业务与资源实时智能适配"), not interrogatives. Use the shape below only to test the *body sentence* beneath the noun-phrase title; do not flag a noun-phrase SQ as task-like for being non-interrogative:
 
 `Under [specific scenario/condition], how do [variables/resources/failures/data shifts] constrain [model/mechanism/control/representation], and how can this relation be described, optimized, or verified?`
 
@@ -94,7 +94,7 @@ For fast-moving AI/network/security topics, suggest that applicants explicitly c
 
 ## Validation And Feasibility
 
-Select evidence levels appropriate to the claimed result; a theoretical-method study does not automatically require deployment or real-world data:
+A credible validation chain should make three levels visible:
 
 - controlled validation: simulation, benchmark, ablation, theoretical bound, convergence, or complexity analysis;
 - scenario validation: real traffic/data, field scene, open platform, prototype, or industry-style workload;
@@ -107,7 +107,7 @@ Strong research-basis sections map prior work to future tasks. A useful local pa
 Flag:
 
 - prior papers are listed by venue only, without task-level mapping;
-- a dataset/platform is not connected to its validation role anywhere in the supplied material;
+- the validation dataset/platform appears only in feasibility and not in the research contents;
 - a collaborator, enterprise, open platform, or sensitive dataset is essential but not evidenced;
 - the preliminary work appears to have already completed the central algorithm or platform.
 
@@ -129,7 +129,7 @@ Figures: use the options in `audit-surfaces.md` when an architecture or resource
 
 ## Report Add-On
 
-Record relevant domain coverage concisely. Use the following only when it adds information; reference existing finding IDs instead of repeating their explanation:
+When diagnosing an information or communication draft, add a short field-specific check:
 
 ```markdown
 ### 信息通信类专项检查

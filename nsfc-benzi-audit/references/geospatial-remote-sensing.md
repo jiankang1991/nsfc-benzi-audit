@@ -2,7 +2,7 @@
 
 Use this reference when a draft or example involves remote sensing, GIS, geospatial intelligence, DEM/terrain/geomorphology, spatial databases, point clouds, SAR/optical/hyperspectral imagery, video GIS, camera networks, POI/trajectory/location data, city 3D modeling, or geospatial knowledge graphs.
 
-Use these domain questions within [benzi-logic.md](benzi-logic.md). Prediction, inversion, measurement and transfer burdens are defined in [research-claims.md](research-claims.md); specialize them to the stated spatial object and claim. Read only relevant sections.
+The goal is to decide whether a geospatial application has converted a data-processing, mapping, monitoring, or platform demand into a reviewable basic-research problem.
 
 ## Context Calibration
 
@@ -48,12 +48,12 @@ Common strong chains include:
 
 Audit questions:
 
-- Can each content item be assigned a scientific role, whether in a dependency chain or a set of complementary studies?
+- Can each content item be assigned a role in one chain rather than treated as an independent technical module?
 - Does the final map, database, platform, or prototype validate the scientific model's boundary and generality?
 - Are data resources, annotation rules, registration methods, metrics, and uncertainty tied to the relevant research contents?
 - For key projects, do subteams contribute to one shared framework rather than parallel deliverables?
 
-The examples do not prescribe task counts. Check the coherence of contributions, actual dependencies and feasible scope for the target category.
+For youth projects, three contents are usually enough: focused representation/model, method, validation. For general projects, three or four contents can work. For key projects, four or five contents may be justified when the first content establishes shared data/knowledge or a unified spatial-temporal frame, and later contents depend on it.
 
 ## Scientific Questions
 
@@ -68,7 +68,7 @@ Good geospatial scientific questions often ask about:
 - camera/sensor network coverage, topology, synchronization, pose, and cooperative observation under quality constraints;
 - evaluation validity when ground truth is expensive, missing, delayed, or only partially observable.
 
-Both compact noun phrases (e.g. "散射机理约束") and interrogatives can express a question. Use the shape below to inspect the underlying proposition, not to prescribe its title form:
+Real funded geospatial SQs are written as compact noun phrases (e.g. "散射机理约束", "地貌全信息知识图谱体系构建", "跨源表征的联合测度机理"), not as interrogatives. Use the shape below only as an internal test of the *body sentence* beneath the noun-phrase title, and do not flag a normal noun-phrase question as task-like for being non-interrogative:
 
 `Under [spatial scene/data modality/scale], how do [geometry/physics/topology/semantics/time/annotation constraints] affect [representation/model/knowledge/optimization/evaluation], and how can this relation be described, computed, or validated?`
 
@@ -79,7 +79,7 @@ Flag questions whose body sentence can only be answered by "we will process data
 "Physical consistency" is often asserted generically. Check whether the physics actually enters the scientific question, the method, AND the evaluation — not just the introduction.
 
 - SAR: 散射机理 / 属性散射中心 (ASC) / 成像几何与多角度一致性 / 极化 (HH·HV·VV)、入射角、分辨率、波段 (as controllable conditions or shift-inducing factors) / 复值与相位 / 散斑. A strong SAR draft threads these through the SQ (e.g. "生成的多条件解耦与散射机理约束"), uses a physical quantity (ASC + feature matching) as an evaluation metric, and defines its open-world along physical axes (目标观测受限 / 场景散射变化 / 载荷配置多样). "SAR" merely name-dropped in the intro is the weak case. Add the frequency/aperture axis when the draft works in the signal domain: 距离频域子带 / 多普勒(方位)频域 / 彩色子孔径图像 (CSI) / 时频谱 — bandwidth and synthetic-aperture length decide what frequency selectivity is observable at all, so 带宽、PRF、多普勒带宽 act simultaneously as the method's resource and as its 可观测性 constraint (which orders, periods, or target scales simply cannot enter the processed band). A draft that uses this axis only to display colour or texture, with no quantitative link from the frequency-domain feature back to a physical or geometric parameter, is still at the qualitative stage.
-- InSAR (historical exemplar evidence is `样本不足`; this is domain guidance): 相干性 / 干涉相位 / 形变-大气-地形相位分解 / 时空基线. Use the INVERSE card in [research-claims.md](research-claims.md#inverse--recovering-unknowns-from-observations) for parameter-recovery claims; this does not mandate a causal experiment.
+- InSAR (flag `样本不足` — add only by analogy, not as a sample-derived rule): 相干性 / 干涉相位 / 形变-大气-地形相位分解 / 时空基线. Treat parameter estimation as an inverse problem (see benzi-logic Research-Type Tests).
 - Optical/hyperspectral (`样本不足`): 成像光谱 / 混合像元-端元-丰度 / 空谱联合 / 大气校正 / 降维. Term trap: real hyperspectral method vocabulary often appears in English (unmixing / endmember / abundance / low-rank / super-resolution) while 混合像元/降维/空谱 are rarely written literally — do not key domain detection only on Chinese surface terms.
 
 ## Literature And Rationale
@@ -95,7 +95,7 @@ Avoid treating national strategy, public safety, smart-city demand, or map/datab
 
 ## Validation And Feasibility
 
-Choose validation layers that test the actual claim; these are alternatives or complementary evidence, not three mandatory stages:
+Credible validation should make three layers visible:
 
 - controlled validation: simulation, benchmark, ablation, uncertainty analysis, theoretical property, convergence, or complexity;
 - geospatial validation: multi-region, multi-sensor, multi-season, field-site, UAV/ground truth, map comparison, or physical/geometric consistency;
@@ -132,7 +132,7 @@ Innovation should not be only a technology stack or a new dataset. Ask whether e
 
 Datasets, maps, knowledge bases, or systems can support innovation, but they are usually not the innovation alone unless the scientific contribution is the taxonomy, annotation principle, measurement framework, uncertainty model, or generalizable construction method.
 
-For 一体化 / 协同 / 融合 claims, inspect the stated coupling: a mutual prior, joint objective, shared representation, common evaluation or explicit inter-model connection. Report an integration gap only when the promised relation has no support anywhere in the design. Parallel tasks can share a coherent framework; their scheduling alone does not refute integration.
+Integration must be cashed out as a mechanism. When a draft's spine is 一体化 / 协同 / 融合, verify the word resolves to a concrete mechanism — a mutual prior between two tasks (e.g. segmentation ↔ reconstruction), a joint/unified mathematical framework or objective, a shared representation/latent space, or explicit inter-model 连接点 — not a bundling slogan. Strong drafts *earn* the integration word (e.g. "geometry-semantics mutual prior", a bidirectional generate↔perceive optimization loop with named stages); a title that claims 一体化 while the contents run in parallel is a flag.
 
 ## Figure Conventions
 
@@ -140,7 +140,7 @@ Use figures to expose spatial relations, data provenance, model structure or val
 
 ## Report Add-On
 
-Record relevant domain coverage concisely. Expand the following only when useful; reference existing finding IDs instead of repeating their explanation:
+When diagnosing a geospatial or remote-sensing draft, add:
 
 ```markdown
 ### 遥感/GIS/地理空间专项检查

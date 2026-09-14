@@ -4,16 +4,14 @@ Use this reference when auditing NSFC drafts in medicine, clinical research, bio
 
 Treat successful medical examples as pattern evidence only. Do not copy disease-specific wording, undisclosed data, project structure, or team claims. The patterns below are transferable only when the target draft has comparable project type, discipline, research attribute, and evidence burden.
 
-First choose the actual claim family in [research-claims.md](research-claims.md): PRED for prediction/statistical validity, CAUSAL for mechanisms, and TRANSFER for extrapolation. The mechanism chains below apply to mechanism claims. The finding decision in [benzi-logic.md](benzi-logic.md) controls scope, counterchecking and priority.
-
 ## Calibration
 
 Medical and biomedical proposals often need to prove two things at once:
 
-- Scientific question: identify the knowledge sought in a disease mechanism, causal relation, statistical/diagnostic model, marker validity or intervention principle. A prediction-method project need not claim a disease mechanism.
+- Scientific question: the draft is not only treating, detecting, predicting, or screening, but explaining a disease mechanism, causal relation, biological process, model, marker logic, or intervention principle.
 - Medical relevance: the mechanism or method is anchored in a real disease subtype, clinical phenotype, patient population, sample source, diagnostic/prognostic endpoint, or treatment bottleneck.
 
-For a disease-mechanism project, a useful chain is:
+Do not force an engineering-style "system construction" standard onto medical drafts. Prefer a disease-centered chain:
 
 `clinical problem or disease subtype -> biological mechanism or causal hypothesis -> model/experiment/data evidence -> human sample or clinical relevance validation -> expected marker/target/diagnostic/therapeutic value`
 
@@ -29,8 +27,8 @@ Extract the medical version of the usual logic map:
 | Problem/goal | Unexplained pathogenesis, resistance, recurrence, poor prognosis, diagnostic ambiguity, immune escape, marker failure, model gap, or treatment bottleneck. |
 | Method/path | Clinical specimens, cohort/data mining, omics, perturbation, cellular mechanism, animal/organoid model, drug/biomarker validation, statistics. |
 | Distinctive feature | New disease subtype, mechanism, target, marker, model, intervention principle, validation resource, or cross-scale evidence chain. |
-| Data/validation loop | Evidence matched to the claim: cohort/model evaluation for predictive validity, discriminating causal evidence for mechanisms, relevant human/clinical evidence for an extrapolation claim. |
-| Significance | The scientific result and its relevant diagnostic, prognostic, preventive or therapeutic use. |
+| Data/validation loop | Human sample/data discovery or validation plus mechanistic perturbation and model-level functional verification. |
+| Significance | Mechanistic understanding first; diagnostic, prognostic, preventive, or therapeutic value second. |
 
 Flag "clinical importance" that is large but disconnected from the proposed mechanism. The proposal should narrow broad disease burden into a specific unsolved scientific question.
 
@@ -45,13 +43,13 @@ Strong medical scientific questions often ask:
 
 Weak versions:
 
-- Uses association alone to assert a causal mechanism or therapeutic target, without evidence supporting that stronger inference.
+- Only asks whether a factor is associated with prognosis, expression, diagnosis, or treatment response.
 - Presents screening, sequencing, database mining, or model construction as the scientific question.
 - Uses "clinical significance" as a final appendix without a defined endpoint, population, or validation method.
 - Claims a therapeutic target before proving disease relevance, causal mechanism, and model fit.
 - Lists multiple pathways, markers, drugs, and models without one governing hypothesis.
 
-For an actual mechanism claim, the following can clarify the proposed relation:
+For applicant-facing revision, push the wording from "研究 X 在疾病中的作用" toward:
 
 `X 在 [疾病/亚型/病程/治疗背景] 中通过 [机制/通路/细胞过程] 调控 [表型/终点] 的作用及机制`
 
@@ -59,7 +57,7 @@ Only use this skeleton as a logic aid; the applicant must verify all factual cla
 
 ## Medical Evidence Chain
 
-For cross-scale mechanism or translation claims, inspect the chain supporting that inference. For predictive/statistical claims, use the relevant evaluation boundary instead.
+Audit whether the draft builds a cross-scale evidence chain rather than isolated work packages.
 
 Common strong patterns:
 
@@ -73,7 +71,7 @@ Common dependency graph:
 
 `Content 1: clinical/data discovery or candidate validation -> Content 2: causal mechanism -> Content 3: in vivo/model verification -> Content 4: clinical significance, biomarker, drug, or intervention validation`
 
-This is an example architecture, not a task-count or full-translational-pipeline requirement. Check scientific roles and claimed dependencies; complementary parallel studies can be coherent.
+For youth projects, this may be compressed to 2-3 contents. Do not demand a full translational pipeline if it exceeds the project type. Do demand that every content has a clear input/output relation.
 
 ## Samples, Cohorts, Endpoints, And Statistics
 
@@ -105,8 +103,8 @@ For immune-mechanism claims, identify strain/genotype, retained and missing immu
 
 Use these checks when the medical draft is not a standard molecule-pathway-disease proposal. They are contrastive questions; do not force every item into every draft.
 
-- Clinical prediction, AI, imaging, or warning models: identify the decision point, target population, label/ground truth, cohort source, information available at prediction, evaluation separation and claimed utility. Match internal, temporal, prospective or external validation to the promised use; do not require all of them. A question about calibration, model validity, diagnostic principles or decision rules need not add a disease-mechanism experiment.
-- Nursing, psychology, health service, public-health, or behavioral intervention work: define population, scenario, intervention component, comparator/usual care, outcome scale, follow-up window and randomization/blinding where applicable. Inspect a mediator or mechanism when the project makes that causal claim; do not add it solely because the proposal is basic research.
+- Clinical prediction, AI, imaging, or warning models: identify the clinical decision point, target population, label/ground truth, cohort source, training/validation/test separation, prospective or external validation plan, leakage/confounding controls, interpretability, and clinical utility. Model construction alone is not the scientific question unless it exposes a disease mechanism, diagnostic principle, or decision rule that fits NSFC basic-research framing.
+- Nursing, psychology, health service, public-health, or behavioral intervention work: define population, scenario, intervention component, comparator/usual care, outcome scale, follow-up window, randomization/blinding where applicable, implementation pathway, and mediator/mechanism if the project claims basic research value.
 - Traditional medicine, formula, natural-product, or syndrome-based work: translate syndrome, formula, herb, or compound claims into a testable material basis and mechanism chain. Check quality control, batch/compound identity, dose-response, target engagement, pathway perturbation, model fit, and whether efficacy claims are separated from mechanistic claims.
 - Biomaterials, nanomedicine, molecular imaging, or theranostic work: link material/probe design to biological mechanism and disease endpoint. Check biodistribution, targeting specificity, safety/toxicity, clearance, comparator, imaging ground truth, therapeutic synergy, and the boundary between platform novelty and disease-relevant scientific question.
 - Antimicrobial, infection, implant, or wound-material work: connect local microenvironment triggers, release kinetics, host response, pathogen/biofilm model, tissue repair, and safety. Do not accept "new material plus antibacterial test" as sufficient without a mechanism and clinically matched model.
@@ -139,13 +137,13 @@ Because these observations may come from a small or field-specific sample batch,
 
 ## Common Findings
 
-Use concise applicant-facing language only after the core countercheck. These are example issue names, not findings to populate for every draft; reuse existing IDs for the same root issue:
+Use concise applicant-facing language:
 
 - `医学问题没有收束`: 临床负担写得很大，但没有收敛到本项目要解释的具体机制/病程/治疗耐受问题。
 - `样本链条不够清楚`: 提到了病例或标本，但缺少来源、分组、终点、随访、统计或伦理说明。
 - `机制跳跃`: 从表达相关或数据库筛选直接跳到靶点/治疗价值，中间缺少因果扰动和模型验证。
 - `模型不匹配`: 细胞或动物模型不能支撑所声称的疾病亚型、免疫机制、转移/复发或治疗场景。
-- `临床外推缺口`: 所声称的临床适用范围缺少对应验证；验证放在最后一项本身不是问题。
+- `临床意义后置`: 临床验证只放在最后一项，没有说明它如何反向支撑科学问题和创新点。
 - `前期基础未映射`: 论文、平台和样本很多，但没有说明分别支撑哪个研究内容。
 - `模型构建替代科学问题`: 预测、AI、影像或预警模型写得完整，但缺少要解释的机制、决策原则、验证终点或临床应用边界。
 - `技术平台抢主线`: 纳米材料、递送体系、影像探针或诊疗一体化设计很复杂，但没有说明它为什么是解决该疾病科学问题的必要路径。
