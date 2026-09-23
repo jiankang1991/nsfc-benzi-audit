@@ -53,6 +53,13 @@
 
 分级表写在 [benzi-logic.md](../nsfc-benzi-audit/references/benzi-logic.md#signals-countercheck-and-grading)。写作类问题默认进入报告（建议改或可润色），题目/摘要承诺了正文没有落实的对象、条件或结果时为必改。
 
+## 2026-09-23：口径统一
+
+- `benzi-logic.md` 的证据图与一致性矩阵标为工作底稿，报告只摘缺口行（对应 craft 评测的篇幅问题）；科学问题/创新点条数改为提示信号并合并两处创新点条数说法。
+- `kd-lookup.md` 触发条件与 SKILL、报告模板统一：按请求或核心新颖性主张提供查询卡。
+- 报告模板：每个编号除清单外最多再出现一次（依据 [2026-09-23 real 评测](../evals/runs/2026-09-23-real/README.md) 中编号重复 3–4 次的篇幅代价）。
+- 去掉对已不维护的 `paper-lookup` 的点名；历史审核报告移至 `docs/`；结构检查增加 name 与目录一致、description ≤ 1024 字符。
+
 ## 验证方式
 
 行为用例在 [evals](../evals/README.md)。向独立评估者只提供请求、skill 快照与原始测试材料；判据留给评分者。用正反例检验：既要检出写作问题，也要不把样本偏好误报为必改。不用关键词匹配冒充行为测试。

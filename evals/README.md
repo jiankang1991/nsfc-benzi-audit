@@ -8,6 +8,8 @@
 
 [craft](craft/rubric.md) 是专门检验本子写作知识的正反例：弱稿（限制性定语未落实、立项依据不收敛、内容写成目的、科学问题写成任务、创新点空泛）、强稿（多对多覆盖、声明转方向、零设备费、同年分阶段等不应误报的情形）、新观测体制与跨域类比稿。运行记录见 [runs/2026-09-14-craft](runs/2026-09-14-craft/README.md)。
 
+真实已中本子加埋雷的有/无 skill 对照（独立评分者半盲评分）见 [runs/2026-09-23-real](runs/2026-09-23-real/README.md)。原文与报告全文不入库。
+
 ## 给独立评估者的请求
 
 - **revision**：使用本 skill 审核 `fixtures/revision/current-draft.md` v2，并逐条复核 `previous-review.md`；同目录的 `full.md` 是历史材料。仅根据已提供内容和 skill 的已注明来源范围诊断，不执行外部检索。输出到独立临时目录。

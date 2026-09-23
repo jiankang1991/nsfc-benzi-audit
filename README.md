@@ -107,7 +107,7 @@ Use $nsfc-benzi-audit to audit this NSFC application draft.
 
 使用 Skills CLI 安装后，可用 `npx skills update nsfc-benzi-audit` 更新，用 `npx skills remove nsfc-benzi-audit -g -a codex` 卸载（Claude Code 将 agent 改为 `claude-code`）。手动安装请从仓库根目录复制内层 skill 目录，并重新开启会话或按宿主要求刷新发现。
 
-文本诊断不依赖其他命名 skill。PDF/DOCX 需要宿主能提取正文、表格和图片；否则提供已提取文本即可先做局部诊断。没有网络时仍可做内部逻辑检查，官方规则、文献与 kd 状态按实际标为未核查。`paper-lookup` 等仅是可用时的集成选项，不要求另装才能使用本 skill。
+文本诊断不依赖其他命名 skill。PDF/DOCX 需要宿主能提取正文、表格和图片；否则提供已提取文本即可先做局部诊断。没有网络时仍可做内部逻辑检查，官方规则、文献与 kd 状态按实际标为未核查。文献检索类 skill 仅是可用时的集成选项，不要求另装才能使用本 skill。
 
 ## 推荐输入
 

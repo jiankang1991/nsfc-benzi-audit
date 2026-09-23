@@ -102,6 +102,12 @@ def validate(root, manifest=None):
             for key in ("name", "description"):
                 if not re.search(rf"^{key}:\s*\S", header[1], re.M):
                     errors.append(f"Missing frontmatter field: {key}")
+            name = re.search(r"^name:\s*(\S+)", header[1], re.M)
+            if name and name[1] != skill.name:
+                errors.append(f"Skill name {name[1]} differs from directory {skill.name}")
+            description = re.search(r"^description:\s*(.*)$", header[1], re.M)
+            if description and len(description[1]) > 1024:
+                errors.append("Skill description exceeds 1024 characters")
         for relative in set(re.findall(r"`((?:references|assets)/[^`]+\.md)`", text)):
             if not (skill / relative).is_file():
                 errors.append(f"Missing skill resource: {relative}")

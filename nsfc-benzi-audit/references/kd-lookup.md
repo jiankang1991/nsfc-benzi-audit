@@ -46,7 +46,7 @@ Rules:
 
 ## The Five Lookups
 
-Ranked by how much they change the revision list. Run 1 and 2 whenever the draft's 申请代码 and keywords are known; the rest on demand.
+Ranked by how much they change the revision list. Offer lookups 1 and 2 when the user asks for collision/code checks or when a novelty claim (首次/空白/尚无人开展) is central to the draft; the rest on demand. Otherwise do not attach a query card.
 
 ### 1. 撞题核查 (topic collision)
 

@@ -182,7 +182,7 @@ Key scientific questions should be:
 - Rooted: point to a bottom mechanism or core relation.
 - Representative: specific to the project's object/class, not a universal slogan.
 - Important: if solved, they enable the stated method, goal, or innovation.
-- Few: usually 2 for youth projects and 2-3 for general projects.
+- Few: often 2 for youth projects and 2-3 for general projects — a prompt to check focus, never a grading criterion by itself.
 
 Flag weak scientific questions that:
 
@@ -335,7 +335,7 @@ Flag issues:
 - The plan relies on high-risk breakthroughs without alternatives.
 - Feasibility only says "team has rich experience" without mapping evidence to tasks.
 
-Use an evidence map for full audits:
+Use an evidence map for full audits (a working sheet, not report output — the report keeps gap rows only):
 
 | Research content | Needed evidence/resource | Draft evidence | Gap |
 | --- | --- | --- | --- |
@@ -353,7 +353,7 @@ Two nuances that catch weak feasibility sections:
 
 ## Features And Innovations
 
-Features and innovations should come from the distinctive feature, the scientific questions, and expected breakthroughs. Usually 2-3 points are enough.
+Features and innovations should come from the distinctive feature, the scientific questions, and expected breakthroughs. For the count signal see *Focus* below.
 
 Innovation can appear as:
 
@@ -423,7 +423,7 @@ For 面上项目, check whether the basis explains a natural continuation: what 
 
 ## Consistency Matrix
 
-For a full audit, create a matrix with rows:
+For a full audit, build this matrix as a working sheet (not report output; the report carries only the gap rows, per `assets/report-template.md`), with rows:
 
 - Title
 - Abstract

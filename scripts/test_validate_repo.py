@@ -16,7 +16,7 @@ class RepositoryValidationTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.write("LICENSE", "Example license\n")
         self.write("nsfc-benzi-audit/LICENSE", "Example license\n")
-        self.write("nsfc-benzi-audit/SKILL.md", "---\nname: example\ndescription: Example\n---\n")
+        self.write("nsfc-benzi-audit/SKILL.md", "---\nname: nsfc-benzi-audit\ndescription: Example\n---\n")
         self.write("资料/说明.md", "# 研究 条件\n\n## 重复\n\n## 重复\n")
         self.write("README.md", "[中文](资料/说明.md#研究-条件)\n[重复](资料/说明.md#重复-1)\n\n```text\n[示例](absent.md)\n```\n")
 
@@ -32,6 +32,11 @@ class RepositoryValidationTests(unittest.TestCase):
 
     def test_valid_unicode_anchors_duplicate_headings_and_fenced_examples(self):
         self.assertEqual(validate(self.root)["errors"], [])
+
+    def test_frontmatter_name_and_description_length(self):
+        self.write("nsfc-benzi-audit/SKILL.md", f"---\nname: other\ndescription: {'x' * 1025}\n---\n")
+        self.assert_error("differs from directory")
+        self.assert_error("exceeds 1024")
 
     def test_missing_file(self):
         self.write("README.md", "[附件](missing.md)\n")

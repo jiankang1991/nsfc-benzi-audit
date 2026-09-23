@@ -17,7 +17,7 @@ Do not judge relevance from titles alone. Titles mislead in both directions:
 Before judging relevance, obtain evidence appropriate to the claim:
 
 1. Prefer applicant-supplied PDFs or accessible source text. Inspect methods, data and validation before making method-level support claims.
-2. Use available DOI resolution, publisher pages, official preprint repositories or bibliographic services. An installed `paper-lookup` skill is optional, not a package dependency. If unavailable, use ordinary browsing/lookup tools; if those are unavailable too, continue the internal audit and mark external verification incomplete.
+2. Use available DOI resolution, publisher pages, official preprint repositories or bibliographic services. An installed literature/citation lookup skill is optional, not a package dependency. If unavailable, use ordinary browsing/lookup tools; if those are unavailable too, continue the internal audit and mark external verification incomplete.
 3. Record separate levels: **书目已核实** (identity/year/authors/venue), **摘要可见**, **方法全文已核实**, **未核实**. A bibliographic record establishes existence but not the full method; an abstract supports only the claims it actually states. A missing index entry is not proof that a paper does not exist.
 
 Record identifier, source and access date. For partial access, give a limited support judgment and name the missing evidence; request a PDF only when needed for the conclusion. Never invent metrics or author contributions.
