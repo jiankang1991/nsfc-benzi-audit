@@ -12,6 +12,8 @@
 
 借鉴外部规则前的 RED 实跑（数字来源分级、撞题别名通道，均未通过而不借）见 [runs/2026-09-28-borrow](runs/2026-09-28-borrow/README.md)。
 
+吸收《从技术问题到科学问题》前后的实跑（4 条候选借 1 条，另收紧单节请求的分级）见 [runs/2026-10-07-borrow](runs/2026-10-07-borrow/README.md)。
+
 ## 给独立评估者的请求
 
 - **revision**：使用本 skill 审核 `fixtures/revision/current-draft.md` v2，并逐条复核 `previous-review.md`；同目录的 `full.md` 是历史材料。仅根据已提供内容和 skill 的已注明来源范围诊断，不执行外部检索。输出到独立临时目录。
