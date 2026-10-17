@@ -14,6 +14,20 @@
 
 吸收《从技术问题到科学问题》前后的实跑（4 条候选借 1 条，另收紧单节请求的分级）见 [runs/2026-10-07-borrow](runs/2026-10-07-borrow/README.md)。
 
+对照 gxCaesar/open-research-skills 的预注册（2 条文档侧采纳、2 条待 RED 的候选规则）见 [runs/2026-10-17-borrow](runs/2026-10-17-borrow/README.md)。
+
+信号与见证材料的对应见 [coverage.md](coverage.md)；无见证的信号在删除或降级前先补材料。
+
+## 对照运行的记录要求（2026-10-17 起）
+
+有/无 skill 对照、借鉴前 RED/GREEN 实跑的 `runs/<日期>/README.md` 必须记录下面三项，缺任一项记为不合规运行，不得作为检出率或误报的证据（借自 gxCaesar/open-research-skills 的 `docs/evidence.md` 与冷审隔离规则；起因是 [2026-09-23 real](runs/2026-09-23-real/README.md) 只能算半盲）：
+
+1. **盲化由构造证明**：评分前对两臂报告施同一去模板化规则（剥标题、状态表、编号前缀，统一为平铺条目），记录规则与每份报告的改写次数；评分者的组别映射存在评分者拿不到的地方。
+2. **跨家族评分**：评分者模型家族与被测不同（本机可走 Codex），同家族评分只能标「半盲」。
+3. **输入清单**：skill 快照的 commit 哈希、每个 fixture 的 sha256、交给子代理的文件列表与请求原文。
+
+借鉴前 RED 实跑单臂运行只需第 3 项，判据照旧在运行前写定。
+
 ## 给独立评估者的请求
 
 - **revision**：使用本 skill 审核 `fixtures/revision/current-draft.md` v2，并逐条复核 `previous-review.md`；同目录的 `full.md` 是历史材料。仅根据已提供内容和 skill 的已注明来源范围诊断，不执行外部检索。输出到独立临时目录。
