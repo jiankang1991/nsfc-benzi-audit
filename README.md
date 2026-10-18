@@ -183,7 +183,7 @@ nsfc-benzi-audit/
     └── current-rules.md
 ```
 
-`SKILL.md` 负责触发和工作流，`benzi-logic.md` 统一信号→反查→分级规则，其他 `references/` 补充凝练、审核面、学科、代表作、kd 和官方规则，`assets/report-template.md` 是默认报告结构。仓库根目录的 `evals/`、`docs/`、`scripts/` 只用于维护验证；`python3 scripts/validate_repo.py` 检查本地链接与结构，不判断诊断对错。
+`SKILL.md` 负责触发和工作流，`benzi-logic.md` 统一信号→反查→分级规则，其他 `references/` 补充凝练、审核面、学科、代表作、kd 和官方规则，`assets/report-template.md` 是默认报告结构，`scripts/nsfc_ack_grants.py` 从论文致谢里反查近几年在研的国自然批准号（OpenAlex，补 kd 结题库的盲区）。仓库根目录的 `evals/`、`docs/`、`scripts/` 只用于维护验证；`python3 scripts/validate_repo.py` 检查本地链接与结构，不判断诊断对错。
 
 ## 修改示例
 

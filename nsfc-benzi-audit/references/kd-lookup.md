@@ -55,6 +55,7 @@ Ranked by how much they change the revision list. Offer lookups 1 and 2 when the
 - **Convert to action**: overlap is not a veto — it is a demand for an explicit differentiation sentence. Write the fix as "在创新点第 N 条后补一句，说明相对 [某已资助方向] 新增的变量/关系/边界". If three or more funded projects cover the same object with the same method, the finding escalates: the 通讯评审人 is plausibly one of those PIs, and an undifferentiated draft reads as a rerun.
 - **On empty result**: distinguish a successfully executed query with 0 hits from invalid conditions, captcha failure, throttling or incomplete access. Report the queried module/year range and coverage limits; never infer novelty from zero hits.
 - **The 结题库 alone is not enough for this lookup.** The nearest competitors are usually funded in the three or four years before submission, which is exactly the blind spot — so a 结题库-only sweep can report a crowded topic as clear. The collision check is only meaningful when the applicant also runs 资助项目检索 (项目公布), captcha and all. If only the open endpoint was run, say so and mark the result 不完整.
+- **Acknowledgment pre-pass (automatic, before the query card).** In-progress projects that have already published show up in paper acknowledgments. Run `python3 scripts/nsfc_ack_grants.py '<title-level terms>'` (OpenAlex, titles and abstracts of NSFC-funded papers from the last three years); it lists 批准号 approved in the last five years with their papers. Read the papers of each number before calling it a neighbor, since acknowledgments also list unrelated grants. Put the shortlisted numbers into query card B so the applicant resolves names and abstracts by 批准号. It misses projects with no papers yet (the latest one or two approval years) and Chinese-only output, so it narrows the blind spot but never closes it: a zero result is not a clear topic, and without card B the check stays 不完整. Send only short title-level terms, never draft text.
 
 ### 2. 申请代码校准 (code routing)
 
@@ -107,7 +108,7 @@ If samples change the rules, follow the exemplar-learning procedure and record s
 ### 资助格局与撞题核查
 
 - 核查方式：<申请人自查并回传 / 未核查及原因>
-- 查询记录：<模块、词/代码/类别、结题年度、批准年度、原始命中数、去重筛选后样本数、查询状态与日期>
+- 查询记录：<模块、词/代码/类别、结题年度、批准年度、原始命中数、去重筛选后样本数、查询状态与日期；致谢反查的检索式、扫描篇数/总篇数、近邻批准号数>
 - 撞题风险：
 - 申请代码校准：<当前代码 N1 条 / 候选代码 N2 条；需按当年指南确认>
 - 预期成果标定：<同类结题项目产出区间，样本 N>
@@ -134,6 +135,7 @@ A. 结题项目检索
 - 本人项目自查（仅在请求时）：同样逐个选择结题年度，用本人姓名和单位检索。
 
 B. 资助项目检索
+- 先按「批准号」逐个查所附在研批准号清单 [G1、G2…]（从论文致谢反查得到），回传名称、负责人、单位、代码和可见摘要。
 - 按页面实际提供的批准年度 [A1…A2]、标题级词 [K1/K2/K3] 和适用代码检索。
 - 由你本人处理验证码；回传近邻项目及可见信息。摘要不可见就标不可见，不补写。
 - 代码校准时取消代码限制。不要把资助检索的批准年度填法套用到结题检索。
