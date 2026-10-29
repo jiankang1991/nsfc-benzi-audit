@@ -58,12 +58,13 @@
 | information-communication.md | real A（信息通信，不入库） | 仅运行记录 |
 | medical-biomedical.md：模型按组分判断 | 09-12 medical；real B（截断） | 仅运行记录 |
 | exemplar-learning.md：样本规律提炼与迁移限制 | — | **无见证** |
+| current-rules.md：已获资助内容须说明区别和联系、不得含涉密或敏感信息 | 10-29 disclosure-application / disclosure-counter、sensitive-application / sensitive-counter（GREEN 4/4 引条款，反例 0/4） | 有见证 |
 
 ## 汇总
 
 | 状态 | 组数 |
 | --- | ---: |
-| 有见证（含部分） | 22 |
+| 有见证（含部分） | 23 |
 | 仅运行记录 | 9 |
 | 无见证（整组或组内点名的子项） | 15 |
 
